@@ -37,91 +37,88 @@ author:
      country: China
      email: hutong@cmhi.chinamobile.com
 -
-     fullname: Luis Miguel Contreras Murillo
-     organization: Telefonica I+D
-     city: Madrid
-     country: Spain
-     email: luismiguel.contrerasmurillo@telefonica.com
+    fullname: Luis Miguel Contreras Murillo
+    organization: Telefonica I+D
+    city: Madrid
+    country: Spain
+    email: luismiguel.contrerasmurillo@telefonica.com
 -
-     fullname: Thomas Graf
-     organization: Swisscom
-     street: Binzring 17CH-8045
-     city: Zurich
-     country: Switzerland
-     email: thomas.graf@swisscom.com
+    fullname: Thomas Graf
+    organization: Swisscom
+    street: Binzring 17CH-8045
+    city: Zurich
+    country: Switzerland
+    email: thomas.graf@swisscom.com
 -
-     fullname: Qin Wu
-     organization: Huawei
-     street: 101 Software Avenue, Yuhua District
-     city: Nanjing
-     code: 210012
-     country: China
-     email: bill.wu@huawei.com
+    fullname: Qin Wu
+    organization: Huawei
+    street: 101 Software Avenue, Yuhua District
+    city: Nanjing
+    code: 210012
+    country: China
+    email: bill.wu@huawei.com
 -
-     fullname: Chaode Yu
-     organization: Huawei
-     email: yuchaode@huawei.com
+    fullname: Chaode Yu
+    organization: Huawei
+    email: yuchaode@huawei.com
 -
-     fullname: Nigel Davis
-     organization: Ciena
-     email: ndavis@ciena.com
+    fullname: Nigel Davis
+    organization: Ciena
+    email: ndavis@ciena.com
 
 contributor:
 -
-     name: MingShuang Jin
-     org: Huawei Technologies
-     email: jinmingshuang@huawei.com
+    name: MingShuang Jin
+    org: Huawei Technologies
+    email: jinmingshuang@huawei.com
 -
-     name: Chunchi Liu
-     org: Huawei Technologies
-     email: liuchunchi@huawei.com
+    name: Chunchi Liu
+    org: Huawei Technologies
+    email: liuchunchi@huawei.com
 -
-     name: Aihua Guo
-     org: Futurewei Technologies
-     email: aihuaguo.ietf@gmail.com
+    name: Aihua Guo
+    org: Futurewei Technologies
+    email: aihuaguo.ietf@gmail.com
 -
-     name: Zhidong Yin
-     org: Huawei
-     email: yinzhidong@huawei.com
+    name: Zhidong Yin
+    org: Huawei
+    email: yinzhidong@huawei.com
 -
-     name: Guoxiang Liu
-     org: Huawei
-     email: liuguoxiang@huawei.com
+    name: Guoxiang Liu
+    org: Huawei
+    email: liuguoxiang@huawei.com
 -
-     name: Kaichun Wu
-     org: Huawei
-     email: wukaichun@huawei.com
+    name: Kaichun Wu
+    org: Huawei
+    email: wukaichun@huawei.com
 -
-     name: Yanlei Zheng
-     org: China Unicom
-     email: zhengyanlei@chinaunicom.cn
+    name: Yanlei Zheng
+    org: China Unicom
+    email: zhengyanlei@chinaunicom.cn
 -
-     name: Yunbin Xu
-     org: CAICT
-     email: xuyunbin@caict.ac.cn
+    name: Yunbin Xu
+    org: CAICT
+    email: xuyunbin@caict.ac.cn
 -
-     name: Xing Zhao
-     org: CAICT
-     email: zhaoxing@caict.ac.cn
+    name: Xing Zhao
+    org: CAICT
+    email: zhaoxing@caict.ac.cn
 
 normative:
 
 informative:
 
-
-BERT:
+ BERT:
    title:  BERT (language model)
    target: https://en.wikipedia.org/wiki/BERT_(language_model)
 
-TMF724A:
+ TMF724A:
    title: Incident Management API Profile v1.0.0
-   organization: "TMF"
    target: https://www.tmforum.org/resources/standard/tmf724a-incident-management-api-profile-v1-0-0/
    date: 2023
 
-W3C-Trace-Context:
+ W3C-Trace-Context:
    title: W3C Recommendation on Trace Context
-   orgnization: W3C
    target: https://www.w3.org/TR/2021/REC-trace-context-1-20211123/
    date: 2021
 
@@ -151,7 +148,7 @@ data model for alarm management {{?RFC8632}} defines a standard
 interface for alarm management.  A data model for Network and VPN
 Service Performance Monitoring {{?RFC9375}} defines a standard interface
 for network performance management.  In addition, distributed tracing
-mechanism defined in {{?W3C-Trace-Context}} can also be used to analyze
+mechanism defined in {{W3C-Trace-Context}} can also be used to analyze
 and debug operations, such as configuration transactions, across
 multiple distributed systems.
 
@@ -180,7 +177,7 @@ be used at specific layer in specific domain but also can be used to
 span across layer for multi-layer network troubleshooting.  A network
 incident refers to an unexpected interruption of a network service,
 degradation of a network service quality, or sub-health of a network
-service {{?TMF724A}}.  Different data sources including alarms, metrics
+service {{TMF724A}}.  Different data sources including alarms, metrics
 and other anomaly information can be aggregated into few amount of
 incidents irrespective layer by correlation analysis and the service
 impact analysis.  For example, the protocols related to the interface
@@ -232,13 +229,13 @@ The following terms are defined in this document:
 
 Incident:  An unexpected interruption of a network service,
    degradation of network service quality, or sub-health of a network
-   service {{?TMF724A}}.
+   service {{TMF724A}}.
 
 
 Problem:  The cause of one or more incidents.  The cause is not
    usually known when a problem record is created, and the problem
    management process is responsible for further investigation
-   {{?TMF724A}}.
+   {{TMF724A}}.
 
 Incident management:  Lifecycle management of incidents including
    incident identification, reporting, acknowledge, diagnosis, and
@@ -366,7 +363,7 @@ Incident management client:  An entity which can manage incidents.
       can also distract teams from real incidents.
 
       With the help of the incident management, BERT(Bidirectional Encoder
-      Representations from Transformers) {{?BERT}} classifier can be adopted to
+      Representations from Transformers) {{BERT}} classifier can be adopted to
       analyses the suspicious activity and understands the significance of
       the gathered data (through both facts and inferences) and help
       operation and maintenance engineers focus on handling important
@@ -563,9 +560,9 @@ Incident management client:  An entity which can manage incidents.
 
 ##  Relationship with Trace Context
 
-         W3C defines a common trace context[W3C-Trace-Context] for distributed
+         W3C defines a common trace context{{W3C-Trace-Context}} for distributed
          system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
-         netconf extension for {{?W3C-Trace-Context}} and
+         netconf extension for {{W3C-Trace-Context}} and
          {{?I-D.quilbeuf-opsawg-configuration-tracing}} defines a mechanism for
          configuration tracing.  If some errors occur when services are
          deploying, it's very easy to identify these errors by distributed
@@ -637,7 +634,7 @@ Incident management client:  An entity which can manage incidents.
             As mentioned above, SAIN is another way to implement incident
             identification.  Observation timestamp defined in
             {{?I-D.tgraf-yang-push-observation-time}} and trace context defined in
-            {{?W3C-Trace-Context}} may be helpful for incident identification.
+            {{W3C-Trace-Context}} may be helpful for incident identification.
 
 ~~~~         
                                  +----------------------+
@@ -979,7 +976,7 @@ transport is Secure Shell (SSH) {{!RFC6242}}.  The lowest RESTCONF layer
 is HTTPS, and the mandatory-to-implement secure transport is TLS
 {{!RFC8446}}.
 
-The Network Configuration Access Control Model (NACM) [RFC8341]
+The Network Configuration Access Control Model (NACM) {{!RFC8341}}
 provides the means to restrict access for particular NETCONF or
 RESTCONF users to a preconfigured subset of all available NETCONF or
 RESTCONF protocol operations and content.
