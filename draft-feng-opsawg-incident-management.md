@@ -73,7 +73,6 @@ author:
     orgnization: Huawei
     street: 101 Software Avenue, Yuhua District
     city: Nanjing
-    code: 210012
     country: China
     email: bill.wu@huawei.com
  -
@@ -87,40 +86,40 @@ author:
 
 contributor:
   -
-    name: MingShuang Jin
-    org: Huawei Technologies
+    fullname: MingShuang Jin
+    orgnization: Huawei Technologies
     email: jinmingshuang@huawei.com
  -
-    name: Chunchi Liu
-    org: Huawei Technologies
+    fullname: Chunchi Liu
+    orgnization: Huawei Technologies
     email: liuchunchi@huawei.com
  -
-    name: Aihua Guo
-    org: Futurewei Technologies
+    fullname: Aihua Guo
+    orgnization: Futurewei Technologies
     email: aihuaguo.ietf@gmail.com
  -
-    name: Zhidong Yin
-    org: Huawei
+    fullname: Zhidong Yin
+    orgnization: Huawei
     email: yinzhidong@huawei.com
  -
-    name: Guoxiang Liu
-    org: Huawei
+    fullname: Guoxiang Liu
+    orgnization: Huawei
     email: liuguoxiang@huawei.com
  -
-    name: Kaichun Wu
-    org: Huawei
+    fullname: Kaichun Wu
+    orgnization: Huawei
     email: wukaichun@huawei.com
  -
-    name: Yanlei Zheng
-    org: China Unicom
+    fullname: Yanlei Zheng
+    orgnization: China Unicom
     email: zhengyanlei@chinaunicom.cn
  -
-    name: Yunbin Xu
-    org: CAICT
+    fullname: Yunbin Xu
+    orgnization: CAICT
     email: xuyunbin@caict.ac.cn
  -
-    name: Xing Zhao
-    org: CAICT
+    fullname: Xing Zhao
+    orgnization: CAICT
     email: zhaoxing@caict.ac.cn
 
 normative:
