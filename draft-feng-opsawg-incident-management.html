@@ -1792,40 +1792,40 @@ system tracing, and an incident should be reported.<a href="#section-4.4-1" clas
 <figure id="figure-4">
           <div class="alignCenter art-text artwork" id="section-5.1-1.1">
 <pre>
-                    +--------------+
-                 +--|  Incident1   |
-                 |  +--+-----------+
-                 |     |  +-----------+
-                 |     +--+  alarm1   |
-                 |     |  +-----------+
-                 |     |
-                 |     |  +-----------+
-                 |     +--+  alarm2   |
-                 |     |  +-----------+
-                 |     |
-                 |     |  +-----------+
-                 |     +--+  alarm3   |
-                 |        +-----------+
-                 |  +--------------+
-                 +--|  Incident2   |
-                 |  +--+-----------+
-                 |     |  +-----------+
-                 |     +--+  metric1  |
-                 |     |  +-----------+
-                 |     |  +-----------+
-                 |     +--+  metric2  |
-                 |        +-----------+
-                 |
-                 |  +--------------+
-                 +--|  Incident3   |
-                    +--+-----------+
-                       |  +-----------+
-                       +--+ alarm1    |
-                       |  +-----------+
-                       |
-                       |  +-----------+
-                       +--| metric1   |
-                          +-----------+
+        +--------------+
+ +--|  Incident1   |
+ |  +--+-----------+
+ |     |  +-----------+
+ |     +--+  alarm1   |
+ |     |  +-----------+
+ |     |
+ |     |  +-----------+
+ |     +--+  alarm2   |
+ |     |  +-----------+
+ |     |
+ |     |  +-----------+
+ |     +--+  alarm3   |
+ |        +-----------+
+ |  +--------------+
+ +--|  Incident2   |
+ |  +--+-----------+
+ |     |  +-----------+
+ |     +--+  metric1  |
+ |     |  +-----------+
+ |     |  +-----------+
+ |     +--+  metric2  |
+ |        +-----------+
+ |
+ |  +--------------+
+ +--|  Incident3   |
+        +--+-----------+
+           |  +-----------+
+           +--+ alarm1    |
+           |  +-----------+
+           |
+           |  +-----------+
+           +--| metric1   |
+                  +-----------+
 </pre>
 </div>
 <figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
@@ -1863,8 +1863,8 @@ identification.  Observation timestamp defined in
                                  |     Orchestrator     |
                                  |                      |
                                  +----+-----------------+
-                                      ^VPN A Unavailable
-                                      |
+                                          ^VPN A Unavailable
+                                          |
                                   +---+----------------+
                                   |                    |
                                   |     Controller     |
@@ -1872,16 +1872,16 @@ identification.  Observation timestamp defined in
                                   |                    |
                                   +-+-+-+-----+--+-----+
                                   ^ ^            ^
-                              IGP | |Interface   |IGP Peer
-                             Down | |Down        | Abnormal
+                          IGP | |Interface   |IGP Peer
+                         Down | |Down        | Abnormal
                                   | |            |
-                 VPN A            | |            |
-                +-----------------+-+------------+------------------*
-                | \  +---+       ++-++         +-+-+        +---+  /|
-                |  \ |   |       |   |         |   |        |   | / |
-                |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
-                |    +---+       +---+         +---+        +---+   |
-                +---------------------------------------------------+
+ VPN A            | |            |
++-----------------+-+------------+------------------*
+| \  +---+       ++-++         +-+-+        +---+  /|
+|  \ |   |       |   |         |   |        |   | / |
+|   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
+|    +---+       +---+         +---+        +---+   |
++---------------------------------------------------+
 </pre>
 </div>
 <figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
@@ -1902,8 +1902,8 @@ alarms are aggregated and analyzed by controller, and the incident
                                 |     Orchestrator     |
                                 |                      |
                                 +----+-----------------+
-                                     ^VPN A Degradation
-                                     |
+                                         ^VPN A Degradation
+                                         |
                                  +---+----------------+
                                  |                    |
                                  |     controller     |
@@ -1914,13 +1914,13 @@ alarms are aggregated and analyzed by controller, and the incident
                                    |Packet      |Path Delay
                                    |Loss        |
                                    |            |
-                VPN A              |            |
-               +-------------------+------------+-------------------+
-               | \  +---+       ++-++         +-+-+        +---+  / |
-               |  \ |   |       |   |         |   |        |   | /  |
-               |   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
-               |    +---+       +---+         +---+        +---+    |
-               +----------------------------------------------------+
+VPN A              |            |
++-------------------+------------+-------------------+
+| \  +---+       ++-++         +-+-+        +---+  / |
+|  \ |   |       |   |         |   |        |   | /  |
+|   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
+|    +---+       +---+         +---+        +---+    |
++----------------------------------------------------+
 </pre>
 </div>
 <figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
@@ -1955,27 +1955,21 @@ quality metrics, etc.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
         <h3 id="name-incident-resolution">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-incident-resolution" class="section-name selfRef">Incident Resolution</a>
         </h3>
-<div class="alignLeft art-text artwork" id="section-5.3-1">
-<pre>
-        After the root cause is diagnosed, the client MAY resolve the
-        incident.  The client MAY choose resolve the incident by invoking
-        other functions, such as routing calculation function, configuration
-        function, dispatching a ticket or asking the server to resolve it.
-        Generally, the client would attempt to directly resolve the root
-        cause.  If the root cause cannot be resolved, an alternative solution
-        SHOULD be required.  For example, if an incident caused by a physical
-        component failure, it cannot be automatically resolved, the standby
-        link can be used to bypass the faulty component.
-
-        Incident server will monitor the status of incident, if the faults
-        are fixed, the server will update the status of incident to
-        'cleared', and report the updated incident to the client.
-
-        Incident resolution may affect the running network services.  The
-        client can choose not to perform those operations after determining
-        the impact is not trivial.
-</pre><a href="#section-5.3-1" class="pilcrow">¶</a>
-</div>
+<p id="section-5.3-1">After the root cause is diagnosed, the client <span class="bcp14">MAY</span> resolve the
+incident.  The client <span class="bcp14">MAY</span> choose resolve the incident by invoking
+other functions, such as routing calculation function, configuration
+function, dispatching a ticket or asking the server to resolve it.
+Generally, the client would attempt to directly resolve the root
+cause.  If the root cause cannot be resolved, an alternative solution
+<span class="bcp14">SHOULD</span> be required.  For example, if an incident caused by a physical
+component failure, it cannot be automatically resolved, the standby
+link can be used to bypass the faulty component.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-2">Incident server will monitor the status of incident, if the faults
+are fixed, the server will update the status of incident to
+'cleared', and report the updated incident to the client.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
+<p id="section-5.3-3">Incident resolution may affect the running network services.  The
+client can choose not to perform those operations after determining
+the impact is not trivial.<a href="#section-5.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2062,47 +2056,47 @@ support one general notification to report incident state changes and
 three rpcs to manage the network incidents.<a href="#section-7.1-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-7.1-2">
 <pre>
-                  module: ietf-incident
-                    +--ro incidents
-                       +--ro incident* [incident-id]
-                          +--ro incident-id string
-                          +--ro csn? uint64
-                          +--ro service-instance* string
-                          +--ro name? string
-                          +--ro type? enumeration
-                          +--ro domain? identityref
-                          +--ro priority? int:incident-priority
-                          +--ro status? enumeration
-                          +--ro ack-status? enumeration
-                          +--ro category? identityref
-                          +--ro detail? string
-                          +--ro resolve-advice? string
-                          +--ro sources
-                          ...
-                          +--ro root-causes
-                          ...
-                          +--ro root-events
-                          ...
-                          +--ro events
-                          ...
-                          +--ro raise-time? yang:date-and-time
-                          +--ro occur-time? yang:date-and-time
-                          +--ro clear-time? yang:date-and-time
-                          +--ro ack-time? yang:date-and-time
-                          +--ro last-updated? yang:date-and-time
-                    rpcs:
-                      +---x incident-acknowledge
-                      ...
-                      +---x incident-diagnose
-                      ...
-                      +---x incident-resolve
+module: ietf-incident
++--ro incidents
+   +--ro incident* [incident-id]
+          +--ro incident-id string
+          +--ro csn? uint64
+          +--ro service-instance* string
+          +--ro name? string
+          +--ro type? enumeration
+          +--ro domain? identityref
+          +--ro priority? int:incident-priority
+          +--ro status? enumeration
+          +--ro ack-status? enumeration
+          +--ro category? identityref
+          +--ro detail? string
+          +--ro resolve-advice? string
+          +--ro sources
+          ...
+          +--ro root-causes
+          ...
+          +--ro root-events
+          ...
+          +--ro events
+          ...
+          +--ro raise-time? yang:date-and-time
+          +--ro occur-time? yang:date-and-time
+          +--ro clear-time? yang:date-and-time
+          +--ro ack-time? yang:date-and-time
+          +--ro last-updated? yang:date-and-time
+rpcs:
+  +---x incident-acknowledge
+  ...
+  +---x incident-diagnose
+  ...
+  +---x incident-resolve
 
-                    notifications:
-                      +---n incident-notification
-                         +--ro incident-id?
-                                 -&gt; /inc:incidents/inc:incident/inc:incident-id
-                         ...
-                         +--ro time? yang:date-and-time
+notifications:
+  +---n incident-notification
+         +--ro incident-id?
+                         -&gt; /inc:incidents/inc:incident/inc:incident-id
+         ...
+         +--ro time? yang:date-and-time
 </pre><a href="#section-7.1-2" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2114,54 +2108,54 @@ three rpcs to manage the network incidents.<a href="#section-7.1-1" class="pilcr
         </h3>
 <div class="alignLeft art-text artwork" id="section-7.2-1">
 <pre>
-                    notifications:
-                      +---n incident-notification
-                         +--ro incident-id?
-                                 -&gt; /inc:incidents/inc:incident/inc:incident-id
-                         +--ro csn? uint64
-                         +--ro service-instance* string
-                         +--ro name? string
-                         +--ro type? enumeration
-                         +--ro domain? identityref
-                         +--ro priority? int:incident-priority
-                         +--ro status? enumeration
-                         +--ro ack-status? enumeration
-                         +--ro category? identityref
-                         +--ro detail? string
-                         +--ro resolve-advice? string
-                         +--ro sources
-                         |  +--ro source* [node]
-                         |     +--ro node -&gt; /nw:networks/nw:network/nw:node/nw:node-id
-                         |     +--ro resource* [name]
-                         |        +--ro name al:resource
-                         +--ro root-causes
-                         |  +--ro root-cause* [node]
-                         |     +--ro node -&gt; /nw:networks/nw:network/nw:node/nw:node-id
-                         |     +--ro resource* [name]
-                         |     |  +--ro name al:resource
-                         |     |  +--ro cause-name? string
-                         |     |  +--ro detail? string
-                         |     +--ro cause-name? string
-                         |     +--ro detail? string
-                         +--ro root-events
-                         |  +--ro root-event* [type event-id]
-                         |     +--ro type -&gt; ../../../events/event/type
-                         |     +--ro event-id leafref
-                         +--ro events
-                         |  +--ro event* [type event-id]
-                         |     +--ro type enumeration
-                         |     +--ro event-id string
-                         |     +--ro (event-type-info)?
-                         |        +--:(alarm)
-                         |        |  +--ro alarm
-                         |        |     +--ro resource? leafref
-                         |        |     +--ro alarm-type-id? leafref
-                         |        |     +--ro alarm-type-qualifier? leafref
-                         |        +--:(notification)
-                         |        +--:(log)
-                         |        +--:(KPI)
-                         |        +--:(unknown)
-                         +--ro time? yang:date-and-time
+notifications:
+  +---n incident-notification
+         +--ro incident-id?
+                         -&gt; /inc:incidents/inc:incident/inc:incident-id
+         +--ro csn? uint64
+         +--ro service-instance* string
+         +--ro name? string
+         +--ro type? enumeration
+         +--ro domain? identityref
+         +--ro priority? int:incident-priority
+         +--ro status? enumeration
+         +--ro ack-status? enumeration
+         +--ro category? identityref
+         +--ro detail? string
+         +--ro resolve-advice? string
+         +--ro sources
+         |  +--ro source* [node]
+         |     +--ro node -&gt; /nw:networks/nw:network/nw:node/nw:node-id
+         |     +--ro resource* [name]
+         |        +--ro name al:resource
+         +--ro root-causes
+         |  +--ro root-cause* [node]
+         |     +--ro node -&gt; /nw:networks/nw:network/nw:node/nw:node-id
+         |     +--ro resource* [name]
+         |     |  +--ro name al:resource
+         |     |  +--ro cause-name? string
+         |     |  +--ro detail? string
+         |     +--ro cause-name? string
+         |     +--ro detail? string
+         +--ro root-events
+         |  +--ro root-event* [type event-id]
+         |     +--ro type -&gt; ../../../events/event/type
+         |     +--ro event-id leafref
+         +--ro events
+         |  +--ro event* [type event-id]
+         |     +--ro type enumeration
+         |     +--ro event-id string
+         |     +--ro (event-type-info)?
+         |        +--:(alarm)
+         |        |  +--ro alarm
+         |        |     +--ro resource? leafref
+         |        |     +--ro alarm-type-id? leafref
+         |        |     +--ro alarm-type-qualifier? leafref
+         |        +--:(notification)
+         |        +--:(log)
+         |        +--:(KPI)
+         |        +--:(unknown)
+         +--ro time? yang:date-and-time
 </pre><a href="#section-7.2-1" class="pilcrow">¶</a>
 </div>
 <p id="section-7.2-2">A general notification, incident-notification, is provided here.
@@ -2182,23 +2176,18 @@ would be set to 'cleared'.<a href="#section-7.2-2" class="pilcrow">¶</a></p>
         </h3>
 <div class="alignLeft art-text artwork" id="section-7.3-1">
 <pre>
-                      +---x incident-acknowledge
-                      |  +---w input
-                      |  |  +---w incident-id*
-                      |  |          -&gt; /inc:incidents/inc:incident/inc:incident-id
++---x incident-acknowledge
+|  +---w input
+|  |  +---w incident-id*
+|  |          -&gt; /inc:incidents/inc:incident/inc:incident-id
 </pre><a href="#section-7.3-1" class="pilcrow">¶</a>
 </div>
-<div class="alignLeft art-text artwork" id="section-7.3-2">
-<pre>
-              After an incident is generated, updated, or cleared, (In some
-              scenarios where automatic diagnosis and resolution are supported, the
-              status of an incident may be updated multiple times or even
-              automatically resolved.)  The operator needs to confirm the incident
-              to ensure that the client knows the incident.
-
-              The incident-acknowledge rpc can confirm multiple incidents at a time
-</pre><a href="#section-7.3-2" class="pilcrow">¶</a>
-</div>
+<p id="section-7.3-2">After an incident is generated, updated, or cleared, (In some
+scenarios where automatic diagnosis and resolution are supported, the
+status of an incident may be updated multiple times or even
+automatically resolved.)  The operator needs to confirm the incident
+to ensure that the client knows the incident.<a href="#section-7.3-2" class="pilcrow">¶</a></p>
+<p id="section-7.3-3">The incident-acknowledge rpc can confirm multiple incidents at a time<a href="#section-7.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="incident-diagnose">
@@ -2208,10 +2197,10 @@ would be set to 'cleared'.<a href="#section-7.2-2" class="pilcrow">¶</a></p>
         </h3>
 <div class="alignLeft art-text artwork" id="section-7.4-1">
 <pre>
-                      +---x incident-diagnose
-                      |  +---w input
-                      |  |  +---w incident-id*
-                      |  |          -&gt; /inc:incidents/inc:incident/inc:incident-id
++---x incident-diagnose
+|  +---w input
+|  |  +---w incident-id*
+|  |          -&gt; /inc:incidents/inc:incident/inc:incident-id
 </pre><a href="#section-7.4-1" class="pilcrow">¶</a>
 </div>
 <p id="section-7.4-2">After an incident is generated, incident diagnose rpc can be used to
@@ -2230,10 +2219,10 @@ be triggered to report the latest status of the incident.<a href="#section-7.4-3
         </h3>
 <div class="alignLeft art-text artwork" id="section-7.5-1">
 <pre>
-                      +---x incident-resolve
-                         +---w input
-                         |  +---w incident-id*
-                         |          -&gt; /inc:incidents/inc:incident/inc:incident-id
++---x incident-resolve
+ +---w input
+ |  +---w incident-id*
+ |          -&gt; /inc:incidents/inc:incident/inc:incident-id
 </pre><a href="#section-7.5-1" class="pilcrow">¶</a>
 </div>
 <p id="section-7.5-2">After the root causes and impacts are determined, incident-resolve
