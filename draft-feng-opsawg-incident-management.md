@@ -44,7 +44,7 @@ venue:
   latest: https://billwuqin.github.io/network-incident/draft-feng-opsawg-network-incident.html
 
 author:
- -
+  -
     fullname: Chong Feng
     role: editor
     email: fengchonglly@gmail.com
@@ -55,20 +55,20 @@ author:
     city: Hangzhou
     code: 311121
     country: China
-    Email: hutong@cmhi.chinamobile.com
+    email: hutong@cmhi.chinamobile.com
  -
     fullname: Luis Miguel Contreras Murillo
     organization: Telefonica I+D
     city: Madrid
     country: Spain
-    Email: luismiguel.contrerasmurillo@telefonica.com
+    email: luismiguel.contrerasmurillo@telefonica.com
  -
     fullname: Thomas Graf
     organization: Swisscom
     street: Binzring 17CH-8045
     city: Zurich
     country: Switzerland
-    Email: thomas.graf@swisscom.com
+    email: thomas.graf@swisscom.com
  -
     fullname: Qin Wu
     orgnization: Huawei
@@ -76,17 +76,17 @@ author:
     city: Nanjing
     code: 210012
     country: China
-    Email: bill.wu@huawei.com
+    email: bill.wu@huawei.com
  -
     fullname: Chaode Yu
     organization: Huawei
-    Email: yuchaode@huawei.com
+    email: yuchaode@huawei.com
  -
     fullname: Nigel Davis
     orgnization: Ciena
-    Email: ndavis@ciena.com
+    email: ndavis@ciena.com
 
-    contributor:
+contributor:
   -
     name: MingShuang Jin
     org: Huawei Technologies
