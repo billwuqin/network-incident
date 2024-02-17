@@ -53,7 +53,6 @@ author:
     organization: China Mobile (Hangzhou) Information Technology Co., Ltd
     street: Building A01, 1600 Yuhangtang Road, Wuchang Street, Yuhang District
     city: Hangzhou
-    code: 311121
     country: China
     email: hutong@cmhi.chinamobile.com
  -
