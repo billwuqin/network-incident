@@ -307,64 +307,64 @@ L3VPN service will be derived.
 
 ## Multi-layer Fault Demarcation
 
-      When a fault occurs in a network that contains both packet-layer
-      devices and optical-layer devices, it may cause correlative faults in
-      both layers, i.e., packet layer and optical layer.  Specifically,
-      fault propagation could be classified into three typical types.
-      First, fault occurs at a packet-layer device will further cause fault
-      (e.g.,WDM (wavelength division multiplexing) client fault) at an
-      optical-layer device.  Second, fault occurs at an optical-layer
-      device will further cause fault (e.g., L3 link down) at a packet-
-      layer device.  Third, fault occurs at the inter-layer link between a
+When a fault occurs in a network that contains both packet-layer
+devices and optical-layer devices, it may cause correlative faults in
+both layers, i.e., packet layer and optical layer.  Specifically,
+fault propagation could be classified into three typical types.
+First, fault occurs at a packet-layer device will further cause fault
+(e.g.,WDM (wavelength division multiplexing) client fault) at an
+optical-layer device.  Second, fault occurs at an optical-layer
+device will further cause fault (e.g., L3 link down) at a packet-
+layer device.  Third, fault occurs at the inter-layer link between a
 
-      packet-layer device and an optical-layer device will further cause
-      faults at both devices.  Traditionally, multiple operation teams are
-      needed to first analyze huge amount of alarms (triggered by the above
-      mentioned faults) from single network layer independently, then
-      cooperate to locate the root cause through manually analyzing multi-
-      layer topology data and service data, thus fault demarcation becomes
-      more complex and time-consuming in multi-layer scenario than in
-      single-layer scenario.
+packet-layer device and an optical-layer device will further cause
+faults at both devices.  Traditionally, multiple operation teams are
+needed to first analyze huge amount of alarms (triggered by the above
+mentioned faults) from single network layer independently, then
+cooperate to locate the root cause through manually analyzing multi-
+layer topology data and service data, thus fault demarcation becomes
+more complex and time-consuming in multi-layer scenario than in
+single-layer scenario.
 
-      With the help of incident management, the management systems first
-      automatically analyze root cause of the alarms at each single network
-      layer and report corresponding incidents to the upper layer, then
-      multi-layer management system comprehensively analyzes the topology
-      relationship and service relationship between the root causes of both
-      layers.  The inner relationship among the alarms will be identified
-      and finally the root cause will be located among multiple layers.  By
-      cooperating with the integrated Optical time-domain reflectometer
-      (OTDR) within the network device, we can determine the target optical
-      exchange station before site visits.  Therefore, the overall fault
-      demarcation process is simplified and automated, the analyze result
-      could be reported and visualized in time.  In this case, operation
-      teams only have to confirm the analyze result and dispatch site
-      engineers to perform relative maintenance actions (e.g., splice
-      fiber) based on the root cause.
+With the help of incident management, the management systems first
+automatically analyze root cause of the alarms at each single network
+layer and report corresponding incidents to the upper layer, then
+multi-layer management system comprehensively analyzes the topology
+relationship and service relationship between the root causes of both
+layers.  The inner relationship among the alarms will be identified
+and finally the root cause will be located among multiple layers.  By
+cooperating with the integrated Optical time-domain reflectometer
+(OTDR) within the network device, we can determine the target optical
+exchange station before site visits.  Therefore, the overall fault
+demarcation process is simplified and automated, the analyze result
+could be reported and visualized in time.  In this case, operation
+teams only have to confirm the analyze result and dispatch site
+engineers to perform relative maintenance actions (e.g., splice
+fiber) based on the root cause.
 
 ## Security events Automated Noise reduction based on Situation awareness
 
-      In the continuous data driven monitoring, tools used by the Security
-      Operation Center (SoC) scan the network 24/7 to flag any
-      abnormalities or suspicious activities.  As the SoC adds more tools
-      for security events detection, the volume of security events or
-      alerts grows continually. the overwhelming number of threat alerts
-      can cause threat fatigue.  In addition, many of these alerts do not
-      provide sufficient intelligence, context to investigate, or are false
-      positives.  False positives not only drain time and resources, but
-      can also distract teams from real incidents.
+In the continuous data driven monitoring, tools used by the Security
+Operation Center (SoC) scan the network 24/7 to flag any
+abnormalities or suspicious activities.  As the SoC adds more tools
+for security events detection, the volume of security events or
+alerts grows continually. the overwhelming number of threat alerts
+can cause threat fatigue.  In addition, many of these alerts do not
+provide sufficient intelligence, context to investigate, or are false
+positives.  False positives not only drain time and resources, but
+can also distract teams from real incidents.
 
-      With the help of the incident management, BERT(Bidirectional Encoder
-      Representations from Transformers) {{?BERT}} classifier can be adopted to
-      analyses the suspicious activity and understands the significance of
-      the gathered data (through both facts and inferences) and help
-      operation and maintenance engineers focus on handling important
-      security events and avoid wasting resources on false alerts, e.g.,
-      automatically determine whether 10,000 network security events are
-      real incidents and give reasonable explanations.  Progressively,
-      Llama interpreter can be used to explain the reason why such alerts
-      are picked out and marked significant, what could be the potential
-      security implications that exist yet remain undiscovered.
+With the help of the incident management, BERT(Bidirectional Encoder
+Representations from Transformers) {{?BERT}} classifier can be adopted to
+analyses the suspicious activity and understands the significance of
+the gathered data (through both facts and inferences) and help
+operation and maintenance engineers focus on handling important
+security events and avoid wasting resources on false alerts, e.g.,
+automatically determine whether 10,000 network security events are
+real incidents and give reasonable explanations.  Progressively,
+Llama interpreter can be used to explain the reason why such alerts
+are picked out and marked significant, what could be the potential
+security implications that exist yet remain undiscovered.
 
 
 # Incident Management Architecture
@@ -402,37 +402,37 @@ L3VPN service will be derived.
 ~~~~
  {:#arch title="Network Incident Management Architecture" artwork-align="center"}
 
-         {{arch}} illustrates the incident management architecture.  Two key
-         components for the incident management are incident management client
-         and incident management server.
+{{arch}} illustrates the incident management architecture.  Two key
+components for the incident management are incident management client
+and incident management server.
 
-         Incident management server can be deployed in network analytics
-         platform, controllers and provides functionalities such as incident
-         identification, report, diagnosis, resolution, querying for incident
-         lifecycle management.
+Incident management server can be deployed in network analytics
+platform, controllers and provides functionalities such as incident
+identification, report, diagnosis, resolution, querying for incident
+lifecycle management.
 
-         Incident management client can be deployed in the network OSS or
-         other business systems of operators and invokes the functionalities
-         provided by incident management server to meet the business
-         requirements of fault management.
+Incident management client can be deployed in the network OSS or
+other business systems of operators and invokes the functionalities
+provided by incident management server to meet the business
+requirements of fault management.
 
-         A typical workflow of incident management is as follows:
+A typical workflow of incident management is as follows:
 
-         *  Some alarms or abnormal operations, network performance metrics
-            are reported from the network.  Incident management server
-            receives these alarms/abnormal operations/metrics and try to
-            analyze the correlation of them, if the incidents are identified,
-            it will be reported to the client.  The impact of network services
-            will be also analyzed and will update the incident.
+* Some alarms or abnormal operations, network performance metrics
+   are reported from the network.  Incident management server
+   receives these alarms/abnormal operations/metrics and try to
+   analyze the correlation of them, if the incidents are identified,
+   it will be reported to the client.  The impact of network services
+   will be also analyzed and will update the incident.
 
-         *  Incident management client receives the incident raised by server,
-            and acknowledge it.  Client may invoke the "incident diagnose" rpc
-            to diagnose this incident to find the root causes.
+* Incident management client receives the incident raised by server,
+  and acknowledge it.  Client may invoke the "incident diagnose" rpc
+  to diagnose this incident to find the root causes.
 
-         *  If the root causes have been found, the client can resolve this
-            incident by invoking the 'incident resolve' rpc operation,
-            dispatching a ticket or using other functions (e.g. routing
-            calculation,configuration)
+* If the root causes have been found, the client can resolve this
+  incident by invoking the 'incident resolve' rpc operation,
+  dispatching a ticket or using other functions (e.g. routing
+  calculation,configuration)
 
 ## Interworking with Alarm Management
 
@@ -465,39 +465,39 @@ L3VPN service will be derived.
 ~~~~
 {:#alarm title="Interworking with alarm management" artwork-align="center"}
 
-         YANG model for the alarm management {{?RFC8632}} defines a standard
-         interface to manage the lifecycle of alarms.  Alarms represent the
-         undesirable state of network resources, alarm data model also defines
-         the root causes and impacted services fields, but there may lack
-         sufficient information to determine them in lower layer system
-         (mainly in devices level), so alarms do not always tell the status of
-         services or the root causes.  As described in {{?RFC8632}}, alarm
-         management act as a starting point for high-level fault management.
-         While incident management often works at the network level, so it's
-         possible to have enough information to perform correlation and
-         service impact analysis.  Alarms can work as one of data sources of
-         incident management and may be aggregated into few amount of
-         incidents by correlation analysis, network service impact and root
-         causes may be determined during incident process.
+YANG model for the alarm management {{?RFC8632}} defines a standard
+interface to manage the lifecycle of alarms.  Alarms represent the
+undesirable state of network resources, alarm data model also defines
+the root causes and impacted services fields, but there may lack
+sufficient information to determine them in lower layer system
+(mainly in devices level), so alarms do not always tell the status of
+services or the root causes.  As described in {{?RFC8632}}, alarm
+management act as a starting point for high-level fault management.
+While incident management often works at the network level, so it's
+possible to have enough information to perform correlation and
+service impact analysis.  Alarms can work as one of data sources of
+incident management and may be aggregated into few amount of
+incidents by correlation analysis, network service impact and root
+causes may be determined during incident process.
 
-         Incident also contains some related alarms,if needed users can query
-         the information of alarms by alarm management interface {{?RFC8632}}.
-         In some cases, e.g. cutover scenario, incident server may use alarm
-         management interface {{?RFC8632}} to shelve some alarms.
+Incident also contains some related alarms,if needed users can query
+the information of alarms by alarm management interface {{?RFC8632}}.
+In some cases, e.g. cutover scenario, incident server may use alarm
+management interface {{?RFC8632}} to shelve some alarms.
 
-         Alarm management may keep the original process, alarms are reported
-         from network to network controller or analytics and then reported to
-         upper layer system(e.g.  OSS).  Upper layer system may store these
-         alarms and provide the information for fault analysis (e.g. deeper
-         analysis based on incident).
+Alarm management may keep the original process, alarms are reported
+from network to network controller or analytics and then reported to
+upper layer system(e.g.  OSS).  Upper layer system may store these
+alarms and provide the information for fault analysis (e.g. deeper
+analysis based on incident).
 
-         Compared with alarm management, incident management provides not only
-         incident reporting but also diagnosis and resolution functions, it's
-         possible to support self-healing and may be helpful for single-domain
-         closed-loop control.
+Compared with alarm management, incident management provides not only
+incident reporting but also diagnosis and resolution functions, it's
+possible to support self-healing and may be helpful for single-domain
+closed-loop control.
 
-         Incident management is not a substitute for alarm management.
-         Instead, they can work together to implement fault management.
+Incident management is not a substitute for alarm management.
+Instead, they can work together to implement fault management.
 
 ## Interworking with SAIN
 ~~~~
@@ -526,39 +526,39 @@ L3VPN service will be derived.
 ~~~~
 {:#sain title="Interworking with SAIN" artwork-align="center"}
 
-         SAIN {{?RFC9417}} defines the architecture of network service assurance.
-         A network service can be decomposed into some sub-services, and some
-         metrics can be monitored for sub-services.  For example, a tunnel
-         service can be decomposed into some peer tunnel interface sub-
-         services and IP connectivity sub-service.  If some metrics are
-         evaluated to indicate unhealthy for specific sub-service, some
-         symptoms will be present.  Incident server may identify the incident
-         based on symptoms, and then report it to upper layer system.  So,
-         SAIN can be one way to identify incident, services, sub-services and
-         metrics can be preconfigured via APIs defined by service assurance
-         YANG model {{?RFC9418}} and incident will be reported if symptoms match
-         the condition of incident.
+SAIN {{?RFC9417}} defines the architecture of network service assurance.
+A network service can be decomposed into some sub-services, and some
+metrics can be monitored for sub-services.  For example, a tunnel
+service can be decomposed into some peer tunnel interface sub-
+services and IP connectivity sub-service.  If some metrics are
+evaluated to indicate unhealthy for specific sub-service, some
+symptoms will be present.  Incident server may identify the incident
+based on symptoms, and then report it to upper layer system.  So,
+SAIN can be one way to identify incident, services, sub-services and
+metrics can be preconfigured via APIs defined by service assurance
+YANG model {{?RFC9418}} and incident will be reported if symptoms match
+the condition of incident.
 
 ## Relationship with RFC8969
 
-         {{?RFC8969}} defines a framework for network automation using YANG, this
-         framework breaks down YANG modules into three layers, service layer,
-         network layer and device layer, and contains service deployment,
-         service optimization/assurance, and service diagnosis.  Incident
-         works at the network layer and aggregates alarms, metrics and other
-         information from device layer, it's helpful to provfide service
-         assurance.  And the incident diagnosis may be one way of service
-         diagnosis.
+{{?RFC8969}} defines a framework for network automation using YANG, this
+framework breaks down YANG modules into three layers, service layer,
+network layer and device layer, and contains service deployment,
+service optimization/assurance, and service diagnosis.  Incident
+works at the network layer and aggregates alarms, metrics and other
+information from device layer, it's helpful to provfide service
+assurance.  And the incident diagnosis may be one way of service
+diagnosis.
 
 ## Relationship with Trace Context
 
-         W3C defines a common trace context {{W3C-Trace-Context}} for distributed
-         system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
-         netconf extension for {{W3C-Trace-Context}} and
-         {{?I-D.quilbeuf-opsawg-configuration-tracing}} defines a mechanism for
-         configuration tracing.  If some errors occur when services are
-         deploying, it's very easy to identify these errors by distributed
-         system tracing, and an incident should be reported.
+W3C defines a common trace context {{W3C-Trace-Context}} for distributed
+system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
+netconf extension for {{W3C-Trace-Context}} and
+{{?I-D.quilbeuf-opsawg-configuration-tracing}} defines a mechanism for
+configuration tracing.  If some errors occur when services are
+deploying, it's very easy to identify these errors by distributed
+system tracing, and an incident should be reported.
 
 # Functional Interface Requirements between the Client and the Server
 
@@ -602,31 +602,31 @@ L3VPN service will be derived.
 ~~~~
 {:#ident title="Incident Identification" artwork-align="center"}
 
-            As described in {{ident}}, multiple alarms, metrics, or hybrid can be
-            aggregated into an incident after analysis.
+As described in {{ident}}, multiple alarms, metrics, or hybrid can be
+aggregated into an incident after analysis.
 
-            The incident management server MUST be capable of identifying
-            incidents.  Multiple alarms, metrics and other information are
-            reported to incident server, and the server must analyze it and find
-            out the correlations of them, if the correlation match the incident
-            rules, incident will be identified and reported to the client.
-            Service impact analysis will be performed if an indent is identified,
-            and the content of incident will be updated if impacted network
-            services are detected.
+The incident management server MUST be capable of identifying
+incidents.  Multiple alarms, metrics and other information are
+reported to incident server, and the server must analyze it and find
+out the correlations of them, if the correlation match the incident
+rules, incident will be identified and reported to the client.
+Service impact analysis will be performed if an indent is identified,
+and the content of incident will be updated if impacted network
+services are detected.
 
-            AI/ML may be used to identify the incident.  Expert system and online
-            learning can help AI to identify the correlation of alarms, metrics
-            and other information by time-base correlation algorithm, topo-based
-            correlation algorithm, etc.  For example, if interface is down, then
-            many protocol alarms will be reported, AI will think these alarms
-            have some correlations.  These correlations will be put into
-            knowledge base, and the incident will be identified faster according
-            to knowledge base next time.
+AI/ML may be used to identify the incident.  Expert system and online
+learning can help AI to identify the correlation of alarms, metrics
+and other information by time-base correlation algorithm, topo-based
+correlation algorithm, etc.  For example, if interface is down, then
+many protocol alarms will be reported, AI will think these alarms
+have some correlations.  These correlations will be put into
+knowledge base, and the incident will be identified faster according
+to knowledge base next time.
 
-            As mentioned above, SAIN is another way to implement incident
-            identification.  Observation timestamp defined in
-            {{?I-D.tgraf-yang-push-observation-time}} and trace context defined in
-            {{W3C-Trace-Context}} may be helpful for incident identification.
+As mentioned above, SAIN is another way to implement incident
+identification.  Observation timestamp defined in
+{{?I-D.tgraf-yang-push-observation-time}} and trace context defined in
+{{W3C-Trace-Context}} may be helpful for incident identification.
 
 ~~~~
                                  +----------------------+
@@ -656,11 +656,11 @@ L3VPN service will be derived.
 ~~~~
 {:#exam1 title="Example 1 of Incident Identification" artwork-align="center"}
 
-            As described in {{exam1}}, vpn a is deployed from PE1 to PE2, if a
-            interface of P1 is going down, many alarms are triggered, such as
-            interface down, igp down, and igp peer abnormal from P2.  These
-            alarms are aggregated and analyzed by controller, and the incident
-            'vpn unavailable' is triggered by the controller.
+As described in {{exam1}}, vpn a is deployed from PE1 to PE2, if a
+interface of P1 is going down, many alarms are triggered, such as
+interface down, igp down, and igp peer abnormal from P2.  These
+alarms are aggregated and analyzed by controller, and the incident
+'vpn unavailable' is triggered by the controller.
 
 
 ~~~~
@@ -692,23 +692,23 @@ L3VPN service will be derived.
 ~~~~
 {:#exam2 title="Example 2 of Incident Identification" artwork-align="center"}
 
-            As described in {{exam2}}, controller collect the network metrics from
-            network elements, it finds the packet loss of P1 and the path delay
-            of P2 exceed the thresholds, an incident 'VPN A degradation' may be
-            triggered after service impact analysis.
+As described in {{exam2}}, controller collect the network metrics from
+network elements, it finds the packet loss of P1 and the path delay
+of P2 exceed the thresholds, an incident 'VPN A degradation' may be
+triggered after service impact analysis.
 
 ## Incident Diagnosis
 
-            After an incident is reported to the incident management client, the
-            client MAY diagnose the incident to determine the root cause.  Some
-            diagnosis operations may affect the running network services.  The
-            client can choose not to perform that diagnosis operation after
-            determining the impact is not trivial.  The incident management
-            server can also perform self-diagnosis.  However, the self-diagnosis
-            MUST not affect the running network services.  Possible diagnosis
-            methods include link reachability detection, link quality detection,
-            alarm/log analysis, and short-term fine-grained monitoring of network
-            quality metrics, etc.
+After an incident is reported to the incident management client, the
+client MAY diagnose the incident to determine the root cause.  Some
+diagnosis operations may affect the running network services.  The
+client can choose not to perform that diagnosis operation after
+determining the impact is not trivial.  The incident management
+server can also perform self-diagnosis.  However, the self-diagnosis
+MUST not affect the running network services.  Possible diagnosis
+methods include link reachability detection, link quality detection,
+alarm/log analysis, and short-term fine-grained monitoring of network
+quality metrics, etc.
 
 ## Incident Resolution
 
@@ -734,54 +734,54 @@ L3VPN service will be derived.
 
 ## Identifying the Incident Instance
 
-               An incident ID is used as an identifier of an incident instance, if
-               an incident instance is identified, a new incident ID is created.
-               The incident ID MUST be unique in the whole system.
+An incident ID is used as an identifier of an incident instance, if
+an incident instance is identified, a new incident ID is created.
+The incident ID MUST be unique in the whole system.
 
 ## The Incident Lifecycle
 
 ### Incident Instance Lifecycle
 
-               From an incident instance perspective, an incident can have the
-               following lifecycle: 'raised', 'updated', 'cleared'.  When an
-               incident is generated, the status is 'raised'.  If the status changes
-               after the incident is generated, (for example, self-diagnosis,
-               diagnosis command issued by the client, or any other condition causes
-               the status to change but does not reach the 'cleared' level.) , the
-               status changes to 'updated'.  When an incident is successfully
-               resolved, the status changes to 'cleared'.
+From an incident instance perspective, an incident can have the
+following lifecycle: 'raised', 'updated', 'cleared'.  When an
+incident is generated, the status is 'raised'.  If the status changes
+after the incident is generated, (for example, self-diagnosis,
+diagnosis command issued by the client, or any other condition causes
+the status to change but does not reach the 'cleared' level.) , the
+status changes to 'updated'.  When an incident is successfully
+resolved, the status changes to 'cleared'.
 
 ### Operator Incident Lifecycle
 
-               From an operator perspective, the lifecycle of an incident instance
-               includes 'acknowledged', 'diagnosed', and 'resolved'.  When an
-               incident instance is generated, the operator SHOULD acknowledge the
-               incident.  And then the operator attempts to diagnose the incident
-               (for example, find out the root cause and affected components).
-               Diagnosis is not mandatory.  If the root cause and affected
-               components are known when the incident is generated, diagnosis is not
-               required.  After locating the root cause and affected components,
-               operator can try to resolve the incident.
+From an operator perspective, the lifecycle of an incident instance
+includes 'acknowledged', 'diagnosed', and 'resolved'.  When an
+incident instance is generated, the operator SHOULD acknowledge the
+incident.  And then the operator attempts to diagnose the incident
+(for example, find out the root cause and affected components).
+Diagnosis is not mandatory.  If the root cause and affected
+components are known when the incident is generated, diagnosis is not
+required.  After locating the root cause and affected components,
+operator can try to resolve the incident.
 
 # Incident Data Model Design
 
 ## Overview
 
-                  There are two YANG modules in the model.  The first module, "ietf-
-                  incident-type", provides common definitions such as incident domain,
-                  incident category, incident priority.  The second module, "ietf-
-                  incident", defines technology independent abstraction of network
-                  incident construct for alarm, log, performance metrics, etc.  The
-                  information reported in the incident include Root cause,
-                  priority,impact, suggestion, etc.  At the top of "ietf-incident"
-                  module is the Network Incident.  Network incident is represented as a
-                  list and indexed by "incident-id".  Each Network Incident is
-                  associated with a service instance, domain and sources.  Under
-                  sources, there is one or more sources.  Each source corresponds to
-                  node defined in the network topology model and network resource in
-                  the network device,e.g., interface.  In addition, "ietf-incident"
-                  support one general notification to report incident state changes and
-                  three rpcs to manage the network incidents.
+There are two YANG modules in the model.  The first module, "ietf-
+incident-type", provides common definitions such as incident domain,
+incident category, incident priority.  The second module, "ietf-
+incident", defines technology independent abstraction of network
+incident construct for alarm, log, performance metrics, etc.  The
+information reported in the incident include Root cause,
+priority,impact, suggestion, etc.  At the top of "ietf-incident"
+module is the Network Incident.  Network incident is represented as a
+list and indexed by "incident-id".  Each Network Incident is
+associated with a service instance, domain and sources.  Under
+sources, there is one or more sources.  Each source corresponds to
+node defined in the network topology model and network resource in
+the network device,e.g., interface.  In addition, "ietf-incident"
+support one general notification to report incident state changes and
+three rpcs to manage the network incidents.
 
 ~~~~
                   module: ietf-incident
@@ -880,15 +880,15 @@ L3VPN service will be derived.
                          +--ro time? yang:date-and-time
 ~~~~
 
-                  A general notification, incident-notification, is provided here.
-                  When an incident instance is identified, the notification will be
-                  sent.  After a notification is generated, if the incident management
-                  server performs self diagnosis or the client uses the interfaces
-                  provided by the incident management server to deliver diagnosis and
-                  resolution actions, the notification update behavior is triggered,
-                  for example, the root cause objects and affected objects are updated.
-                  When an incident is successfully resolved, the status of the incident
-                  would be set to 'cleared'.
+A general notification, incident-notification, is provided here.
+When an incident instance is identified, the notification will be
+sent.  After a notification is generated, if the incident management
+server performs self diagnosis or the client uses the interfaces
+provided by the incident management server to deliver diagnosis and
+resolution actions, the notification update behavior is triggered,
+for example, the root cause objects and affected objects are updated.
+When an incident is successfully resolved, the status of the incident
+would be set to 'cleared'.
 
 ## Incident Acknowledge
 
@@ -914,14 +914,14 @@ L3VPN service will be derived.
                       |  |  +---w incident-id*
                       |  |          -> /inc:incidents/inc:incident/inc:incident-id
 ~~~~
-                  After an incident is generated, incident diagnose rpc can be used to
-                  diagnose the incident and locate the root causes.  Diagnosis can be
-                  performed on some detection tasks, such as BFD detection, flow
-                  detection, telemetry collection, short-term threshold alarm,
-                  configuration error check, or test packet injection.
+After an incident is generated, incident diagnose rpc can be used to
+diagnose the incident and locate the root causes.  Diagnosis can be
+performed on some detection tasks, such as BFD detection, flow
+detection, telemetry collection, short-term threshold alarm,
+configuration error check, or test packet injection.
 
-                  After the diagnosis is performed, a incident update notification will
-                  be triggered to report the latest status of the incident.
+After the diagnosis is performed, a incident update notification will
+be triggered to report the latest status of the incident.
 
 ## Incident Resolution
 
@@ -932,16 +932,16 @@ L3VPN service will be derived.
                          |          -> /inc:incidents/inc:incident/inc:incident-id
 ~~~~
 
-                  After the root causes and impacts are determined, incident-resolve
-                  rpc can be used to resolve the incident (if the server can resolve
-                  it).  How to resolve an incident instance is out of the scope of this
-                  document.
+After the root causes and impacts are determined, incident-resolve
+rpc can be used to resolve the incident (if the server can resolve
+it).  How to resolve an incident instance is out of the scope of this
+document.
 
-                  Incident resolve rpc allows multiple incident instances to be
-                  resolved at a time.  If an incident instance is successfully
-                  resolved, a notification will be triggered to update the incident
-                  status to 'cleared'.  If the incident content is changed during this
-                  process, a notification update will be triggered.
+Incident resolve rpc allows multiple incident instances to be
+resolved at a time.  If an incident instance is successfully
+resolved, a notification will be triggered to update the incident
+status to 'cleared'.  If the incident content is changed during this
+process, a notification update will be triggered.
 
 # Incident Management YANG Module
 
@@ -998,23 +998,23 @@ operations and their sensitivity/vulnerability:
 
 ## The "IETF XML" Registry
 
-   This document registers one XML namespace URN in the 'IETF XML
-   registry', following the format defined in {{!RFC3688}}.
+This document registers one XML namespace URN in the 'IETF XML
+registry', following the format defined in {{!RFC3688}}.
 
-   URI: urn:ietf:params:xml:ns:yang:ietf-incident
-   Registrant Contact: The IESG.
-   XML: N/A, the requested URIs are XML namespaces.
+URI: urn:ietf:params:xml:ns:yang:ietf-incident
+Registrant Contact: The IESG.
+XML: N/A, the requested URIs are XML namespaces.
 
 ## The "YANG Module Names" Registry
 
-   This document registers one module name in the 'YANG Module Names'
-   registry, defined in {{!RFC6020}}.
+This document registers one module name in the 'YANG Module Names'
+registry, defined in {{!RFC6020}}.
 
-   name: ietf-incident
-   prefix: inc
-   namespace: urn:ietf:params:xml:ns:yang:ietf-incident
-   RFC: XXXX
-   // RFC Ed.: replace XXXX and remove this comment
+name: ietf-incident
+prefix: inc
+namespace: urn:ietf:params:xml:ns:yang:ietf-incident
+RFC: XXXX
+// RFC Ed.: replace XXXX and remove this comment
 
 # Acknowledgments
 {:numbered="false"}
