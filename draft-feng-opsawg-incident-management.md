@@ -277,7 +277,7 @@ Incident management client:  An entity which can manage incidents.
       efficiency of network troubleshooting can be largely improved. which
       address the pain point of traditional trouble ticket dispatching.
 
-   ##  Incident Derivation from L3VPN services Unavailability
+##  Incident Derivation from L3VPN services Unavailability
 
       The service attachment points defined in {{?RFC9408}} represent the
       network reference points where network services can be delivered to
@@ -305,7 +305,7 @@ Incident management client:  An entity which can manage incidents.
       is violated, a specific network incident, associated with,let's say
       L3VPN service will be derived.
 
-   ##  Multi-layer Fault Demarcation
+##  Multi-layer Fault Demarcation
 
       When a fault occurs in a network that contains both packet-layer
       devices and optical-layer devices, it may cause correlative faults in
@@ -342,7 +342,7 @@ Incident management client:  An entity which can manage incidents.
       engineers to perform relative maintenance actions (e.g., splice
       fiber) based on the root cause.
 
-   ##  Security events Automated Noise reduction based on Situation awareness
+##  Security events Automated Noise reduction based on Situation awareness
 
       In the continuous data driven monitoring, tools used by the Security
       Operation Center (SoC) scan the network 24/7 to flag any
