@@ -471,7 +471,7 @@ Incident management client:  An entity which can manage incidents.
             |                             |
             +-----------------------------+
 ~~~~
-{:#alarm title="Interworking with alarm management" artwork-align="center"}     
+{:#alarm title="Interworking with alarm management" artwork-align="center"}
 
          YANG model for the alarm management {{?RFC8632}} defines a standard
          interface to manage the lifecycle of alarms.  Alarms represent the
@@ -508,7 +508,7 @@ Incident management client:  An entity which can manage incidents.
          Instead, they can work together to implement fault management.
 
 ##  Interworking with SAIN
-~~~~    
+~~~~
                    +----------------+
                    | incident client|
                    +----------------+
@@ -531,8 +531,8 @@ Incident management client:  An entity which can manage incidents.
              |                           |
              +---------------------------+
 
-~~~~  
-{:#sain title="Interworking with SAIN" artwork-align="center"}  
+~~~~
+{:#sain title="Interworking with SAIN" artwork-align="center"}
 
          SAIN {{?RFC9417}} defines the architecture of network service assurance.
          A network service can be decomposed into some sub-services, and some
@@ -540,7 +540,7 @@ Incident management client:  An entity which can manage incidents.
          service can be decomposed into some peer tunnel interface sub-
          services and IP connectivity sub-service.  If some metrics are
          evaluated to indicate unhealthy for specific sub-service, some
-         symptoms will be present.  Incident server may identify the incident    
+         symptoms will be present.  Incident server may identify the incident
          based on symptoms, and then report it to upper layer system.  So,
          SAIN can be one way to identify incident, services, sub-services and
          metrics can be preconfigured via APIs defined by service assurance
@@ -572,7 +572,7 @@ Incident management client:  An entity which can manage incidents.
 
 ## Incident Identification
 
-~~~~    
+~~~~
                     +--------------+
                  +--|  Incident1   |
                  |  +--+-----------+
@@ -608,7 +608,7 @@ Incident management client:  An entity which can manage incidents.
                        +--| metric1   |
                           +-----------+
 ~~~~
-{:#ident title="Incident Identification" artwork-align="center"}           
+{:#ident title="Incident Identification" artwork-align="center"}
 
             As described in {{ident}}, multiple alarms, metrics, or hybrid can be
             aggregated into an incident after analysis.
@@ -636,7 +636,7 @@ Incident management client:  An entity which can manage incidents.
             {{?I-D.tgraf-yang-push-observation-time}} and trace context defined in
             {{W3C-Trace-Context}} may be helpful for incident identification.
 
-~~~~       
+~~~~
                                  +----------------------+
                                  |                      |
                                  |     Orchestrator     |
@@ -661,8 +661,8 @@ Incident management client:  An entity which can manage incidents.
                 |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
                 |    +---+       +---+         +---+        +---+   |
                 +---------------------------------------------------+
-~~~~      
-{:#exam1 title="Example 1 of Incident Identification" artwork-align="center"}              
+~~~~
+{:#exam1 title="Example 1 of Incident Identification" artwork-align="center"}     
 
             As described in {{exam1}}, vpn a is deployed from PE1 to PE2, if a
             interface of P1 is going down, many alarms are triggered, such as
@@ -697,8 +697,8 @@ Incident management client:  An entity which can manage incidents.
                |   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
                |    +---+       +---+         +---+        +---+    |
                +----------------------------------------------------+
-~~~~ 
-{:#exam2 title="Example 2 of Incident Identification" artwork-align="center"}         
+~~~~
+{:#exam2 title="Example 2 of Incident Identification" artwork-align="center"}    
 
             As described in {{exam2}}, controller collect the network metrics from
             network elements, it finds the packet loss of P1 and the path delay
@@ -716,7 +716,7 @@ Incident management client:  An entity which can manage incidents.
             MUST not affect the running network services.  Possible diagnosis
             methods include link reachability detection, link quality detection,
             alarm/log analysis, and short-term fine-grained monitoring of network
-            quality metrics, etc.   
+            quality metrics, etc.
 
 ## Incident Resolution
 
@@ -757,7 +757,7 @@ Incident management client:  An entity which can manage incidents.
                diagnosis command issued by the client, or any other condition causes
                the status to change but does not reach the 'cleared' level.) , the
                status changes to 'updated'.  When an incident is successfully
-               resolved, the status changes to 'cleared'.        
+               resolved, the status changes to 'cleared'.
 
 ###  Operator Incident Lifecycle
 
@@ -791,7 +791,7 @@ Incident management client:  An entity which can manage incidents.
                   support one general notification to report incident state changes and
                   three rpcs to manage the network incidents.
 
-~~~~~           
+~~~~
                   module: ietf-incident
                     +--ro incidents
                        +--ro incident* [incident-id]
@@ -837,7 +837,7 @@ Incident management client:  An entity which can manage incidents.
 
 ## Incident Notifications
 
-~~~~             
+~~~~
                     notifications:
                       +---n incident-notification
                          +--ro incident-id?
@@ -886,7 +886,7 @@ Incident management client:  An entity which can manage incidents.
                          |        +--:(KPI)
                          |        +--:(unknown)
                          +--ro time? yang:date-and-time
-~~~~         
+~~~~       
 
                   A general notification, incident-notification, is provided here.
                   When an incident instance is identified, the notification will be
@@ -900,12 +900,12 @@ Incident management client:  An entity which can manage incidents.
 
 ## Incident Acknowledge
 
-~~~~         
+~~~~       
                       +---x incident-acknowledge
                       |  +---w input
                       |  |  +---w incident-id*
                       |  |          -> /inc:incidents/inc:incident/inc:incident-id
-~~~~              
+~~~~        
                   After an incident is generated, updated, or cleared, (In some
                   scenarios where automatic diagnosis and resolution are supported, the
                   status of an incident may be updated multiple times or even
@@ -916,12 +916,12 @@ Incident management client:  An entity which can manage incidents.
 
 ##  Incident Diagnose
 
-~~~~          
+~~~~  
                       +---x incident-diagnose
                       |  +---w input
                       |  |  +---w incident-id*
                       |  |          -> /inc:incidents/inc:incident/inc:incident-id
-~~~~         
+~~~~      
                   After an incident is generated, incident diagnose rpc can be used to
                   diagnose the incident and locate the root causes.  Diagnosis can be
                   performed on some detection tasks, such as BFD detection, flow
@@ -933,12 +933,12 @@ Incident management client:  An entity which can manage incidents.
 
 ## Incident Resolution
 
-~~~~            
+~~~~    
                       +---x incident-resolve
                          +---w input
                          |  +---w incident-id*
                          |          -> /inc:incidents/inc:incident/inc:incident-id
-~~~~             
+~~~~   
 
                   After the root causes and impacts are determined, incident-resolve
                   rpc can be used to resolve the incident (if the server can resolve
