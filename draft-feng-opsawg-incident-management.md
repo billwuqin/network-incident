@@ -169,7 +169,7 @@ be used at specific layer in specific domain but also can be used to
 span across layer for multi-layer network troubleshooting.  A network
 incident refers to an unexpected interruption of a network service,
 degradation of a network service quality, or sub-health of a network
-service {{TMF724A}}.  Different data sources including alarms, metrics
+service {{?TMF724A}}.  Different data sources including alarms, metrics
 and other anomaly information can be aggregated into few amount of
 incidents irrespective layer by correlation analysis and the service
 impact analysis.  For example, the protocols related to the interface
@@ -221,13 +221,13 @@ The following terms are defined in this document:
 
 Incident:  An unexpected interruption of a network service,
    degradation of network service quality, or sub-health of a network
-   service {{TMF724A}}.
+   service {{?TMF724A}}.
 
 
 Problem:  The cause of one or more incidents.  The cause is not
    usually known when a problem record is created, and the problem
    management process is responsible for further investigation
-   {{TMF724A}}.
+   {{?TMF724A}}.
 
 Incident management:  Lifecycle management of incidents including
    incident identification, reporting, acknowledge, diagnosis, and
@@ -355,7 +355,7 @@ Incident management client:  An entity which can manage incidents.
       can also distract teams from real incidents.
 
       With the help of the incident management, BERT(Bidirectional Encoder
-      Representations from Transformers) {{BERT}} classifier can be adopted to
+      Representations from Transformers) {{?BERT}} classifier can be adopted to
       analyses the suspicious activity and understands the significance of
       the gathered data (through both facts and inferences) and help
       operation and maintenance engineers focus on handling important
@@ -552,9 +552,9 @@ Incident management client:  An entity which can manage incidents.
 
 ##  Relationship with Trace Context
 
-         W3C defines a common trace context{{W3C-Trace-Context}} for distributed
+         W3C defines a common trace context{{?W3C-Trace-Context}} for distributed
          system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
-         netconf extension for {{W3C-Trace-Context}} and
+         netconf extension for {{?W3C-Trace-Context}} and
          {{?I-D.quilbeuf-opsawg-configuration-tracing}} defines a mechanism for
          configuration tracing.  If some errors occur when services are
          deploying, it's very easy to identify these errors by distributed
@@ -626,7 +626,7 @@ Incident management client:  An entity which can manage incidents.
             As mentioned above, SAIN is another way to implement incident
             identification.  Observation timestamp defined in
             {{?I-D.tgraf-yang-push-observation-time}} and trace context defined in
-            {{W3C-Trace-Context}} may be helpful for incident identification.
+            {{?W3C-Trace-Context}} may be helpful for incident identification.
 
 ~~~~
                                  +----------------------+
@@ -1016,9 +1016,6 @@ operations and their sensitivity/vulnerability:
    RFC: XXXX
    // RFC Ed.: replace XXXX and remove this comment
 
-
---- back
-
 # Acknowledgments
 {:numbered="false"}
 
@@ -1026,3 +1023,64 @@ The authors would like to thank Mohamed Boucadair, Robert Wilton,
 Benoit Claise, Oscar Gonzalez de Dios, Adrian Farrel, Mahesh
 Jethanandani, Balazs Lengyel, Bo Wu, Qiufang Ma, Haomian Zheng,
 YuanYao for their valuable comments and great input to this work.
+
+--- back
+
+# Changes between Revisions
+   v03 - v04
+
+   *  Update incident defintion based on TMF incident API profile
+      specification.
+
+   *  Update use case on Multi-layer Fault Demarcation based on side
+      meeting discussion and IETF 119 session discussion.
+
+   *  Update section 5.1 to explain how network incident is generated
+      based on other factors.
+
+   *  Add one new use cases on Security Events noise reduction based on
+      Situation Awareness.
+
+   *  Other Editorial changes.
+
+   v02 - v03
+
+   *  Add one new use cases on Incident Generation.
+
+   *  Add reference to Precision Availability Metric defined in IPPM PAM
+      WG document.
+
+   v01 - v02
+
+   *  A few Editorial change to YANG data models in section 8.
+
+   *  Add some text to the model design overview.
+
+   *  Revise sample use cases section to focus on two key use cases.
+
+   *  Motivation and goal clarification in the introduction section.
+
+   v00 - v01
+
+   *  Modify the introduction.
+
+   *  Rename incident agent to incident server.
+
+   *  Add the interworking with alarm management.
+
+   *  Add the interworking with SAIN.
+
+   *  Add the relationship with RFC8969.
+
+   *  Add the relationship with observation timestamp and trace context.
+
+   *  Clarify the incident identification process.
+
+   *  Modify the work flow of incident diagnosis and resolution.
+
+   *  Remove identities and typedefs from ietf-incident YANG module, and
+      create a new YANG module called ietf-incident-types.
+
+   *  Modify ietf-incident YANG module, for example, modify incident-
+      diagnose rpc and incident-resolve rpc.
+
