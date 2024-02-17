@@ -231,59 +231,59 @@ Table of Contents
 
 3.1.  Incident-Based Trouble Tickets dispatching
 
-    Traditionally, the dispatching of trouble tickets is mostly based on
-    alarms data analysis and need to involve operators' maintenance
-    engineers.  These operators' maintenance engineers are able to
-    monitor and detect that alarms at both end devices of specific
-    network tunnel or at both optical layer and IP layer which are
-    associated with the same network fault.  Therefore, they can
-    correlate these alarms to the same trouble ticket, which is in the
-    low automation.  If there are more alarms, then the human costs for
-    network maintenance are increased accordingly.
+   Traditionally, the dispatching of trouble tickets is mostly based on
+   alarms data analysis and need to involve operators' maintenance
+   engineers.  These operators' maintenance engineers are able to
+   monitor and detect that alarms at both end devices of specific
+   network tunnel or at both optical layer and IP layer which are
+   associated with the same network fault.  Therefore, they can
+   correlate these alarms to the same trouble ticket, which is in the
+   low automation.  If there are more alarms, then the human costs for
+   network maintenance are increased accordingly.
 
-    Some operators preconfigure whitelist and adopt some coarse
-    granularity data correlation rules for the alarm management.  It
-    seems to improve fault management automation.  However, some trouble
-    tickets could be missed if the filtering conditions are too strict.
-    If the filtering conditions are not strict, it might end up with
-    multiple trouble tickets being dispatched to the same network fault.
+   Some operators preconfigure whitelist and adopt some coarse
+   granularity data correlation rules for the alarm management.  It
+   seems to improve fault management automation.  However, some trouble
+   tickets could be missed if the filtering conditions are too strict.
+   If the filtering conditions are not strict, it might end up with
+   multiple trouble tickets being dispatched to the same network fault.
 
-    It is hard to achieve a perfect balance between the network
-    management automation and duplicated trouble tickets under the
-    traditional working situations.  However, with the help of the
-    incident management, massive alarms can be aggregated into a few
-    network incidents based on service impact analysis, the number of
-    trouble tickets will be greatly reduced.  At the same time, the
-    efficiency of network troubleshooting can be largely improved. which
-    address the pain point of traditional trouble ticket dispatching.
+   It is hard to achieve a perfect balance between the network
+   management automation and duplicated trouble tickets under the
+   traditional working situations.  However, with the help of the
+   incident management, massive alarms can be aggregated into a few
+   network incidents based on service impact analysis, the number of
+   trouble tickets will be greatly reduced.  At the same time, the
+   efficiency of network troubleshooting can be largely improved. which
+   address the pain point of traditional trouble ticket dispatching.
 
 3.2.  Incident Derivation from L3VPN services Unavailability
 
-  The service attachment points defined in {{RFC9408}} represent the
-  network reference points where network services can be delivered to
-  customers.
+   The service attachment points defined in [RFC9408] represent the
+   network reference points where network services can be delivered to
+   customers.
 
-  SLOs can be used to characterize the ability of a particular set of
-  nodes to communicate according to certain measurable expectations
-  {{I-D.ietf-ippm-pam}}.  For example, an SLA might state that any given
-  SLO applies to at least a certain percentage of packets, allowing for
-  a certain level of packet loss and exceeding packet delay threshold
-  to take place.  An SLA might establish a multi-tiered SLO of end to
-  end latency as follows:
+   SLOs can be used to characterize the ability of a particular set of
+   nodes to communicate according to certain measurable expectations
+   [I-D.ietf-ippm-pam].  For example, an SLA might state that any given
+   SLO applies to at least a certain percentage of packets, allowing for
+   a certain level of packet loss and exceeding packet delay threshold
+   to take place.  An SLA might establish a multi-tiered SLO of end to
+   end latency as follows:
 
-  *  not to exceed 30 ms for any packet;
+   *  not to exceed 30 ms for any packet;
 
-  *  not to exceed 25 ms for 99.999% of packets;
+   *  not to exceed 25 ms for 99.999% of packets;
 
-  *  not to exceed 20 ms for 99% of packets.
+   *  not to exceed 20 ms for 99% of packets.
 
-  This SLA information can be bound with two or multiple service
-  attachment point defined in {{RFC9408}}, so that the service
-  orchestration layer can use these interfaces to commit the delivery
-  of a service on specific point to point service topology or point to
-  multi-point topology.  Upon specific levels of a threshold of an SLO
-  is violated, a specific network incident, associated with,let's say
-  L3VPN service will be derived.
+   This SLA information can be bound with two or multiple service
+   attachment point defined in [RFC9408], so that the service
+   orchestration layer can use these interfaces to commit the delivery
+   of a service on specific point to point service topology or point to
+   multi-point topology.  Upon specific levels of a threshold of an SLO
+   is violated, a specific network incident, associated with,let's say
+   L3VPN service will be derived.
 
 3.3.  Multi-layer Fault Demarcation
 

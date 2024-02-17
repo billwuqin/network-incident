@@ -1419,35 +1419,29 @@ capitals, as shown here.<a href="#section-2-2" class="pilcrow">¶</a></p>
         <h3 id="name-incident-based-trouble-tick">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-incident-based-trouble-tick" class="section-name selfRef">Incident-Based Trouble Tickets dispatching</a>
         </h3>
-<div class="alignLeft art-text artwork" id="section-3.1-1">
-<pre>
-  Traditionally, the dispatching of trouble tickets is mostly based on
-  alarms data analysis and need to involve operators' maintenance
-  engineers.  These operators' maintenance engineers are able to
-  monitor and detect that alarms at both end devices of specific
-  network tunnel or at both optical layer and IP layer which are
-  associated with the same network fault.  Therefore, they can
-  correlate these alarms to the same trouble ticket, which is in the
-  low automation.  If there are more alarms, then the human costs for
-  network maintenance are increased accordingly.
-
-  Some operators preconfigure whitelist and adopt some coarse
-  granularity data correlation rules for the alarm management.  It
-  seems to improve fault management automation.  However, some trouble
-  tickets could be missed if the filtering conditions are too strict.
-  If the filtering conditions are not strict, it might end up with
-  multiple trouble tickets being dispatched to the same network fault.
-
-  It is hard to achieve a perfect balance between the network
-  management automation and duplicated trouble tickets under the
-  traditional working situations.  However, with the help of the
-  incident management, massive alarms can be aggregated into a few
-  network incidents based on service impact analysis, the number of
-  trouble tickets will be greatly reduced.  At the same time, the
-  efficiency of network troubleshooting can be largely improved. which
-  address the pain point of traditional trouble ticket dispatching.
-</pre><a href="#section-3.1-1" class="pilcrow">¶</a>
-</div>
+<p id="section-3.1-1">Traditionally, the dispatching of trouble tickets is mostly based on
+alarms data analysis and need to involve operators' maintenance
+engineers.  These operators' maintenance engineers are able to
+monitor and detect that alarms at both end devices of specific
+network tunnel or at both optical layer and IP layer which are
+associated with the same network fault.  Therefore, they can
+correlate these alarms to the same trouble ticket, which is in the
+low automation.  If there are more alarms, then the human costs for
+network maintenance are increased accordingly.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">Some operators preconfigure whitelist and adopt some coarse
+granularity data correlation rules for the alarm management.  It
+seems to improve fault management automation.  However, some trouble
+tickets could be missed if the filtering conditions are too strict.
+If the filtering conditions are not strict, it might end up with
+multiple trouble tickets being dispatched to the same network fault.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<p id="section-3.1-3">It is hard to achieve a perfect balance between the network
+management automation and duplicated trouble tickets under the
+traditional working situations.  However, with the help of the
+incident management, massive alarms can be aggregated into a few
+network incidents based on service impact analysis, the number of
+trouble tickets will be greatly reduced.  At the same time, the
+efficiency of network troubleshooting can be largely improved. which
+address the pain point of traditional trouble ticket dispatching.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="incident-derivation-from-l3vpn-services-unavailability">
@@ -1455,35 +1449,34 @@ capitals, as shown here.<a href="#section-2-2" class="pilcrow">¶</a></p>
         <h3 id="name-incident-derivation-from-l3">
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-incident-derivation-from-l3" class="section-name selfRef">Incident Derivation from L3VPN services Unavailability</a>
         </h3>
-<div class="alignLeft art-text artwork" id="section-3.2-1">
-<pre>
-  The service attachment points defined in {{RFC9408}} represent the
-  network reference points where network services can be delivered to
-  customers.
-
-  SLOs can be used to characterize the ability of a particular set of
-  nodes to communicate according to certain measurable expectations
-  {{I-D.ietf-ippm-pam}}.  For example, an SLA might state that any given
-  SLO applies to at least a certain percentage of packets, allowing for
-  a certain level of packet loss and exceeding packet delay threshold
-  to take place.  An SLA might establish a multi-tiered SLO of end to
-  end latency as follows:
-
-  *  not to exceed 30 ms for any packet;
-
-  *  not to exceed 25 ms for 99.999% of packets;
-
-  *  not to exceed 20 ms for 99% of packets.
-
-  This SLA information can be bound with two or multiple service
-  attachment point defined in {{RFC9408}}, so that the service
-  orchestration layer can use these interfaces to commit the delivery
-  of a service on specific point to point service topology or point to
-  multi-point topology.  Upon specific levels of a threshold of an SLO
-  is violated, a specific network incident, associated with,let's say
-  L3VPN service will be derived.
-</pre><a href="#section-3.2-1" class="pilcrow">¶</a>
-</div>
+<p id="section-3.2-1">The service attachment points defined in <span>[<a href="#RFC9408" class="cite xref">RFC9408</a>]</span> represent the
+network reference points where network services can be delivered to
+customers.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-2">SLOs can be used to characterize the ability of a particular set of
+nodes to communicate according to certain measurable expectations
+<span>[<a href="#I-D.ietf-ippm-pam" class="cite xref">I-D.ietf-ippm-pam</a>]</span>.  For example, an SLA might state that any given
+SLO applies to at least a certain percentage of packets, allowing for
+a certain level of packet loss and exceeding packet delay threshold
+to take place.  An SLA might establish a multi-tiered SLO of end to
+end latency as follows:<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.2-3.1">
+            <p id="section-3.2-3.1.1">not to exceed 30 ms for any packet;<a href="#section-3.2-3.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-3.2">
+            <p id="section-3.2-3.2.1">not to exceed 25 ms for 99.999% of packets;<a href="#section-3.2-3.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.2-3.3">
+            <p id="section-3.2-3.3.1">not to exceed 20 ms for 99% of packets.<a href="#section-3.2-3.3.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.2-4">This SLA information can be bound with two or multiple service
+attachment point defined in <span>[<a href="#RFC9408" class="cite xref">RFC9408</a>]</span>, so that the service
+orchestration layer can use these interfaces to commit the delivery
+of a service on specific point to point service topology or point to
+multi-point topology.  Upon specific levels of a threshold of an SLO
+is violated, a specific network incident, associated with,let's say
+L3VPN service will be derived.<a href="#section-3.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="multi-layer-fault-demarcation">
