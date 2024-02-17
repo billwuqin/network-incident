@@ -147,7 +147,7 @@ W3C-Trace-Context:
    orgnization: W3C
    target: https://www.w3.org/TR/2021/REC-trace-context-
    1-20211123/
-   date: 23 November 2021
+   date: 2021
 
 --- abstract
 
