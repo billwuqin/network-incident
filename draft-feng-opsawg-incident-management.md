@@ -355,7 +355,7 @@ positives.  False positives not only drain time and resources, but
 can also distract teams from real incidents.
 
 With the help of the incident management, BERT(Bidirectional Encoder
-Representations from Transformers) {{?BERT}} classifier can be adopted to
+Representations from Transformers) {{BERT}} classifier can be adopted to
 analyses the suspicious activity and understands the significance of
 the gathered data (through both facts and inferences) and help
 operation and maintenance engineers focus on handling important
