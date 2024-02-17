@@ -4,7 +4,7 @@ abbrev: "Network Incident Management"
 category: std
 
 docname: draft-feng-opsawg-incident-management-latest
-submissiontype: IETF  
+submissiontype: IETF
 number:
 date:
 consensus: true
@@ -662,7 +662,7 @@ Incident management client:  An entity which can manage incidents.
                 |    +---+       +---+         +---+        +---+   |
                 +---------------------------------------------------+
 ~~~~
-{:#exam1 title="Example 1 of Incident Identification" artwork-align="center"}     
+{:#exam1 title="Example 1 of Incident Identification" artwork-align="center"}
 
             As described in {{exam1}}, vpn a is deployed from PE1 to PE2, if a
             interface of P1 is going down, many alarms are triggered, such as
@@ -671,7 +671,7 @@ Incident management client:  An entity which can manage incidents.
             'vpn unavailable' is triggered by the controller.
 
 
-~~~~  
+~~~~
 
                                 +----------------------+
                                 |                      |
@@ -698,7 +698,7 @@ Incident management client:  An entity which can manage incidents.
                |    +---+       +---+         +---+        +---+    |
                +----------------------------------------------------+
 ~~~~
-{:#exam2 title="Example 2 of Incident Identification" artwork-align="center"}    
+{:#exam2 title="Example 2 of Incident Identification" artwork-align="center"}
 
             As described in {{exam2}}, controller collect the network metrics from
             network elements, it finds the packet loss of P1 and the path delay
@@ -886,7 +886,7 @@ Incident management client:  An entity which can manage incidents.
                          |        +--:(KPI)
                          |        +--:(unknown)
                          +--ro time? yang:date-and-time
-~~~~       
+~~~~
 
                   A general notification, incident-notification, is provided here.
                   When an incident instance is identified, the notification will be
@@ -900,12 +900,12 @@ Incident management client:  An entity which can manage incidents.
 
 ## Incident Acknowledge
 
-~~~~       
+~~~~
                       +---x incident-acknowledge
                       |  +---w input
                       |  |  +---w incident-id*
                       |  |          -> /inc:incidents/inc:incident/inc:incident-id
-~~~~        
+~~~~
                   After an incident is generated, updated, or cleared, (In some
                   scenarios where automatic diagnosis and resolution are supported, the
                   status of an incident may be updated multiple times or even
@@ -916,12 +916,12 @@ Incident management client:  An entity which can manage incidents.
 
 ##  Incident Diagnose
 
-~~~~  
+~~~~
                       +---x incident-diagnose
                       |  +---w input
                       |  |  +---w incident-id*
                       |  |          -> /inc:incidents/inc:incident/inc:incident-id
-~~~~      
+~~~~
                   After an incident is generated, incident diagnose rpc can be used to
                   diagnose the incident and locate the root causes.  Diagnosis can be
                   performed on some detection tasks, such as BFD detection, flow
@@ -933,12 +933,12 @@ Incident management client:  An entity which can manage incidents.
 
 ## Incident Resolution
 
-~~~~    
+~~~~
                       +---x incident-resolve
                          +---w input
                          |  +---w incident-id*
                          |          -> /inc:incidents/inc:incident/inc:incident-id
-~~~~   
+~~~~
 
                   After the root causes and impacts are determined, incident-resolve
                   rpc can be used to resolve the incident (if the server can resolve
