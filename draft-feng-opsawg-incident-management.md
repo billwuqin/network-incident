@@ -24,11 +24,11 @@ venue:
   latest: https://billwuqin.github.io/network-incident/draft-feng-opsawg-network-incident.html
 
 author:
-  -
+-
     fullname: Chong Feng
     role: editor
     email: fengchonglly@gmail.com
- -
+-
     fullname: Tong Hu
     organization: China Mobile (Hangzhou) Information Technology Co., Ltd
     street: Building A01, 1600 Yuhangtang Road, Wuchang Street, Yuhang District
@@ -55,51 +55,51 @@ author:
     city: Nanjing
     country: China
     email: bill.wu@huawei.com
- -
+-
     fullname: Chaode Yu
     organization: Huawei
     email: yuchaode@huawei.com
- -
+-
     fullname: Nigel Davis
-    orgnization: Ciena
+    organization: Ciena
     email: ndavis@ciena.com
 
 contributor:
-  -
+-
     fullname: MingShuang Jin
-    orgnization: Huawei Technologies
+    organization: Huawei Technologies
     email: jinmingshuang@huawei.com
- -
+-
     fullname: Chunchi Liu
-    orgnization: Huawei Technologies
+    organization: Huawei Technologies
     email: liuchunchi@huawei.com
- -
+-
     fullname: Aihua Guo
-    orgnization: Futurewei Technologies
+    organization: Futurewei Technologies
     email: aihuaguo.ietf@gmail.com
- -
+-
     fullname: Zhidong Yin
-    orgnization: Huawei
+    organization: Huawei
     email: yinzhidong@huawei.com
- -
+-
     fullname: Guoxiang Liu
-    orgnization: Huawei
+    organization: Huawei
     email: liuguoxiang@huawei.com
- -
+-
     fullname: Kaichun Wu
-    orgnization: Huawei
+    organization: Huawei
     email: wukaichun@huawei.com
- -
+-
     fullname: Yanlei Zheng
-    orgnization: China Unicom
+    organization: China Unicom
     email: zhengyanlei@chinaunicom.cn
- -
+-
     fullname: Yunbin Xu
-    orgnization: CAICT
+    organization: CAICT
     email: xuyunbin@caict.ac.cn
- -
+-
     fullname: Xing Zhao
-    orgnization: CAICT
+    organization: CAICT
     email: zhaoxing@caict.ac.cn
 
 normative:
