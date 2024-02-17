@@ -49,7 +49,7 @@ author:
     role: editor
     organization:
     email: fengchonglly@gmail.com
-
+ -
     fullname: Tong Hu
     organization: China Mobile (Hangzhou) Information Technology Co., Ltd
     street: Building A01, 1600 Yuhangtang Road, Wuchang Street, Yuhang District
@@ -57,20 +57,20 @@ author:
     code: 311121
     country: China
     Email: hutong@cmhi.chinamobile.com
-
+ -
     fullname: Luis Miguel Contreras Murillo
     organization: Telefonica I+D
     city: Madrid
     country: Spain
     Email: luismiguel.contrerasmurillo@telefonica.com
-
+ -
     fullname: Thomas Graf
     organization: Swisscom
     street: Binzring 17CH-8045
     city: Zurich
     country: Switzerland
     Email: thomas.graf@swisscom.com
-
+ -
     fullname: Qin Wu
     orgnization: Huawei
     street: 101 Software Avenue, Yuhua District
@@ -78,12 +78,11 @@ author:
     code: 210012
     country: China
     Email: bill.wu@huawei.com
-
-
+ -
     fullname: Chaode Yu
     organization: Huawei
     Email: yuchaode@huawei.com
-
+ -
     fullname: Nigel Davis
     orgnization: Ciena
     Email: ndavis@ciena.com
@@ -93,39 +92,38 @@ author:
     name: MingShuang Jin
     org: Huawei Technologies
     email: jinmingshuang@huawei.com
-
+ -
     name: Chunchi Liu
     org: Huawei Technologies
     email: liuchunchi@huawei.com
-
+ -
     name: Aihua Guo
     org: Futurewei Technologies
     email: aihuaguo.ietf@gmail.com
-
+ -
     name: Zhidong Yin
     org: Huawei
     email: yinzhidong@huawei.com
-
+ -
     name: Guoxiang Liu
     org: Huawei
     email: liuguoxiang@huawei.com
-
+ -
     name: Kaichun Wu
     org: Huawei
     email: wukaichun@huawei.com
-
+ -
     name: Yanlei Zheng
     org: China Unicom
     email: zhengyanlei@chinaunicom.cn
-
+ -
     name: Yunbin Xu
     org: CAICT
     email: xuyunbin@caict.ac.cn
-
+ -
     name: Xing Zhao
     org: CAICT
     email: zhaoxing@caict.ac.cn
-
 
 normative:
 
@@ -147,7 +145,7 @@ W3C-Trace-Context:
    orgnization: W3C
    target: https://www.w3.org/TR/2021/REC-trace-context-
    1-20211123/
-   date: 2021
+   date: 23 November 2021
 
 --- abstract
 
