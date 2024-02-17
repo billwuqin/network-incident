@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: Operations and Management
-workgroup: OPSAWG Working Group
+area: "Operations and Management"
+workgroup: "Operations and Management Area Working Group"
 keyword:
  - network incident management
  - yang data model
  - network model
 venue:
-  group: OPSAWG
-  type: Working Group
-  mail: opsawg@ietf.org
-  arch: https://mailarchive.ietf.org/arch/browse/opsawg/
-  github: https://github.com/billwuqin/network-incident
-  latest: https://billwuqin.github.io/network-incident/draft-feng-opsawg-network-incident.html
+  group: "Operations and Management Area Working Group"
+  type: "Working Group"
+  mail: "opsawg@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/opsawg/"
+  github: "billwuqin/network-incident"
+  latest: "https://billwuqin.github.io/network-incident/draft-feng-opsawg-incident-management.html"
 
 author:
 -
