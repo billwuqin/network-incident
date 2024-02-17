@@ -242,7 +242,7 @@ Incident management:  Lifecycle management of incidents including
    resolution.
 
 Incident management system:  An entity which implements incident
-   management.  It include incident management server and incident
+   management. It include incident management server and incident
    management client.
 
 Incident management server:  An entity which provides some functions
