@@ -22,7 +22,7 @@ author:
      email: fengchonglly@gmail.com
 -
      fullname: Tong Hu
-     organization: China Mobile (Hangzhou) Information Technology Co., Ltd
+     organization: CMCC
      street: Building A01, 1600 Yuhangtang Road, Wuchang Street, Yuhang District
      city: Hangzhou
      code: 311121
