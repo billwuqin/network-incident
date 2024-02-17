@@ -140,7 +140,7 @@ data model for alarm management {{?RFC8632}} defines a standard
 interface for alarm management.  A data model for Network and VPN
 Service Performance Monitoring {{?RFC9375}} defines a standard interface
 for network performance management.  In addition, distributed tracing
-mechanism defined in {{W3C-Trace-Context}} can also be used to analyze
+mechanism defined in {{?W3C-Trace-Context}} can also be used to analyze
 and debug operations, such as configuration transactions, across
 multiple distributed systems.
 
@@ -552,7 +552,7 @@ Incident management client:  An entity which can manage incidents.
 
 ##  Relationship with Trace Context
 
-         W3C defines a common trace context{{?W3C-Trace-Context}} for distributed
+         W3C defines a common trace context {{?W3C-Trace-Context}} for distributed
          system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
          netconf extension for {{?W3C-Trace-Context}} and
          {{?I-D.quilbeuf-opsawg-configuration-tracing}} defines a mechanism for
