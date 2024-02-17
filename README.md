@@ -5,7 +5,7 @@ This is the working area for the individual Internet-Draft, "A YANG Data Model f
 * [Editor's Copy](http://htmlpreview.github.io/?https://github.com/billwuqin/network-incident/gh-pages/draft-feng-opsawg-incident-management.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-feng-opsawg-incident-management)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-feng-opsawg-incident-management)
-* [Compare Editor's Copy to Individual Draft]([https://billwuqin.github.io/network-incident/#go.draft-feng-opsawg-incident-management.diff](https://author-tools.ietf.org/diff?url_1=https://raw.githubusercontent.com/billwuqin/network-incident/gh-pages/draft-feng-opsawg-incident-management.txt))
+* [Compare Editor's Copy to Individual Draft](https://author-tools.ietf.org/diff?url_1=https://raw.githubusercontent.com/billwuqin/network-incident/gh-pages/draft-feng-opsawg-incident-management.txt)
 
 
 ## Contributing
