@@ -140,7 +140,7 @@ data model for alarm management {{?RFC8632}} defines a standard
 interface for alarm management.  A data model for Network and VPN
 Service Performance Monitoring {{?RFC9375}} defines a standard interface
 for network performance management.  In addition, distributed tracing
-mechanism defined in {{?W3C-Trace-Context}} can also be used to analyze
+mechanism defined in {{W3C-Trace-Context}} can also be used to analyze
 and debug operations, such as configuration transactions, across
 multiple distributed systems.
 
@@ -169,7 +169,7 @@ be used at specific layer in specific domain but also can be used to
 span across layer for multi-layer network troubleshooting.  A network
 incident refers to an unexpected interruption of a network service,
 degradation of a network service quality, or sub-health of a network
-service {{?TMF724A}}.  Different data sources including alarms, metrics
+service {{TMF724A}}.  Different data sources including alarms, metrics
 and other anomaly information can be aggregated into few amount of
 incidents irrespective layer by correlation analysis and the service
 impact analysis.  For example, the protocols related to the interface
@@ -221,13 +221,13 @@ The following terms are defined in this document:
 
 Incident:  An unexpected interruption of a network service,
    degradation of network service quality, or sub-health of a network
-   service {{?TMF724A}}.
+   service {{TMF724A}}.
 
 
 Problem:  The cause of one or more incidents.  The cause is not
    usually known when a problem record is created, and the problem
    management process is responsible for further investigation
-   {{?TMF724A}}.
+   {{TMF724A}}.
 
 Incident management:  Lifecycle management of incidents including
    incident identification, reporting, acknowledge, diagnosis, and
@@ -552,9 +552,9 @@ Incident management client:  An entity which can manage incidents.
 
 ##  Relationship with Trace Context
 
-         W3C defines a common trace context {{?W3C-Trace-Context}} for distributed
+         W3C defines a common trace context {{W3C-Trace-Context}} for distributed
          system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
-         netconf extension for {{?W3C-Trace-Context}} and
+         netconf extension for {{W3C-Trace-Context}} and
          {{?I-D.quilbeuf-opsawg-configuration-tracing}} defines a mechanism for
          configuration tracing.  If some errors occur when services are
          deploying, it's very easy to identify these errors by distributed
@@ -626,7 +626,7 @@ Incident management client:  An entity which can manage incidents.
             As mentioned above, SAIN is another way to implement incident
             identification.  Observation timestamp defined in
             {{?I-D.tgraf-yang-push-observation-time}} and trace context defined in
-            {{?W3C-Trace-Context}} may be helpful for incident identification.
+            {{W3C-Trace-Context}} may be helpful for incident identification.
 
 ~~~~
                                  +----------------------+
