@@ -277,7 +277,7 @@ Incident management client:  An entity which can manage incidents.
       efficiency of network troubleshooting can be largely improved. which
       address the pain point of traditional trouble ticket dispatching.
 
-##  Incident Derivation from L3VPN services Unavailability
+## Incident Derivation from L3VPN services Unavailability
 
       The service attachment points defined in {{?RFC9408}} represent the
       network reference points where network services can be delivered to
@@ -305,7 +305,7 @@ Incident management client:  An entity which can manage incidents.
       is violated, a specific network incident, associated with,let's say
       L3VPN service will be derived.
 
-##  Multi-layer Fault Demarcation
+## Multi-layer Fault Demarcation
 
       When a fault occurs in a network that contains both packet-layer
       devices and optical-layer devices, it may cause correlative faults in
@@ -342,7 +342,7 @@ Incident management client:  An entity which can manage incidents.
       engineers to perform relative maintenance actions (e.g., splice
       fiber) based on the root cause.
 
-##  Security events Automated Noise reduction based on Situation awareness
+## Security events Automated Noise reduction based on Situation awareness
 
       In the continuous data driven monitoring, tools used by the Security
       Operation Center (SoC) scan the network 24/7 to flag any
@@ -499,7 +499,7 @@ Incident management client:  An entity which can manage incidents.
          Incident management is not a substitute for alarm management.
          Instead, they can work together to implement fault management.
 
-##  Interworking with SAIN
+## Interworking with SAIN
 ~~~~
                    +----------------+
                    | incident client|
@@ -539,7 +539,7 @@ Incident management client:  An entity which can manage incidents.
          YANG model {{?RFC9418}} and incident will be reported if symptoms match
          the condition of incident.
 
-##  Relationship with RFC8969
+## Relationship with RFC8969
 
          {{?RFC8969}} defines a framework for network automation using YANG, this
          framework breaks down YANG modules into three layers, service layer,
@@ -550,7 +550,7 @@ Incident management client:  An entity which can manage incidents.
          assurance.  And the incident diagnosis may be one way of service
          diagnosis.
 
-##  Relationship with Trace Context
+## Relationship with Trace Context
 
          W3C defines a common trace context {{W3C-Trace-Context}} for distributed
          system tracing, {{?I-D.rogaglia-netconf-trace-ctx-extension}} defines a
@@ -751,7 +751,7 @@ Incident management client:  An entity which can manage incidents.
                status changes to 'updated'.  When an incident is successfully
                resolved, the status changes to 'cleared'.
 
-###  Operator Incident Lifecycle
+### Operator Incident Lifecycle
 
                From an operator perspective, the lifecycle of an incident instance
                includes 'acknowledged', 'diagnosed', and 'resolved'.  When an
@@ -906,7 +906,7 @@ Incident management client:  An entity which can manage incidents.
 
                   The incident-acknowledge rpc can confirm multiple incidents at a time
 
-##  Incident Diagnose
+## Incident Diagnose
 
 ~~~~
                       +---x incident-diagnose
@@ -1005,7 +1005,7 @@ operations and their sensitivity/vulnerability:
    Registrant Contact: The IESG.
    XML: N/A, the requested URIs are XML namespaces.
 
-##  The "YANG Module Names" Registry
+## The "YANG Module Names" Registry
 
    This document registers one module name in the 'YANG Module Names'
    registry, defined in {{!RFC6020}}.
