@@ -47,7 +47,6 @@ author:
  -
     fullname: Chong Feng
     role: editor
-    organization:
     email: fengchonglly@gmail.com
  -
     fullname: Tong Hu
@@ -978,16 +977,18 @@ Incident management client:  An entity which can manage incidents.
                   process, a notification update will be triggered.
 
 # Incident Management YANG Module
-
+~~~~
 <CODE BEGINS>
 file="ietf-incident-types@2023-05-16.yang"
 {::include-fold ./yang/ietf-incident-types.yang}
 <CODE ENDS>
+~~~~
+~~~~
 <CODE BEGINS>
 file="ietf-incident@2023-05-16.yang"
 {::include-fold ./yang/ietf-incident.yang}
 <CODE ENDS>
-
+~~~~
 # Security Considerations
 
 The YANG modules specified in this document define a schema for data
