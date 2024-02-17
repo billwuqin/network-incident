@@ -72,6 +72,10 @@ Table of Contents
    2.  Conventions and Definitions
    3.  Sample Use Cases
      3.1.  Incident-Based Trouble Tickets dispatching
+     3.2.  Incident Derivation from L3VPN services Unavailability
+     3.3.  Multi-layer Fault Demarcation
+     3.4.  Security events Automated Noise reduction based on
+           Situation awareness
    4.  Incident Management Architecture
      4.1.  Interworking with Alarm Management
      4.2.  Interworking with SAIN
@@ -253,7 +257,7 @@ Table of Contents
     efficiency of network troubleshooting can be largely improved. which
     address the pain point of traditional trouble ticket dispatching.
 
-   ## Incident Derivation from L3VPN services Unavailability
+3.2.  Incident Derivation from L3VPN services Unavailability
 
   The service attachment points defined in {{RFC9408}} represent the
   network reference points where network services can be delivered to
@@ -281,7 +285,7 @@ Table of Contents
   is violated, a specific network incident, associated with,let's say
   L3VPN service will be derived.
 
-   ## Multi-layer Fault Demarcation
+3.3.  Multi-layer Fault Demarcation
 
    When a fault occurs in a network that contains both packet-layer
    devices and optical-layer devices, it may cause correlative faults in
@@ -318,8 +322,8 @@ Table of Contents
    engineers to perform relative maintenance actions (e.g., splice
    fiber) based on the root cause.
 
-   ## Security events Automated Noise reduction based on Situation
-   awareness
+3.4.  Security events Automated Noise reduction based on Situation
+      awareness
 
   In the continuous data driven monitoring, tools used by the Security
   Operation Center (SoC) scan the network 24/7 to flag any
