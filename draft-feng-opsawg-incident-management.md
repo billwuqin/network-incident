@@ -565,40 +565,40 @@ system tracing, and an incident should be reported.
 ## Incident Identification
 
 ~~~~
-                    +--------------+
-                 +--|  Incident1   |
-                 |  +--+-----------+
-                 |     |  +-----------+
-                 |     +--+  alarm1   |
-                 |     |  +-----------+
-                 |     |
-                 |     |  +-----------+
-                 |     +--+  alarm2   |
-                 |     |  +-----------+
-                 |     |
-                 |     |  +-----------+
-                 |     +--+  alarm3   |
-                 |        +-----------+
-                 |  +--------------+
-                 +--|  Incident2   |
-                 |  +--+-----------+
-                 |     |  +-----------+
-                 |     +--+  metric1  |
-                 |     |  +-----------+
-                 |     |  +-----------+
-                 |     +--+  metric2  |
-                 |        +-----------+
-                 |
-                 |  +--------------+
-                 +--|  Incident3   |
-                    +--+-----------+
-                       |  +-----------+
-                       +--+ alarm1    |
-                       |  +-----------+
-                       |
-                       |  +-----------+
-                       +--| metric1   |
-                          +-----------+
+	+--------------+
+ +--|  Incident1   |
+ |  +--+-----------+
+ |     |  +-----------+
+ |     +--+  alarm1   |
+ |     |  +-----------+
+ |     |
+ |     |  +-----------+
+ |     +--+  alarm2   |
+ |     |  +-----------+
+ |     |
+ |     |  +-----------+
+ |     +--+  alarm3   |
+ |        +-----------+
+ |  +--------------+
+ +--|  Incident2   |
+ |  +--+-----------+
+ |     |  +-----------+
+ |     +--+  metric1  |
+ |     |  +-----------+
+ |     |  +-----------+
+ |     +--+  metric2  |
+ |        +-----------+
+ |
+ |  +--------------+
+ +--|  Incident3   |
+	+--+-----------+
+	   |  +-----------+
+	   +--+ alarm1    |
+	   |  +-----------+
+	   |
+	   |  +-----------+
+	   +--| metric1   |
+		  +-----------+
 ~~~~
 {:#ident title="Incident Identification" artwork-align="center"}
 
@@ -629,30 +629,30 @@ identification.  Observation timestamp defined in
 {{W3C-Trace-Context}} may be helpful for incident identification.
 
 ~~~~
-                                 +----------------------+
-                                 |                      |
-                                 |     Orchestrator     |
-                                 |                      |
-                                 +----+-----------------+
-                                      ^VPN A Unavailable
-                                      |
-                                  +---+----------------+
-                                  |                    |
-                                  |     Controller     |
-                                  |                    |
-                                  |                    |
-                                  +-+-+-+-----+--+-----+
-                                  ^ ^            ^
-                              IGP | |Interface   |IGP Peer
-                             Down | |Down        | Abnormal
-                                  | |            |
-                 VPN A            | |            |
-                +-----------------+-+------------+------------------*
-                | \  +---+       ++-++         +-+-+        +---+  /|
-                |  \ |   |       |   |         |   |        |   | / |
-                |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
-                |    +---+       +---+         +---+        +---+   |
-                +---------------------------------------------------+
+				 +----------------------+
+				 |                      |
+				 |     Orchestrator     |
+				 |                      |
+				 +----+-----------------+
+					  ^VPN A Unavailable
+					  |
+				  +---+----------------+
+				  |                    |
+				  |     Controller     |
+				  |                    |
+				  |                    |
+				  +-+-+-+-----+--+-----+
+				  ^ ^            ^
+			  IGP | |Interface   |IGP Peer
+			 Down | |Down        | Abnormal
+				  | |            |
+ VPN A            | |            |
++-----------------+-+------------+------------------*
+| \  +---+       ++-++         +-+-+        +---+  /|
+|  \ |   |       |   |         |   |        |   | / |
+|   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
+|    +---+       +---+         +---+        +---+   |
++---------------------------------------------------+
 ~~~~
 {:#exam1 title="Example 1 of Incident Identification" artwork-align="center"}
 
@@ -665,30 +665,30 @@ alarms are aggregated and analyzed by controller, and the incident
 
 ~~~~
 
-                                +----------------------+
-                                |                      |
-                                |     Orchestrator     |
-                                |                      |
-                                +----+-----------------+
-                                     ^VPN A Degradation
-                                     |
-                                 +---+----------------+
-                                 |                    |
-                                 |     controller     |
-                                 |                    |
-                                 |                    |
-                                 +-+-+-+-----+--+-----+
-                                   ^            ^
-                                   |Packet      |Path Delay
-                                   |Loss        |
-                                   |            |
-                VPN A              |            |
-               +-------------------+------------+-------------------+
-               | \  +---+       ++-++         +-+-+        +---+  / |
-               |  \ |   |       |   |         |   |        |   | /  |
-               |   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
-               |    +---+       +---+         +---+        +---+    |
-               +----------------------------------------------------+
+				+----------------------+
+				|                      |
+				|     Orchestrator     |
+				|                      |
+				+----+-----------------+
+					 ^VPN A Degradation
+					 |
+				 +---+----------------+
+				 |                    |
+				 |     controller     |
+				 |                    |
+				 |                    |
+				 +-+-+-+-----+--+-----+
+				   ^            ^
+				   |Packet      |Path Delay
+				   |Loss        |
+				   |            |
+VPN A              |            |
++-------------------+------------+-------------------+
+| \  +---+       ++-++         +-+-+        +---+  / |
+|  \ |   |       |   |         |   |        |   | /  |
+|   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
+|    +---+       +---+         +---+        +---+    |
++----------------------------------------------------+
 ~~~~
 {:#exam2 title="Example 2 of Incident Identification" artwork-align="center"}
 
@@ -712,23 +712,23 @@ quality metrics, etc.
 
 ## Incident Resolution
 
-            After the root cause is diagnosed, the client MAY resolve the
-            incident.  The client MAY choose resolve the incident by invoking
-            other functions, such as routing calculation function, configuration
-            function, dispatching a ticket or asking the server to resolve it.
-            Generally, the client would attempt to directly resolve the root
-            cause.  If the root cause cannot be resolved, an alternative solution
-            SHOULD be required.  For example, if an incident caused by a physical
-            component failure, it cannot be automatically resolved, the standby
-            link can be used to bypass the faulty component.
+After the root cause is diagnosed, the client MAY resolve the
+incident.  The client MAY choose resolve the incident by invoking
+other functions, such as routing calculation function, configuration
+function, dispatching a ticket or asking the server to resolve it.
+Generally, the client would attempt to directly resolve the root
+cause.  If the root cause cannot be resolved, an alternative solution
+SHOULD be required.  For example, if an incident caused by a physical
+component failure, it cannot be automatically resolved, the standby
+link can be used to bypass the faulty component.
 
-            Incident server will monitor the status of incident, if the faults
-            are fixed, the server will update the status of incident to
-            'cleared', and report the updated incident to the client.
+Incident server will monitor the status of incident, if the faults
+are fixed, the server will update the status of incident to
+'cleared', and report the updated incident to the client.
 
-            Incident resolution may affect the running network services.  The
-            client can choose not to perform those operations after determining
-            the impact is not trivial.
+Incident resolution may affect the running network services.  The
+client can choose not to perform those operations after determining
+the impact is not trivial.
 
 # Incident Data Model Concepts
 
@@ -784,100 +784,100 @@ support one general notification to report incident state changes and
 three rpcs to manage the network incidents.
 
 ~~~~
-                  module: ietf-incident
-                    +--ro incidents
-                       +--ro incident* [incident-id]
-                          +--ro incident-id string
-                          +--ro csn? uint64
-                          +--ro service-instance* string
-                          +--ro name? string
-                          +--ro type? enumeration
-                          +--ro domain? identityref
-                          +--ro priority? int:incident-priority
-                          +--ro status? enumeration
-                          +--ro ack-status? enumeration
-                          +--ro category? identityref
-                          +--ro detail? string
-                          +--ro resolve-advice? string
-                          +--ro sources
-                          ...
-                          +--ro root-causes
-                          ...
-                          +--ro root-events
-                          ...
-                          +--ro events
-                          ...
-                          +--ro raise-time? yang:date-and-time
-                          +--ro occur-time? yang:date-and-time
-                          +--ro clear-time? yang:date-and-time
-                          +--ro ack-time? yang:date-and-time
-                          +--ro last-updated? yang:date-and-time
-                    rpcs:
-                      +---x incident-acknowledge
-                      ...
-                      +---x incident-diagnose
-                      ...
-                      +---x incident-resolve
+module: ietf-incident
++--ro incidents
+   +--ro incident* [incident-id]
+	  +--ro incident-id string
+	  +--ro csn? uint64
+	  +--ro service-instance* string
+	  +--ro name? string
+	  +--ro type? enumeration
+	  +--ro domain? identityref
+	  +--ro priority? int:incident-priority
+	  +--ro status? enumeration
+	  +--ro ack-status? enumeration
+	  +--ro category? identityref
+	  +--ro detail? string
+	  +--ro resolve-advice? string
+	  +--ro sources
+	  ...
+	  +--ro root-causes
+	  ...
+	  +--ro root-events
+	  ...
+	  +--ro events
+	  ...
+	  +--ro raise-time? yang:date-and-time
+	  +--ro occur-time? yang:date-and-time
+	  +--ro clear-time? yang:date-and-time
+	  +--ro ack-time? yang:date-and-time
+	  +--ro last-updated? yang:date-and-time
+rpcs:
+  +---x incident-acknowledge
+  ...
+  +---x incident-diagnose
+  ...
+  +---x incident-resolve
 
-                    notifications:
-                      +---n incident-notification
-                         +--ro incident-id?
-                                 -> /inc:incidents/inc:incident/inc:incident-id
-                         ...
-                         +--ro time? yang:date-and-time
+notifications:
+  +---n incident-notification
+	 +--ro incident-id?
+			 -> /inc:incidents/inc:incident/inc:incident-id
+	 ...
+	 +--ro time? yang:date-and-time
 ~~~~
 
 ## Incident Notifications
 
 ~~~~
-                    notifications:
-                      +---n incident-notification
-                         +--ro incident-id?
-                                 -> /inc:incidents/inc:incident/inc:incident-id
-                         +--ro csn? uint64
-                         +--ro service-instance* string
-                         +--ro name? string
-                         +--ro type? enumeration
-                         +--ro domain? identityref
-                         +--ro priority? int:incident-priority
-                         +--ro status? enumeration
-                         +--ro ack-status? enumeration
-                         +--ro category? identityref
-                         +--ro detail? string
-                         +--ro resolve-advice? string
-                         +--ro sources
-                         |  +--ro source* [node]
-                         |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
-                         |     +--ro resource* [name]
-                         |        +--ro name al:resource
-                         +--ro root-causes
-                         |  +--ro root-cause* [node]
-                         |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
-                         |     +--ro resource* [name]
-                         |     |  +--ro name al:resource
-                         |     |  +--ro cause-name? string
-                         |     |  +--ro detail? string
-                         |     +--ro cause-name? string
-                         |     +--ro detail? string
-                         +--ro root-events
-                         |  +--ro root-event* [type event-id]
-                         |     +--ro type -> ../../../events/event/type
-                         |     +--ro event-id leafref
-                         +--ro events
-                         |  +--ro event* [type event-id]
-                         |     +--ro type enumeration
-                         |     +--ro event-id string
-                         |     +--ro (event-type-info)?
-                         |        +--:(alarm)
-                         |        |  +--ro alarm
-                         |        |     +--ro resource? leafref
-                         |        |     +--ro alarm-type-id? leafref
-                         |        |     +--ro alarm-type-qualifier? leafref
-                         |        +--:(notification)
-                         |        +--:(log)
-                         |        +--:(KPI)
-                         |        +--:(unknown)
-                         +--ro time? yang:date-and-time
+notifications:
+  +---n incident-notification
+	 +--ro incident-id?
+			 -> /inc:incidents/inc:incident/inc:incident-id
+	 +--ro csn? uint64
+	 +--ro service-instance* string
+	 +--ro name? string
+	 +--ro type? enumeration
+	 +--ro domain? identityref
+	 +--ro priority? int:incident-priority
+	 +--ro status? enumeration
+	 +--ro ack-status? enumeration
+	 +--ro category? identityref
+	 +--ro detail? string
+	 +--ro resolve-advice? string
+	 +--ro sources
+	 |  +--ro source* [node]
+	 |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
+	 |     +--ro resource* [name]
+	 |        +--ro name al:resource
+	 +--ro root-causes
+	 |  +--ro root-cause* [node]
+	 |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
+	 |     +--ro resource* [name]
+	 |     |  +--ro name al:resource
+	 |     |  +--ro cause-name? string
+	 |     |  +--ro detail? string
+	 |     +--ro cause-name? string
+	 |     +--ro detail? string
+	 +--ro root-events
+	 |  +--ro root-event* [type event-id]
+	 |     +--ro type -> ../../../events/event/type
+	 |     +--ro event-id leafref
+	 +--ro events
+	 |  +--ro event* [type event-id]
+	 |     +--ro type enumeration
+	 |     +--ro event-id string
+	 |     +--ro (event-type-info)?
+	 |        +--:(alarm)
+	 |        |  +--ro alarm
+	 |        |     +--ro resource? leafref
+	 |        |     +--ro alarm-type-id? leafref
+	 |        |     +--ro alarm-type-qualifier? leafref
+	 |        +--:(notification)
+	 |        +--:(log)
+	 |        +--:(KPI)
+	 |        +--:(unknown)
+	 +--ro time? yang:date-and-time
 ~~~~
 
 A general notification, incident-notification, is provided here.
@@ -893,26 +893,26 @@ would be set to 'cleared'.
 ## Incident Acknowledge
 
 ~~~~
-                      +---x incident-acknowledge
-                      |  +---w input
-                      |  |  +---w incident-id*
-                      |  |          -> /inc:incidents/inc:incident/inc:incident-id
++---x incident-acknowledge
+|  +---w input
+|  |  +---w incident-id*
+|  |          -> /inc:incidents/inc:incident/inc:incident-id
 ~~~~
-                  After an incident is generated, updated, or cleared, (In some
-                  scenarios where automatic diagnosis and resolution are supported, the
-                  status of an incident may be updated multiple times or even
-                  automatically resolved.)  The operator needs to confirm the incident
-                  to ensure that the client knows the incident.
+After an incident is generated, updated, or cleared, (In some
+scenarios where automatic diagnosis and resolution are supported, the
+status of an incident may be updated multiple times or even
+automatically resolved.)  The operator needs to confirm the incident
+to ensure that the client knows the incident.
 
-                  The incident-acknowledge rpc can confirm multiple incidents at a time
+The incident-acknowledge rpc can confirm multiple incidents at a time
 
 ## Incident Diagnose
 
 ~~~~
-                      +---x incident-diagnose
-                      |  +---w input
-                      |  |  +---w incident-id*
-                      |  |          -> /inc:incidents/inc:incident/inc:incident-id
++---x incident-diagnose
+|  +---w input
+|  |  +---w incident-id*
+|  |          -> /inc:incidents/inc:incident/inc:incident-id
 ~~~~
 After an incident is generated, incident diagnose rpc can be used to
 diagnose the incident and locate the root causes.  Diagnosis can be
@@ -926,10 +926,10 @@ be triggered to report the latest status of the incident.
 ## Incident Resolution
 
 ~~~~
-                      +---x incident-resolve
-                         +---w input
-                         |  +---w incident-id*
-                         |          -> /inc:incidents/inc:incident/inc:incident-id
++---x incident-resolve
+ +---w input
+ |  +---w incident-id*
+ |          -> /inc:incidents/inc:incident/inc:incident-id
 ~~~~
 
 After the root causes and impacts are determined, incident-resolve
