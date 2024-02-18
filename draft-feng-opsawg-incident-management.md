@@ -634,8 +634,8 @@ identification.  Observation timestamp defined in
 		 |     Orchestrator     |
 		 |                      |
 		 +----+-----------------+
-			  ^VPN A Unavailable
-			  |
+                      ^VPN A Unavailable
+                      |
 		  +---+----------------+
 		  |                    |
 		  |     Controller     |
@@ -643,8 +643,8 @@ identification.  Observation timestamp defined in
 		  |                    |
 		  +-+-+-+-----+--+-----+
 		  ^ ^            ^
-	  IGP | |Interface   |IGP Peer
-	 Down | |Down        | Abnormal
+              IGP | |Interface   |IGP Peer
+             Down | |Down        | Abnormal
 		  | |            |
  VPN A            | |            |
 +-----------------+-+------------+------------------*
