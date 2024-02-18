@@ -5,7 +5,7 @@
 Operations and Management Area Working Group                C. Feng, Ed.
 Internet-Draft                                                          
 Intended status: Standards Track                                   T. Hu
-Expires: 20 August 2024                                             CMCC
+Expires: 21 August 2024                                             CMCC
                                                         L. M. C. Murillo
                                                           Telefonica I+D
                                                                  T. Graf
@@ -15,7 +15,7 @@ Expires: 20 August 2024                                             CMCC
                                                                   Huawei
                                                                 N. Davis
                                                                    Ciena
-                                                        17 February 2024
+                                                        18 February 2024
 
 
            A YANG Data Model for Network Incident Management
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 August 2024.
+   This Internet-Draft will expire on 21 August 2024.
 
 Copyright Notice
 
@@ -349,37 +349,37 @@ Table of Contents
 
 4.  Incident Management Architecture
 
-                      +----------------------+-------------------+
-                      |                                          |
-                      |            Incident Management Client    |
-                      |                                          |
-                      |                                          |
-                      +------------+---------+---------+---------+
-                         ^         |         |         |
-                         |Incident |Incident |Incident |Incident
-                         |Report   |Ack      |Diagnose |Resolve
-                         |         |         |         |
-                         |         V         V         V
-                      +--+-------------------+---------+----------+
-                      |                                           |
-                      |                                           |
-                      |            Incident Management Server     |
-                      |                                           |
-                      |                                           |
-                      |                                           |
-                      |                                           |
-                      +-------------------------------+-----------+
-                            ^       ^Abnormal         ^
-                            |Alarm  |Operations       |Metrics
-                            |Report |Report           |/Telemetry
-                            |       |                 V
-               +------------+-------+-----------------+----------------+
-               |                                                       |
-               |                     Network                           |
-               |                                                       |
-               +------------------------------------+------------------+
+              +----------------------+-------------------+
+              |                                          |
+              |            Incident Management Client    |
+              |                                          |
+              |                                          |
+              +------------+---------+---------+---------+
+                 ^         |         |         |
+                 |Incident |Incident |Incident |Incident
+                 |Report   |Ack      |Diagnose |Resolve
+                 |         |         |         |
+                 |         V         V         V
+              +--+-------------------+---------+----------+
+              |                                           |
+              |                                           |
+              |            Incident Management Server     |
+              |                                           |
+              |                                           |
+              |                                           |
+              |                                           |
+              +-------------------------------+-----------+
+                    ^       ^Abnormal         ^
+                    |Alarm  |Operations       |Metrics
+                    |Report |Report           |/Telemetry
+                    |       |                 V
+         +------------+-------+-----------------+----------------+
+         |                                                       |
+         |                     Network                           |
+         |                                                       |
+         +------------------------------------+------------------+
 
-           Figure 1: Network Incident Management Architecture
+             Figure 1: Network Incident Management Architecture
 
    Figure 1 illustrates the incident management architecture.  Two key
    components for the incident management are incident management client
@@ -479,27 +479,27 @@ Table of Contents
 
 4.2.  Interworking with SAIN
 
-                                   +----------------+
-                                   | incident client|
-                                   +----------------+
-                                           ^
-                                           |incident
-                                   +-------+--------+
-                                   |incident server |
-                                   +----------------+
-                                           ^
-                                           |symptoms
-                                   +-------+--------+
-                                   |     SAIN       |
-                                   |                |
-                                   +----------------+
-                                           ^
-                                           |metrics
-                             +-------------+-------------+
-                             |                           |
-                             |         network           |
-                             |                           |
-                             +---------------------------+
+                               +----------------+
+                               | incident client|
+                               +----------------+
+                                       ^
+                                       |incident
+                               +-------+--------+
+                               |incident server |
+                               +----------------+
+                                       ^
+                                       |symptoms
+                               +-------+--------+
+                               |     SAIN       |
+                               |                |
+                               +----------------+
+                                       ^
+                                       |metrics
+                         +-------------+-------------+
+                         |                           |
+                         |         network           |
+                         |                           |
+                         +---------------------------+
 
                       Figure 3: Interworking with SAIN
 
@@ -542,40 +542,40 @@ Table of Contents
 
 5.1.  Incident Identification
 
-                              +--------------+
-                       +--|  Incident1   |
-                       |  +--+-----------+
-                       |     |  +-----------+
-                       |     +--+  alarm1   |
-                       |     |  +-----------+
-                       |     |
-                       |     |  +-----------+
-                       |     +--+  alarm2   |
-                       |     |  +-----------+
-                       |     |
-                       |     |  +-----------+
-                       |     +--+  alarm3   |
-                       |        +-----------+
-                       |  +--------------+
-                       +--|  Incident2   |
-                       |  +--+-----------+
-                       |     |  +-----------+
-                       |     +--+  metric1  |
-                       |     |  +-----------+
-                       |     |  +-----------+
-                       |     +--+  metric2  |
-                       |        +-----------+
-                       |
-                       |  +--------------+
-                       +--|  Incident3   |
-                              +--+-----------+
-                                 |  +-----------+
-                                 +--+ alarm1    |
-                                 |  +-----------+
-                                 |
-                                 |  +-----------+
-                                 +--| metric1   |
-                                        +-----------+
+                                    +--------------+
+                             +--|  Incident1   |
+                             |  +--+-----------+
+                             |     |  +-----------+
+                             |     +--+  alarm1   |
+                             |     |  +-----------+
+                             |     |
+                             |     |  +-----------+
+                             |     +--+  alarm2   |
+                             |     |  +-----------+
+                             |     |
+                             |     |  +-----------+
+                             |     +--+  alarm3   |
+                             |        +-----------+
+                             |  +--------------+
+                             +--|  Incident2   |
+                             |  +--+-----------+
+                             |     |  +-----------+
+                             |     +--+  metric1  |
+                             |     |  +-----------+
+                             |     |  +-----------+
+                             |     +--+  metric2  |
+                             |        +-----------+
+                             |
+                             |  +--------------+
+                             +--|  Incident3   |
+                                    +--+-----------+
+                                       |  +-----------+
+                                       +--+ alarm1    |
+                                       |  +-----------+
+                                       |
+                                       |  +-----------+
+                                       +--| metric1   |
+                                          +-----------+
 
                      Figure 4: Incident Identification
 
@@ -605,30 +605,30 @@ Table of Contents
    [I-D.tgraf-yang-push-observation-time] and trace context defined in
    [W3C-Trace-Context] may be helpful for incident identification.
 
-                                        +----------------------+
-                                        |                      |
-                                        |     Orchestrator     |
-                                        |                      |
-                                        +----+-----------------+
-                                                 ^VPN A Unavailable
-                                                 |
-                                         +---+----------------+
-                                         |                    |
-                                         |     Controller     |
-                                         |                    |
-                                         |                    |
-                                         +-+-+-+-----+--+-----+
-                                         ^ ^            ^
-                                 IGP | |Interface   |IGP Peer
-                                Down | |Down        | Abnormal
-                                         | |            |
-        VPN A            | |            |
-       +-----------------+-+------------+------------------*
-       | \  +---+       ++-++         +-+-+        +---+  /|
-       |  \ |   |       |   |         |   |        |   | / |
-       |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
-       |    +---+       +---+         +---+        +---+   |
-       +---------------------------------------------------+
+                            +----------------------+
+                            |                      |
+                            |     Orchestrator     |
+                            |                      |
+                            +----+-----------------+
+                                     ^VPN A Unavailable
+                                     |
+                             +---+----------------+
+                             |                    |
+                             |     Controller     |
+                             |                    |
+                             |                    |
+                             +-+-+-+-----+--+-----+
+                             ^ ^            ^
+                     IGP | |Interface   |IGP Peer
+                    Down | |Down        | Abnormal
+                             | |            |
+            VPN A            | |            |
+           +-----------------+-+------------+------------------*
+           | \  +---+       ++-++         +-+-+        +---+  /|
+           |  \ |   |       |   |         |   |        |   | / |
+           |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
+           |    +---+       +---+         +---+        +---+   |
+           +---------------------------------------------------+
 
                Figure 5: Example 1 of Incident Identification
 
@@ -638,30 +638,30 @@ Table of Contents
    alarms are aggregated and analyzed by controller, and the incident
    'vpn unavailable' is triggered by the controller.
 
-                                        +----------------------+
-                                        |                      |
-                                        |     Orchestrator     |
-                                        |                      |
-                                        +----+-----------------+
-                                                 ^VPN A Degradation
-                                                 |
-                                         +---+----------------+
-                                         |                    |
-                                         |     controller     |
-                                         |                    |
-                                         |                    |
-                                         +-+-+-+-----+--+-----+
-                                           ^            ^
-                                           |Packet      |Path Delay
-                                           |Loss        |
-                                           |            |
-        VPN A              |            |
-        +-------------------+------------+-------------------+
-        | \  +---+       ++-++         +-+-+        +---+  / |
-        |  \ |   |       |   |         |   |        |   | /  |
-        |   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
-        |    +---+       +---+         +---+        +---+    |
-        +----------------------------------------------------+
+                          +----------------------+
+                          |                      |
+                          |     Orchestrator     |
+                          |                      |
+                          +----+-----------------+
+                                   ^VPN A Degradation
+                                   |
+                           +---+----------------+
+                           |                    |
+                           |     controller     |
+                           |                    |
+                           |                    |
+                           +-+-+-+-----+--+-----+
+                             ^            ^
+                             |Packet      |Path Delay
+                             |Loss        |
+                             |            |
+          VPN A              |            |
+          +-------------------+------------+-------------------+
+          | \  +---+       ++-++         +-+-+        +---+  / |
+          |  \ |   |       |   |         |   |        |   | /  |
+          |   \|PE1+-------|P1 +---------|P2 +--------|PE2|/   |
+          |    +---+       +---+         +---+        +---+    |
+          +----------------------------------------------------+
 
                Figure 6: Example 2 of Incident Identification
 
