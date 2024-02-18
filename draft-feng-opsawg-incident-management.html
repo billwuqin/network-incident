@@ -1580,7 +1580,7 @@ security implications that exist yet remain undiscovered.<a href="#section-3.4-2
            |Alarm  |Operations       |Metrics
            |Report |Report           |/Telemetry
            |       |                 V
-+------------+-------+-----------------+----------------+
++----------+-------+-----------------+------------------+
 |                                                       |
 |                     Network                           |
 |                                                       |
@@ -1792,7 +1792,7 @@ system tracing, and an incident should be reported.<a href="#section-4.4-1" clas
 <figure id="figure-4">
           <div class="alignCenter art-text artwork" id="section-5.1-1.1">
 <pre>
-                +--------------+
+            +--------------+
          +--|  Incident1   |
          |  +--+-----------+
          |     |  +-----------+
@@ -1858,25 +1858,25 @@ identification.  Observation timestamp defined in
 <figure id="figure-5">
           <div class="alignCenter art-text artwork" id="section-5.1-6.1">
 <pre>
-                 +----------------------+
-                 |                      |
-                 |     Orchestrator     |
-                 |                      |
-                 +----+-----------------+
-                      ^VPN A Unavailable
-                      |
-                  +---+----------------+
-                  |                    |
-                  |     Controller     |
-                  |                    |
-                  |                    |
-                  +-+-+-+-----+--+-----+
-                  ^ ^            ^
-              IGP | |Interface   |IGP Peer
-             Down | |Down        | Abnormal
-                  | |            |
- VPN A            | |            |
-+-----------------+-+------------+------------------*
+         +----------------------+
+         |                      |
+         |     Orchestrator     |
+         |                      |
+         +----+-----------------+
+              ^VPN A Unavailable
+              |
+          +---+----------------+
+          |                    |
+          |     Controller     |
+          |                    |
+          |                    |
+          +-+-+-+----------+---+
+            ^ ^            ^
+        IGP | |Interface   |IGP Peer
+       Down | |Down        | Abnormal
+            | |            |
+VPN A       | |            |
++-----------+-+------------+------------------------+
 | \  +---+       ++-++         +-+-+        +---+  /|
 |  \ |   |       |   |         |   |        |   | / |
 |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
@@ -1909,12 +1909,12 @@ alarms are aggregated and analyzed by controller, and the incident
                  |     controller     |
                  |                    |
                  |                    |
-                 +-+-+-+-----+--+-----+
-                   ^            ^
-                   |Packet      |Path Delay
-                   |Loss        |
-                   |            |
-VPN A              |            |
+                 +--+------------+----+
+                    ^            ^
+                    |Packet      |Path Delay
+                    |Loss        |
+                    |            |
+VPN A               |            |
 +-------------------+------------+-------------------+
 | \  +---+       ++-++         +-+-+        +---+  / |
 |  \ |   |       |   |         |   |        |   | /  |
