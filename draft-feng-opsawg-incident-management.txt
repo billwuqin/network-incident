@@ -610,8 +610,8 @@ Table of Contents
                             |     Orchestrator     |
                             |                      |
                             +----+-----------------+
-                                     ^VPN A Unavailable
-                                     |
+                                 ^VPN A Unavailable
+                                 |
                              +---+----------------+
                              |                    |
                              |     Controller     |
@@ -619,8 +619,8 @@ Table of Contents
                              |                    |
                              +-+-+-+-----+--+-----+
                              ^ ^            ^
-                     IGP | |Interface   |IGP Peer
-                    Down | |Down        | Abnormal
+                         IGP | |Interface   |IGP Peer
+                        Down | |Down        | Abnormal
                              | |            |
             VPN A            | |            |
            +-----------------+-+------------+------------------*
