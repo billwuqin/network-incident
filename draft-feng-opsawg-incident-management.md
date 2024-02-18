@@ -393,7 +393,7 @@ security implications that exist yet remain undiscovered.
 	   |Alarm  |Operations       |Metrics
 	   |Report |Report           |/Telemetry
 	   |       |                 V
-+------------+-------+-----------------+----------------+
++----------+-------+-----------------+------------------+
 |                                                       |
 |                     Network                           |
 |                                                       |
@@ -565,7 +565,7 @@ system tracing, and an incident should be reported.
 ## Incident Identification
 
 ~~~~
-		+--------------+
+            +--------------+
 	 +--|  Incident1   |
 	 |  +--+-----------+
 	 |     |  +-----------+
@@ -629,25 +629,25 @@ identification.  Observation timestamp defined in
 {{W3C-Trace-Context}} may be helpful for incident identification.
 
 ~~~~
-		 +----------------------+
-		 |                      |
-		 |     Orchestrator     |
-		 |                      |
-		 +----+-----------------+
-                      ^VPN A Unavailable
-                      |
-		  +---+----------------+
-		  |                    |
-		  |     Controller     |
-		  |                    |
-		  |                    |
-		  +-+-+-+-----+--+-----+
-		  ^ ^            ^
-              IGP | |Interface   |IGP Peer
-             Down | |Down        | Abnormal
-		  | |            |
- VPN A            | |            |
-+-----------------+-+------------+------------------*
+	 +----------------------+
+	 |                      |
+	 |     Orchestrator     |
+	 |                      |
+	 +----+-----------------+
+	      ^VPN A Unavailable
+	      |
+	  +---+----------------+
+	  |                    |
+	  |     Controller     |
+	  |                    |
+          |                    |
+          +-+-+-+----------+---+
+	    ^ ^            ^
+        IGP | |Interface   |IGP Peer
+       Down | |Down        | Abnormal
+	    | |            |
+VPN A       | |            |
++-----------+-+------------+------------------------+
 | \  +---+       ++-++         +-+-+        +---+  /|
 |  \ |   |       |   |         |   |        |   | / |
 |   \|PE1+-------| P1+X--------|P2 +--------|PE2|/  |
@@ -677,12 +677,12 @@ alarms are aggregated and analyzed by controller, and the incident
 		 |     controller     |
 		 |                    |
 		 |                    |
-		 +-+-+-+-----+--+-----+
-		   ^            ^
-		   |Packet      |Path Delay
-		   |Loss        |
-		   |            |
-VPN A              |            |
+		 +--+------------+----+
+		    ^            ^
+		    |Packet      |Path Delay
+		    |Loss        |
+		    |            |
+VPN A               |            |
 +-------------------+------------+-------------------+
 | \  +---+       ++-++         +-+-+        +---+  / |
 |  \ |   |       |   |         |   |        |   | /  |
