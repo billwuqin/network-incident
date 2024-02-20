@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-18T01:11:33.791607+00:00",
+  "timestamp": "2024-02-20T01:06:22.945962+00:00",
   "repo": "billwuqin/network-incident",
   "labels": [
     {
@@ -49,6 +49,87 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOLTnVFs5_mEPb",
+      "title": "IANA registration issue",
+      "url": "https://github.com/billwuqin/network-incident/issues/1",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Italo said:\r\n\"\r\n-\tThe draft defines two YANG models (ietf-incident-types and ietf-incident) but in the IANA considerations only the registry for one model (ietf-indicent) is described: is it an omission there?\r\n\"",
+      "createdAt": "2024-02-18T01:20:12Z",
+      "updatedAt": "2024-02-18T01:20:12Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOLTnVFs5_mET8",
+      "title": "reusability of ietf-incident-type",
+      "url": "https://github.com/billwuqin/network-incident/issues/2",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Italo said:\r\n\"\r\n-\tDo we really need the split of the ietf-incident-types? Do you foreseen other modules which can re-use these definitions?\r\n\"",
+      "createdAt": "2024-02-18T01:21:19Z",
+      "updatedAt": "2024-02-18T01:21:19Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOLTnVFs5_mEhn",
+      "title": "enumeration on leaf type",
+      "url": "https://github.com/billwuqin/network-incident/issues/3",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Joe made the following comment:\r\n\"\r\n I see what I feel is a mix of terminology.  You have an enumeration on leaf type where \u201cfault\u201d reads as the type of incident being a fault.  To me, this is the type of problem (i.e., the cause of the incident).  The incident type might be an SLA violation.\r\n\"",
+      "createdAt": "2024-02-18T01:25:01Z",
+      "updatedAt": "2024-02-18T01:25:02Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOLTnVFs5_mKME",
+      "title": "Relating to existing solutions",
+      "url": "https://github.com/billwuqin/network-incident/issues/4",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Nigel said:\r\n\"\r\nhttps://github.com/lllyfeng/incident-management/blob/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3/draft-feng-opsawg-incident-management-01.txt#LL152C42-L153C56\r\n\r\nI suggest you change the text from \"Theoretically, it is possible to compress a series of alarms into fewer incidents. \" to \"It is possible to compress a series of alarms into fewer incidents and there are many solutions in the market today that essentially do this to some degree. \"\r\n\"",
+      "createdAt": "2024-02-18T02:55:05Z",
+      "updatedAt": "2024-02-18T02:55:05Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOLTnVFs5_mKPY",
+      "title": "Scope of the work",
+      "url": "https://github.com/billwuqin/network-incident/issues/5",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Nigel said:\r\n\"\r\n[incident-management/draft-feng-opsawg-incident-management-01.txt](https://github.com/lllyfeng/incident-management/blob/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3/draft-feng-opsawg-incident-management-01.txt#L23)\r\n\r\nLine 23 in [f641fd7](https://github.com/lllyfeng/incident-management/commit/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3)\r\n\r\n system and related function interface requirements. \r\nI suggest that we take care not to define the internal process of identification of the incident but instead focus on the boundaries (alarms etc. in, incident reports out, client interaction with incident solution (inc. lifecycle)).\r\n\r\nI think this intent needs to be clearly stated.\r\n\"",
+      "createdAt": "2024-02-18T02:55:56Z",
+      "updatedAt": "2024-02-18T02:55:56Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
