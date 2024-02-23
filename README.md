@@ -2,10 +2,10 @@
 
 This is the working area for the individual Internet-Draft, "A YANG Data Model for Network Incident Management".
 
-* [Editor's Copy](https://billwuqin.github.io/network-incident/#go.draft-feng-opsawg-incident-management.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-feng-opsawg-incident-management)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-feng-opsawg-incident-management)
-* [Compare Editor's Copy to Individual Draft](https://billwuqin.github.io/network-incident/#go.draft-feng-opsawg-incident-management.diff)
+* [Editor's Copy](https://billwuqin.github.io/network-incident/#go.draft-feng-nmop-network-incident-yang.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-feng-nmop-network-incident-yang)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-feng-nmop-network-incident-yang)
+* [Compare Editor's Copy to Individual Draft](https://billwuqin.github.io/network-incident/#go.draft-feng-nmop-network-incident-yang.diff)
 
 
 ## Contributing
