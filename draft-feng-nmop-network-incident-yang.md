@@ -3,14 +3,14 @@ title: "A YANG Data Model for Network Incident Management"
 abbrev: "Network Incident Management"
 category: std
 
-docname: draft-feng-opsawg-incident-management-latest
+docname: draft-feng-nmop-network-incident-yang-latest
 submissiontype: IETF
 number:
 date:
 consensus: true
 v: 3
 area: "Operations and Management"
-workgroup: "Operations and Management Area Working Group"
+workgroup: "NMOP Working Group"
 keyword:
  - network incident management
  - yang data model
