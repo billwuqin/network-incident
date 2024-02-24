@@ -3,7 +3,7 @@ title: "A YANG Data Model for Network Incident Management"
 abbrev: "Network Incident Management"
 category: std
 
-docname: draft-feng-opsawg-incident-management-latest
+docname: draft-feng-nmop-network-incident-yang-latest
 submissiontype: IETF
 number:
 date:
@@ -16,9 +16,9 @@ keyword:
  - yang data model
  - network model
 venue:
-  group: "Operations and Management Area Working Group"
+  group: "NMOP Working Group"
   type: "Working Group"
-  mail: "opsawg@ietf.org"
+  mail: "nmop@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/opsawg/"
   github: "billwuqin/network-incident"
   latest: "https://billwuqin.github.io/network-incident/draft-feng-nmop-network-incident-yang.html"
