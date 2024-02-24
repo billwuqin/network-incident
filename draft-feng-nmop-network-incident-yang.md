@@ -10,7 +10,7 @@ date:
 consensus: true
 v: 3
 area: "Operations and Management"
-workgroup: "Operations and Management Area Working Group"
+workgroup: "NMOP Working Group"
 keyword:
  - network incident management
  - yang data model
@@ -21,7 +21,7 @@ venue:
   mail: "opsawg@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/opsawg/"
   github: "billwuqin/network-incident"
-  latest: "https://billwuqin.github.io/network-incident/draft-feng-opsawg-incident-management.html"
+  latest: "https://billwuqin.github.io/network-incident/draft-feng-nmop-network-incident-yang.html"
 
 author:
 -
