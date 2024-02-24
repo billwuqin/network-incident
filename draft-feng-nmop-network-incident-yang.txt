@@ -5,7 +5,7 @@
 NMOP Working Group                                          C. Feng, Ed.
 Internet-Draft                                                          
 Intended status: Standards Track                                   T. Hu
-Expires: 26 August 2024                                             CMCC
+Expires: 27 August 2024                                             CMCC
                                                         L. M. C. Murillo
                                                           Telefonica I+D
                                                                  T. Graf
@@ -15,7 +15,7 @@ Expires: 26 August 2024                                             CMCC
                                                                   Huawei
                                                                 N. Davis
                                                                    Ciena
-                                                        23 February 2024
+                                                        24 February 2024
 
 
            A YANG Data Model for Network Incident Management
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 August 2024.
+   This Internet-Draft will expire on 27 August 2024.
 
 Copyright Notice
 
