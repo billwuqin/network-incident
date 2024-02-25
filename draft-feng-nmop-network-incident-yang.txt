@@ -1681,9 +1681,10 @@ Informative References
 
 Appendix A.  Changes between Revisions
 
-   v00 (draft-feng-nmop-network-incident-yang) * Change draft name from
-   draft-feng-opsawg-incident-management into draft-feng-nmop-netwrok-
-   incident-yang
+   v00 (draft-feng-nmop-network-incident-yang)
+
+   *  Change draft name from draft-feng-opsawg-incident-management into
+      draft-feng-nmop-netwrok-incident-yang
 
    *  Change title into A YANG Data Model for Network Incident
       Management
