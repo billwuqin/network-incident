@@ -1029,9 +1029,13 @@ YuanYao for their valuable comments and great input to this work.
 
 # Changes between Revisions
    v00 (draft-feng-nmop-network-incident-yang)
-   *  Change draft name from draft-feng-opsawg-incident-management into draft-feng-nmop-netwrok-incident-yang
+   *  Change draft name from draft-feng-opsawg-incident-management
+      into draft-feng-nmop-netwrok-incident-yang
+
    *  Change title into A YANG Data Model for Network Incident Management
+
    *  open issues is tracked in https://github.com/billwuqin/network-incident/issues
+
 
    v03 - v04 (draft-feng-opsawg-incident-management)
 
