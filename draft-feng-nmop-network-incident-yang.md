@@ -1028,7 +1028,12 @@ YuanYao for their valuable comments and great input to this work.
 --- back
 
 # Changes between Revisions
-   v03 - v04
+   v00 (draft-feng-nmop-network-incident-yang)
+   *  Change draft name from draft-feng-opsawg-incident-management into draft-feng-nmop-netwrok-incident-yang
+   *  Change title into A YANG Data Model for Network Incident Management
+   *  open issues is tracked in https://github.com/billwuqin/network-incident/issues
+     
+   v03 - v04 (draft-feng-opsawg-incident-management)
 
    *  Update incident defintion based on TMF incident API profile
       specification.
@@ -1044,7 +1049,7 @@ YuanYao for their valuable comments and great input to this work.
 
    *  Other Editorial changes.
 
-   v02 - v03
+   v02 - v03  (draft-feng-opsawg-incident-management)
 
    *  Add one new use cases on Incident Generation.
 
@@ -1061,7 +1066,7 @@ YuanYao for their valuable comments and great input to this work.
 
    *  Motivation and goal clarification in the introduction section.
 
-   v00 - v01
+   v00 - v01  (draft-feng-opsawg-incident-management)
 
    *  Modify the introduction.
 
