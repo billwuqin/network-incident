@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-02-22T01:06:59.508656+00:00",
+  "timestamp": "2024-02-25T01:11:24.848048+00:00",
   "repo": "billwuqin/network-incident",
   "labels": [
     {
@@ -127,6 +127,54 @@
       "body": "Nigel said:\r\n\"\r\n[incident-management/draft-feng-opsawg-incident-management-01.txt](https://github.com/lllyfeng/incident-management/blob/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3/draft-feng-opsawg-incident-management-01.txt#L23)\r\n\r\nLine 23 in [f641fd7](https://github.com/lllyfeng/incident-management/commit/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3)\r\n\r\n system and related function interface requirements. \r\nI suggest that we take care not to define the internal process of identification of the incident but instead focus on the boundaries (alarms etc. in, incident reports out, client interaction with incident solution (inc. lifecycle)).\r\n\r\nI think this intent needs to be clearly stated.\r\n\"",
       "createdAt": "2024-02-18T02:55:56Z",
       "updatedAt": "2024-02-18T02:55:56Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOLTnVFs6AR5iJ",
+      "title": "align the ietf-incident-semantic-metadata.yang with draft-feng-opsawg-incident-management",
+      "url": "https://github.com/billwuqin/network-incident/issues/6",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "It was suggested by Roland Scott in adoption call in opsawg",
+      "createdAt": "2024-02-24T07:49:01Z",
+      "updatedAt": "2024-02-24T07:49:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOLTnVFs6AR7E-",
+      "title": "Terminology consistency issue",
+      "url": "https://github.com/billwuqin/network-incident/issues/7",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Nigel said:\r\nAs noted in the email chain below, there is a terminology challenge. We have taken an action to clean up the terminology usage and will aim to, where possible, align with terms used in the industry (although, as is often the case, the terms are used ambiguously and will need local definitions).",
+      "createdAt": "2024-02-24T07:54:09Z",
+      "updatedAt": "2024-02-24T07:54:10Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOLTnVFs6AR7ou",
+      "title": "Question from Lizhenqiang",
+      "url": "https://github.com/billwuqin/network-incident/issues/8",
+      "state": "OPEN",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Please consider the following question: As the definition in this draft, network incident is defined from the perspective of a service and is raised by an incident server. Can the incident server know the real effect on the relevant services? For example, in figure 5 in this draft, VPN A may not perceive the link down between P1 and P2 because its packets are not lost during the interruption.",
+      "createdAt": "2024-02-24T07:56:03Z",
+      "updatedAt": "2024-02-24T07:56:03Z",
       "closedAt": null,
       "comments": []
     }
