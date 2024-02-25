@@ -19,7 +19,7 @@ venue:
   group: "NMOP Working Group"
   type: "Working Group"
   mail: "nmop@ietf.org"
-  arch: "https://mailarchive.ietf.org/arch/browse/opsawg/"
+  arch: "https://mailarchive.ietf.org/arch/browse/nmop/"
   github: "billwuqin/network-incident"
   latest: "https://billwuqin.github.io/network-incident/draft-feng-nmop-network-incident-yang.html"
 
