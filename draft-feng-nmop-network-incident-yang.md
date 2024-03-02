@@ -18,7 +18,6 @@ keyword:
 author:
 -
      fullname: Chong Feng
-     role: editor
      email: fengchongllly@gmail.com
 -
      fullname: Tong Hu
@@ -1042,13 +1041,13 @@ Ziyang Xing for their valuable comments and great input to this work.
    * Fix enumeration on leaf type
 
    * Clarify the scope in the abstract and introduction and make
-     the scope focus on YANG data model.
+     the scope focus on YANG data model
 
    * Provide text around figure 5 to clarify how the incident
      server know the real effect on the relevant services.
 
    * Other editorial changes.
-     
+
    v00 (draft-feng-nmop-network-incident-yang)
 
    *  Change draft name from draft-feng-opsawg-incident-management
