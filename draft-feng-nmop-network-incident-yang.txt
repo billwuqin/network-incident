@@ -910,7 +910,7 @@ Table of Contents
 
 8.  Incident Management YANG Module
 
-   This module imports types defined in [RFC6991].
+   This module imports types defined in [RFC6991], [RFC8345], [RFC8632].
 
    <CODE BEGINS> file "ietf-incident@2024-03-02.yang"
    module ietf-incident {
@@ -1560,9 +1560,18 @@ Normative References
               DOI 10.17487/RFC8341, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8341>.
 
+   [RFC8345]  Clemm, A., Medved, J., Varga, R., Bahadur, N.,
+              Ananthakrishnan, H., and X. Liu, "A YANG Data Model for
+              Network Topologies", RFC 8345, DOI 10.17487/RFC8345, March
+              2018, <https://www.rfc-editor.org/rfc/rfc8345>.
+
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/rfc/rfc8446>.
+
+   [RFC8632]  Vallin, S. and M. Bjorklund, "A YANG Data Model for Alarm
+              Management", RFC 8632, DOI 10.17487/RFC8632, September
+              2019, <https://www.rfc-editor.org/rfc/rfc8632>.
 
 Informative References
 
@@ -1604,10 +1613,6 @@ Informative References
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
               <https://www.rfc-editor.org/rfc/rfc7950>.
-
-   [RFC8632]  Vallin, S. and M. Bjorklund, "A YANG Data Model for Alarm
-              Management", RFC 8632, DOI 10.17487/RFC8632, September
-              2019, <https://www.rfc-editor.org/rfc/rfc8632>.
 
    [RFC8969]  Wu, Q., Ed., Boucadair, M., Ed., Lopez, D., Xie, C., and
               L. Geng, "A Framework for Automating Service and Network
