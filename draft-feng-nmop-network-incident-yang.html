@@ -1890,12 +1890,17 @@ VPN A       | |            |
 </div>
 <p id="section-5.1-7">As described in <a href="#exam1" class="auto internal xref">Figure 5</a>, vpn a is deployed from PE1 to PE2, if a
 interface of P1 is going down, many alarms are triggered, such as
-interface down, igp down, and igp peer abnormal from P2.  These
-alarms are aggregated and analyzed by controller, and the incident
-'vpn unavailable' is triggered by the controller.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
+interface down, igp down, and igp peer abnormal from P2.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
+<p id="section-5.1-8">These alarms are aggregated and analyzed by the controller/incident
+management server, and then the incident 'vpn unavailable' is triggered
+by the controller/incident management server.<a href="#section-5.1-8" class="pilcrow">¶</a></p>
+<p id="section-5.1-9">Note that incident management server can rely on data correlation technology such as
+service impact analysis and data analytic component to evaluate the real effect
+on the relevant service and understand whether lower level or device level network
+anomaly, e.g., igp down, has impact on the service.<a href="#section-5.1-9" class="pilcrow">¶</a></p>
 <span id="name-example-2-of-incident-ident"></span><div id="exam2">
 <figure id="figure-6">
-          <div class="alignCenter art-text artwork" id="section-5.1-8.1">
+          <div class="alignCenter art-text artwork" id="section-5.1-10.1">
 <pre>
                 +----------------------+
                 |                      |
@@ -1927,10 +1932,10 @@ VPN A               |            |
 <a href="#name-example-2-of-incident-ident" class="selfRef">Example 2 of Incident Identification</a>
           </figcaption></figure>
 </div>
-<p id="section-5.1-9">As described in <a href="#exam2" class="auto internal xref">Figure 6</a>, controller collect the network metrics from
+<p id="section-5.1-11">As described in <a href="#exam2" class="auto internal xref">Figure 6</a>, controller collect the network metrics from
 network elements, it finds the packet loss of P1 and the path delay
 of P2 exceed the thresholds, an incident 'VPN A degradation' may be
-triggered after service impact analysis.<a href="#section-5.1-9" class="pilcrow">¶</a></p>
+triggered after service impact analysis.<a href="#section-5.1-11" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="incident-diagnosis">
