@@ -249,14 +249,14 @@ module ietf-incident {
     }
     leaf type {
       type enumeration {
-        enum fault {
+        enum problem {
           description "It indicates the type of the incident
-                       is a fault, for example an interface
-                       fails to work.";
+                       is a problem (i.e.,cause of the incident), 
+					   for example an interface fails to work.";
         }
-        enum potential-risk {
+        enum sla-violation {
           description "It indicates the type of the incident
-                       is a potential risk, for example high
+                       is a sla violation, for example high
                        CPU rate may cause a fault in the
                        future.";
         }
