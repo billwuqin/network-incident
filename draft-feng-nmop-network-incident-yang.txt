@@ -910,6 +910,8 @@ Table of Contents
 
 8.  Incident Management YANG Module
 
+   The module imports XXX and uses types defined in XXX.
+
    <CODE BEGINS> file "ietf-incident@2024-03-02.yang"
    module ietf-incident {
      yang-version 1.1;
