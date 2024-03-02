@@ -42,6 +42,10 @@ author:
     country: Switzerland
     email: thomas.graf@swisscom.com
 -
+    fullname: Zhenqiang Li
+    organization: CMCC
+    email: li_zhenqiang@hotmail.com
+-
     fullname: Qin Wu
     organization: Huawei
     street: 101 Software Avenue, Yuhua District
@@ -1031,6 +1035,20 @@ Ziyang Xing for their valuable comments and great input to this work.
 
 # Changes between Revisions
 
+   v00 - v01
+
+   * Merge ietf-incident-type.yang into ietf-incident.yang
+
+   * Fix enumeration on leaf type
+
+   * Clarify the scope in the abstract and introduction and make
+     the scope focus on YANG data model.
+
+   * Provide text around figure 5 to clarify how the incident
+     server know the real effect on the relevant services.
+
+   * Other editorial changes.
+     
    v00 (draft-feng-nmop-network-incident-yang)
 
    *  Change draft name from draft-feng-opsawg-incident-management
