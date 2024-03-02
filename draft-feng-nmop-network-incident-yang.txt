@@ -1128,6 +1128,10 @@ Table of Contents
         (https://trustee.ietf.org/license-info).
         This version of this YANG module is part of RFC XXXX; see the
         RFC itself for full legal notices.  ";
+     revision 2024-03-02 {
+       description "Merge incident yang with incident type yang.";
+           reference "RFC XXX: YANG module for network incident management.";
+     }
      revision 2023-05-16 {
        description "remove identies and typedefs to independent yang
                     module. update some definitions of data model.";
