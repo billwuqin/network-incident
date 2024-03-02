@@ -76,7 +76,7 @@ Table of Contents
      3.3.  Multi-layer Fault Demarcation
      3.4.  Security events Automated Noise reduction based on
            Situation awareness
-   4.  Incident Management Architecture
+   4.  Network Incident Management Architecture
      4.1.  Interworking with Alarm Management
      4.2.  Interworking with SAIN
      4.3.  Relationship with RFC8969
@@ -97,7 +97,7 @@ Table of Contents
      7.3.  Incident Acknowledge
      7.4.  Incident Diagnose
      7.5.  Incident Resolution
-   8.  Incident Management YANG Module
+   8.  Network Incident Management YANG Module
    9.  Security Considerations
    10. IANA Considerations
      10.1.  The "IETF XML" Registry
@@ -177,11 +177,10 @@ Table of Contents
    algorithms can be continuously optimized to improve the efficiency of
    fault diagnosis.
 
-   This document defines the concepts, requirements, and architecture of
-   incident management.  The document also defines a YANG data model for
-   incident lifecycle management, which improves troubleshooting
-   efficiency, ensures network service quality, and improves network
-   automation [RFC8969].
+   This document defines a YANG data model for network incident
+   lifecycle management, which improves troubleshooting efficiency,
+   ensures network service quality, and improves network automation
+   [RFC8969].
 
 2.  Conventions and Definitions
 
@@ -204,7 +203,7 @@ Table of Contents
 
    The following terms are defined in this document:
 
-   Incident: An unexpected interruption of a network service,
+   Network Incident: An unexpected interruption of a network service,
    degradation of network service quality, or sub-health of a network
    service [TMF724A].
 
@@ -254,8 +253,8 @@ Table of Contents
    It is hard to achieve a perfect balance between the network
    management automation and duplicated trouble tickets under the
    traditional working situations.  However, with the help of the
-   incident management, massive alarms can be aggregated into a few
-   network incidents based on service impact analysis, the number of
+   network incident management, massive alarms can be aggregated into a
+   few network incidents based on service impact analysis, the number of
    trouble tickets will be greatly reduced.  At the same time, the
    efficiency of network troubleshooting can be largely improved. which
    address the pain point of traditional trouble ticket dispatching.
@@ -309,21 +308,21 @@ Table of Contents
    more complex and time-consuming in multi-layer scenario than in
    single-layer scenario.
 
-   With the help of incident management, the management systems first
-   automatically analyze root cause of the alarms at each single network
-   layer and report corresponding incidents to the upper layer, then
-   multi-layer management system comprehensively analyzes the topology
-   relationship and service relationship between the root causes of both
-   layers.  The inner relationship among the alarms will be identified
-   and finally the root cause will be located among multiple layers.  By
-   cooperating with the integrated Optical time-domain reflectometer
-   (OTDR) within the network device, we can determine the target optical
-   exchange station before site visits.  Therefore, the overall fault
-   demarcation process is simplified and automated, the analyze result
-   could be reported and visualized in time.  In this case, operation
-   teams only have to confirm the analyze result and dispatch site
-   engineers to perform relative maintenance actions (e.g., splice
-   fiber) based on the root cause.
+   With the help of network incident management, the management systems
+   first automatically analyze root cause of the alarms at each single
+   network layer and report corresponding incidents to the upper layer,
+   then multi-layer management system comprehensively analyzes the
+   topology relationship and service relationship between the root
+   causes of both layers.  The inner relationship among the alarms will
+   be identified and finally the root cause will be located among
+   multiple layers.  By cooperating with the integrated Optical time-
+   domain reflectometer (OTDR) within the network device, we can
+   determine the target optical exchange station before site visits.
+   Therefore, the overall fault demarcation process is simplified and
+   automated, the analyze result could be reported and visualized in
+   time.  In this case, operation teams only have to confirm the analyze
+   result and dispatch site engineers to perform relative maintenance
+   actions (e.g., splice fiber) based on the root cause.
 
 3.4.  Security events Automated Noise reduction based on Situation
       awareness
@@ -338,23 +337,24 @@ Table of Contents
    positives.  False positives not only drain time and resources, but
    can also distract teams from real incidents.
 
-   With the help of the incident management, BERT(Bidirectional Encoder
-   Representations from Transformers) [BERT] classifier can be adopted
-   to analyses the suspicious activity and understands the significance
-   of the gathered data (through both facts and inferences) and help
-   operation and maintenance engineers focus on handling important
-   security events and avoid wasting resources on false alerts, e.g.,
-   automatically determine whether 10,000 network security events are
-   real incidents and give reasonable explanations.  Progressively,
-   Llama interpreter can be used to explain the reason why such alerts
-   are picked out and marked significant, what could be the potential
-   security implications that exist yet remain undiscovered.
+   With the help of the network incident management, BERT(Bidirectional
+   Encoder Representations from Transformers) [BERT] classifier can be
+   adopted to analyses the suspicious activity and understands the
+   significance of the gathered data (through both facts and inferences)
+   and help operation and maintenance engineers focus on handling
+   important security events and avoid wasting resources on false
+   alerts, e.g., automatically determine whether 10,000 network security
+   events are real incidents and give reasonable explanations.
+   Progressively, Llama interpreter can be used to explain the reason
+   why such alerts are picked out and marked significant, what could be
+   the potential security implications that exist yet remain
+   undiscovered.
 
-4.  Incident Management Architecture
+4.  Network Incident Management Architecture
 
               +----------------------+-------------------+
               |                                          |
-              |            Incident Management Client    |
+              |         Incident Management Client       |
               |                                          |
               |                                          |
               +------------+---------+---------+---------+
@@ -366,7 +366,7 @@ Table of Contents
               +--+-------------------+---------+----------+
               |                                           |
               |                                           |
-              |            Incident Management Server     |
+              |        Incident Management Server         |
               |                                           |
               |                                           |
               |                                           |
@@ -384,9 +384,9 @@ Table of Contents
 
              Figure 1: Network Incident Management Architecture
 
-   Figure 1 illustrates the incident management architecture.  Two key
-   components for the incident management are incident management client
-   and incident management server.
+   Figure 1 illustrates the network incident management architecture.
+   Two key components for the incident management are incident
+   management client and incident management server.
 
    Incident management server can be deployed in network analytics
    platform, controllers and provides functionalities such as incident
@@ -398,7 +398,7 @@ Table of Contents
    provided by incident management server to meet the business
    requirements of fault management.
 
-   A typical workflow of incident management is as follows:
+   A typical workflow of network incident management is as follows:
 
    *  Some alarms or abnormal operations, network performance metrics
       are reported from the network.  Incident management server
@@ -585,7 +585,7 @@ Table of Contents
    As described in Figure 4, multiple alarms, metrics, or hybrid can be
    aggregated into an incident after analysis.
 
-   The incident management server MUST be capable of identifying
+   The network incident management server MUST be capable of identifying
    incidents.  Multiple alarms, metrics and other information are
    reported to incident server, and the server must analyze it and find
    out the correlations of them, if the correlation match the incident
@@ -675,16 +675,16 @@ Table of Contents
 
 5.2.  Incident Diagnosis
 
-   After an incident is reported to the incident management client, the
-   client MAY diagnose the incident to determine the root cause.  Some
-   diagnosis operations may affect the running network services.  The
-   client can choose not to perform that diagnosis operation after
-   determining the impact is not trivial.  The incident management
-   server can also perform self-diagnosis.  However, the self-diagnosis
-   MUST not affect the running network services.  Possible diagnosis
-   methods include link reachability detection, link quality detection,
-   alarm/log analysis, and short-term fine-grained monitoring of network
-   quality metrics, etc.
+   After an incident is reported to the network incident management
+   client, the client MAY diagnose the incident to determine the root
+   cause.  Some diagnosis operations may affect the running network
+   services.  The client can choose not to perform that diagnosis
+   operation after determining the impact is not trivial.  The network
+   incident management server can also perform self-diagnosis.  However,
+   the self-diagnosis MUST not affect the running network services.
+   Possible diagnosis methods include link reachability detection, link
+   quality detection, alarm/log analysis, and short-term fine-grained
+   monitoring of network quality metrics, etc.
 
 5.3.  Incident Resolution
 
@@ -854,13 +854,13 @@ Table of Contents
 
    A general notification, incident-notification, is provided here.
    When an incident instance is identified, the notification will be
-   sent.  After a notification is generated, if the incident management
-   server performs self diagnosis or the client uses the interfaces
-   provided by the incident management server to deliver diagnosis and
-   resolution actions, the notification update behavior is triggered,
-   for example, the root cause objects and affected objects are updated.
-   When an incident is successfully resolved, the status of the incident
-   would be set to 'cleared'.
+   sent.  After a notification is generated, if the network incident
+   management server performs self diagnosis or the client uses the
+   interfaces provided by the network incident management server to
+   deliver diagnosis and resolution actions, the notification update
+   behavior is triggered, for example, the root cause objects and
+   affected objects are updated.  When an incident is successfully
+   resolved, the status of the incident would be set to 'cleared'.
 
 7.3.  Incident Acknowledge
 
@@ -911,7 +911,7 @@ Table of Contents
    status to 'cleared'.  If the incident content is changed during this
    process, a notification update will be triggered.
 
-8.  Incident Management YANG Module
+8.  Network Incident Management YANG Module
 
    This module imports types defined in [RFC6991], [RFC8345], [RFC8632].
 
