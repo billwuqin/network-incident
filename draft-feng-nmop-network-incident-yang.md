@@ -197,13 +197,9 @@ data correlation.  Through online and offline learning, these
 algorithms can be continuously optimized to improve the efficiency of
 fault diagnosis.
 
-This document defines the concepts, requirements, and architecture of
-incident management.  The document also defines a YANG data model for
-incident lifecycle management, which improves troubleshooting
-efficiency, ensures network service quality, and improves network
-automation {{?RFC8969}}.
-
-
+This document defines a YANG data model for network incident lifecycle
+management, which improves troubleshooting efficiency, ensures network
+service quality, and improves network automation {{?RFC8969}}.
 
 # Conventions and Definitions
 
@@ -222,7 +218,7 @@ The following terms are defined in {{?RFC8632}} and are not redefined here:
 The following terms are defined in this document:
 
 
-Incident:  An unexpected interruption of a network service,
+Network Incident:  An unexpected interruption of a network service,
    degradation of network service quality, or sub-health of a network
    service {{TMF724A}}.
 
@@ -274,7 +270,7 @@ multiple trouble tickets being dispatched to the same network fault.
 It is hard to achieve a perfect balance between the network
 management automation and duplicated trouble tickets under the
 traditional working situations.  However, with the help of the
-incident management, massive alarms can be aggregated into a few
+network incident management, massive alarms can be aggregated into a few
 network incidents based on service impact analysis, the number of
 trouble tickets will be greatly reduced.  At the same time, the
 efficiency of network troubleshooting can be largely improved. which
@@ -329,7 +325,7 @@ layer topology data and service data, thus fault demarcation becomes
 more complex and time-consuming in multi-layer scenario than in
 single-layer scenario.
 
-With the help of incident management, the management systems first
+With the help of network incident management, the management systems first
 automatically analyze root cause of the alarms at each single network
 layer and report corresponding incidents to the upper layer, then
 multi-layer management system comprehensively analyzes the topology
@@ -357,7 +353,7 @@ provide sufficient intelligence, context to investigate, or are false
 positives.  False positives not only drain time and resources, but
 can also distract teams from real incidents.
 
-With the help of the incident management, BERT(Bidirectional Encoder
+With the help of the network incident management, BERT(Bidirectional Encoder
 Representations from Transformers) {{BERT}} classifier can be adopted to
 analyses the suspicious activity and understands the significance of
 the gathered data (through both facts and inferences) and help
@@ -370,11 +366,11 @@ are picked out and marked significant, what could be the potential
 security implications that exist yet remain undiscovered.
 
 
-# Incident Management Architecture
+# Network Incident Management Architecture
 ~~~~
      +----------------------+-------------------+
      |                                          |
-     |            Incident Management Client    |
+     |         Incident Management Client       |
      |                                          |
      |                                          |
      +------------+---------+---------+---------+
@@ -386,7 +382,7 @@ security implications that exist yet remain undiscovered.
      +--+-------------------+---------+----------+
      |                                           |
      |                                           |
-     |            Incident Management Server     |
+     |        Incident Management Server         |
      |                                           |
      |                                           |
      |                                           |
@@ -405,7 +401,7 @@ security implications that exist yet remain undiscovered.
 ~~~~
  {:#arch title="Network Incident Management Architecture" artwork-align="center"}
 
-{{arch}} illustrates the incident management architecture.  Two key
+{{arch}} illustrates the network incident management architecture.  Two key
 components for the incident management are incident management client
 and incident management server.
 
@@ -419,7 +415,7 @@ other business systems of operators and invokes the functionalities
 provided by incident management server to meet the business
 requirements of fault management.
 
-A typical workflow of incident management is as follows:
+A typical workflow of network incident management is as follows:
 
 * Some alarms or abnormal operations, network performance metrics
    are reported from the network.  Incident management server
@@ -608,7 +604,7 @@ system tracing, and an incident should be reported.
 As described in {{ident}}, multiple alarms, metrics, or hybrid can be
 aggregated into an incident after analysis.
 
-The incident management server MUST be capable of identifying
+The network incident management server MUST be capable of identifying
 incidents.  Multiple alarms, metrics and other information are
 reported to incident server, and the server must analyze it and find
 out the correlations of them, if the correlation match the incident
@@ -702,11 +698,11 @@ triggered after service impact analysis.
 
 ## Incident Diagnosis
 
-After an incident is reported to the incident management client, the
+After an incident is reported to the network incident management client, the
 client MAY diagnose the incident to determine the root cause.  Some
 diagnosis operations may affect the running network services.  The
 client can choose not to perform that diagnosis operation after
-determining the impact is not trivial.  The incident management
+determining the impact is not trivial.  The network incident management
 server can also perform self-diagnosis.  However, the self-diagnosis
 MUST not affect the running network services.  Possible diagnosis
 methods include link reachability detection, link quality detection,
@@ -885,9 +881,9 @@ notifications:
 
 A general notification, incident-notification, is provided here.
 When an incident instance is identified, the notification will be
-sent.  After a notification is generated, if the incident management
+sent.  After a notification is generated, if the network incident management
 server performs self diagnosis or the client uses the interfaces
-provided by the incident management server to deliver diagnosis and
+provided by the network incident management server to deliver diagnosis and
 resolution actions, the notification update behavior is triggered,
 for example, the root cause objects and affected objects are updated.
 When an incident is successfully resolved, the status of the incident
@@ -946,7 +942,7 @@ resolved, a notification will be triggered to update the incident
 status to 'cleared'.  If the incident content is changed during this
 process, a notification update will be triggered.
 
-# Incident Management YANG Module
+# Network Incident Management YANG Module
 
 This module imports types defined in {{!RFC6991}}, {{!RFC8345}}, {{!RFC8632}}.
 
