@@ -946,7 +946,7 @@ process, a notification update will be triggered.
 
 # Incident Management YANG Module
 
-This module imports types from {{!RFC6991}}, {{!RFC8345}},{{!RFC8632}}.
+This module imports types from {{!RFC6991}}, {{!RFC8345}}, {{!RFC8632}}.
 ~~~~
 <CODE BEGINS> file "ietf-incident@2024-03-01.yang"
 {::include-fold ./yang/ietf-incident.yang}
