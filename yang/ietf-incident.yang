@@ -14,12 +14,12 @@ module ietf-incident {
       "RFC 8632: A YANG Data Model for Alarm Management";
   }
 
-  import ietf-incident-types {
-    prefix int;
-    reference
-      "draft-feng-opsawg-incident-management: Incident
-       Management for Network Services";
+  import ietf-network {
+  prefix nw;
+  reference
+	"RFC 8345: A YANG Data Model for Network Topologies";
   }
+
   organization
     "IETF OPSAWG Working Group";
   contact
@@ -65,13 +65,125 @@ module ietf-incident {
     description "initial version";
     reference "RFC XXX: Yang module for incident management.";
   }
+  
+    //identities
+  identity incident-domain {
+    description "The abstract identity to indicate the domain of
+                 an incident.";
+  }
+  identity single-domain {
+    base incident-domain;
+    description "single domain.";
+  }
+  identity access {
+    base single-domain;
+    description "access domain.";
+  }
+  identity ran {
+    base access;
+    description "radio access network domain.";
+  }
+  identity transport {
+    base single-domain;
+    description "transport domain.";
+  }
+  identity otn {
+    base transport;
+    description "optical transport network domain.";
+  }
+  identity ip {
+    base single-domain;
+    description "ip domain.";
+  }
+  identity ptn {
+    base ip;
+    description "packet transport network domain.";
+  }
+
+  identity cross-domain {
+    base incident-domain;
+    description "cross domain.";
+  }
+  identity incident-category {
+    description "The abstract identity for incident category.";
+  }
+  identity device {
+    base incident-category;
+    description "device category.";
+  }
+  identity power-enviorment {
+    base device;
+    description "power system category.";
+  }
+  identity device-hardware {
+    base device;
+    description "hardware of device category.";
+  }
+  identity device-software {
+    base device;
+    description "software of device category";
+  }
+  identity line {
+    base device-hardware;
+    description "line card category.";
+  }
+  identity maintenance {
+    base incident-category;
+    description "maintenance category.";
+  }
+  identity network {
+    base incident-category;
+    description "network category.";
+  }
+  identity protocol {
+    base incident-category;
+    description "protocol category.";
+  }
+  identity overlay {
+    base incident-category;
+    description "overlay category";
+  }
+  identity vm {
+    base incident-category;
+    description "vm category.";
+  }
+
+  //typedefs
+  typedef incident-priority {
+    type enumeration {
+      enum critical {
+        description "the incident MUST be handled immediately.";
+      }
+      enum high {
+        description "the incident should be handled as soon as
+                     possible.";
+      }
+      enum medium {
+        description "network services are not affected, or the
+                     services are slightly affected,but corrective
+                     measures need to be taken.";
+      }
+      enum low {
+        description "potential or imminent service-affecting
+                     incidents are detected,but services are
+                     not affected currently.";
+      }
+    }
+    description "define the priority of incident.";
+  }
+  typedef node-ref {
+    type leafref {
+      path "/nw:networks/nw:network/nw:node/nw:node-id";
+    }
+    description "reference a network node.";
+  }
 
   //groupings
   grouping resources-info {
     description "the grouping which defines the network
                  resources of a node.";
     leaf node {
-      type int:node-ref;
+      type node-ref;
       description "reference to a network node.";
     }
     list resource {
@@ -150,13 +262,13 @@ module ietf-incident {
     }
     leaf domain {
       type identityref {
-        base int:incident-domain;
+        base incident-domain;
       }
       mandatory true;
       description "the domain of an incident.";
     }
     leaf priority {
-      type int:incident-priority;
+      type incident-priority;
       mandatory true;
       description "the priority of an incident instance.";
     }
@@ -191,7 +303,7 @@ module ietf-incident {
     }
     leaf category {
       type identityref {
-        base int:incident-category;
+        base incident-category;
       }
       mandatory true;
       description "The category of an incident.";
