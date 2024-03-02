@@ -910,7 +910,7 @@ Table of Contents
 
 8.  Incident Management YANG Module
 
-   The module imports XXX and uses types defined in XXX.
+   This module imports types defined in [RFC6991].
 
    <CODE BEGINS> file "ietf-incident@2024-03-02.yang"
    module ietf-incident {
@@ -1542,6 +1542,10 @@ Normative References
    [RFC6242]  Wasserman, M., "Using the NETCONF Protocol over Secure
               Shell (SSH)", RFC 6242, DOI 10.17487/RFC6242, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6242>.
+
+   [RFC6991]  Schoenwaelder, J., Ed., "Common YANG Data Types",
+              RFC 6991, DOI 10.17487/RFC6991, July 2013,
+              <https://www.rfc-editor.org/rfc/rfc6991>.
 
    [RFC8040]  Bierman, A., Bjorklund, M., and K. Watsen, "RESTCONF
               Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
