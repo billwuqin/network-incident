@@ -657,17 +657,16 @@ VPN A       | |            |
 
 As described in {{exam1}}, vpn a is deployed from PE1 to PE2, if a
 interface of P1 is going down, many alarms are triggered, such as
-interface down, igp down, and igp peer abnormal from P2.  
+interface down, igp down, and igp peer abnormal from P2.
 
-These alarms are aggregated and analyzed by the controller/incident management
-server, and then the incident 'vpn unavailable' is triggered by the controller/incident
-management server. 
+These alarms are aggregated and analyzed by the controller/incident
+management server, and then the incident 'vpn unavailable' is triggered
+by the controller/incident management server.
 
 Note that incident management server can rely on data correlation technology such as
 service impact analysis and data analytic component to evaluate the real effect
 on the relevant service and understand whether lower level or device level network
 anomaly, e.g., igp down, has impact on the service.
-
 
 ~~~~
 
