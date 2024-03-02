@@ -2,7 +2,7 @@
 
 
 
-NMOP Working Group                                          C. Feng, Ed.
+NMOP Working Group                                               C. Feng
 Internet-Draft                                                          
 Intended status: Standards Track                                   T. Hu
 Expires: 3 September 2024                                           CMCC
@@ -10,6 +10,8 @@ Expires: 3 September 2024                                           CMCC
                                                           Telefonica I+D
                                                                  T. Graf
                                                                 Swisscom
+                                                                   Z. Li
+                                                                    CMCC
                                                                    Q. Wu
                                                                    C. Yu
                                                                   Huawei
@@ -1662,6 +1664,20 @@ Informative References
 
 Appendix A.  Changes between Revisions
 
+   v00 - v01
+
+   *  Merge ietf-incident-type.yang into ietf-incident.yang
+
+   *  Fix enumeration on leaf type
+
+   *  Clarify the scope in the abstract and introduction and make the
+      scope focus on YANG data model
+
+   *  Provide text around figure 5 to clarify how the incident server
+      know the real effect on the relevant services.
+
+   *  Other editorial changes.
+
    v00 (draft-feng-nmop-network-incident-yang)
 
    *  Change draft name from draft-feng-opsawg-incident-management into
@@ -1779,7 +1795,7 @@ Contributors
 
 Authors' Addresses
 
-   Chong Feng (editor)
+   Chong Feng
    Email: fengchongllly@gmail.com
 
 
@@ -1805,6 +1821,11 @@ Authors' Addresses
    CH- Zurich
    Switzerland
    Email: thomas.graf@swisscom.com
+
+
+   Zhenqiang Li
+   CMCC
+   Email: li_zhenqiang@hotmail.com
 
 
    Qin Wu
