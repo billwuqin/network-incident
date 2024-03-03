@@ -17,9 +17,6 @@ keyword:
 
 author:
 -
-     fullname: Chong Feng
-     email: fengchongllly@gmail.com
--
      fullname: Tong Hu
      organization: CMCC
      street: Building A01, 1600 Yuhangtang Road, Wuchang Street, Yuhang District
@@ -60,7 +57,10 @@ author:
     fullname: Nigel Davis
     organization: Ciena
     email: ndavis@ciena.com
-
+-
+    fullname: Chong Feng
+    email: fengchongllly@gmail.com
+     
 contributor:
 -
     name: MingShuang Jin
