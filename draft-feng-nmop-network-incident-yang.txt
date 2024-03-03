@@ -2,12 +2,10 @@
 
 
 
-NMOP Working Group                                               C. Feng
-Internet-Draft                                                          
-Intended status: Standards Track                                   T. Hu
-Expires: 3 September 2024                                           CMCC
-                                                        L. M. C. Murillo
-                                                          Telefonica I+D
+NMOP Working Group                                                 T. Hu
+Internet-Draft                                                      CMCC
+Intended status: Standards Track                        L. M. C. Murillo
+Expires: 4 September 2024                                 Telefonica I+D
                                                                  T. Graf
                                                                 Swisscom
                                                                    Z. Li
@@ -17,7 +15,8 @@ Expires: 3 September 2024                                           CMCC
                                                                   Huawei
                                                                 N. Davis
                                                                    Ciena
-                                                            2 March 2024
+                                                                 C. Feng
+                                                            3 March 2024
 
 
            A YANG Data Model for Network Incident Management
@@ -52,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 September 2024.
+   This Internet-Draft will expire on 4 September 2024.
 
 Copyright Notice
 
@@ -1795,10 +1794,6 @@ Contributors
 
 Authors' Addresses
 
-   Chong Feng
-   Email: fengchongllly@gmail.com
-
-
    Tong Hu
    CMCC
    Building A01, 1600 Yuhangtang Road, Wuchang Street, Yuhang District
@@ -1845,3 +1840,7 @@ Authors' Addresses
    Nigel Davis
    Ciena
    Email: ndavis@ciena.com
+
+
+   Chong Feng
+   Email: fengchongllly@gmail.com
