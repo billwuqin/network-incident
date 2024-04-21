@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-04-18T01:08:54.576178+00:00",
+  "timestamp": "2024-04-21T01:14:37.406724+00:00",
   "repo": "billwuqin/network-incident",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOLTnVFs5_mEPb",
       "title": "IANA registration issue",
       "url": "https://github.com/billwuqin/network-incident/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Italo said:\r\n\"\r\n-\tThe draft defines two YANG models (ietf-incident-types and ietf-incident) but in the IANA considerations only the registry for one model (ietf-indicent) is described: is it an omission there?\r\n\"",
       "createdAt": "2024-02-18T01:20:12Z",
-      "updatedAt": "2024-03-02T13:01:44Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:25:18Z",
+      "closedAt": "2024-04-19T04:25:18Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -79,15 +79,15 @@
       "id": "I_kwDOLTnVFs5_mET8",
       "title": "reusability of ietf-incident-type",
       "url": "https://github.com/billwuqin/network-incident/issues/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Italo said:\r\n\"\r\n-\tDo we really need the split of the ietf-incident-types? Do you foreseen other modules which can re-use these definitions?\r\n\"",
       "createdAt": "2024-02-18T01:21:19Z",
-      "updatedAt": "2024-03-02T13:01:05Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:25:27Z",
+      "closedAt": "2024-04-19T04:25:27Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -103,15 +103,15 @@
       "id": "I_kwDOLTnVFs5_mEhn",
       "title": "enumeration on leaf type",
       "url": "https://github.com/billwuqin/network-incident/issues/3",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Joe made the following comment:\r\n\"\r\n I see what I feel is a mix of terminology.  You have an enumeration on leaf type where \u201cfault\u201d reads as the type of incident being a fault.  To me, this is the type of problem (i.e., the cause of the incident).  The incident type might be an SLA violation.\r\n\"",
       "createdAt": "2024-02-18T01:25:01Z",
-      "updatedAt": "2024-03-02T14:47:06Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:26:37Z",
+      "closedAt": "2024-04-19T04:26:37Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -127,15 +127,15 @@
       "id": "I_kwDOLTnVFs5_mKME",
       "title": "Relating to existing solutions",
       "url": "https://github.com/billwuqin/network-incident/issues/4",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Nigel said:\r\n\"\r\nhttps://github.com/lllyfeng/incident-management/blob/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3/draft-feng-opsawg-incident-management-01.txt#LL152C42-L153C56\r\n\r\nI suggest you change the text from \"Theoretically, it is possible to compress a series of alarms into fewer incidents. \" to \"It is possible to compress a series of alarms into fewer incidents and there are many solutions in the market today that essentially do this to some degree. \"\r\n\"",
       "createdAt": "2024-02-18T02:55:05Z",
-      "updatedAt": "2024-03-02T13:16:43Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:25:53Z",
+      "closedAt": "2024-04-19T04:25:53Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -151,15 +151,15 @@
       "id": "I_kwDOLTnVFs5_mKPY",
       "title": "Scope of the work",
       "url": "https://github.com/billwuqin/network-incident/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Nigel said:\r\n\"\r\n[incident-management/draft-feng-opsawg-incident-management-01.txt](https://github.com/lllyfeng/incident-management/blob/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3/draft-feng-opsawg-incident-management-01.txt#L23)\r\n\r\nLine 23 in [f641fd7](https://github.com/lllyfeng/incident-management/commit/f641fd7da4064bf05bbe4d8d5fab29229bb3d5e3)\r\n\r\n system and related function interface requirements. \r\nI suggest that we take care not to define the internal process of identification of the incident but instead focus on the boundaries (alarms etc. in, incident reports out, client interaction with incident solution (inc. lifecycle)).\r\n\r\nI think this intent needs to be clearly stated.\r\n\"",
       "createdAt": "2024-02-18T02:55:56Z",
-      "updatedAt": "2024-03-02T14:10:34Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:25:06Z",
+      "closedAt": "2024-04-19T04:25:06Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -175,15 +175,15 @@
       "id": "I_kwDOLTnVFs6AR5iJ",
       "title": "align the ietf-incident-semantic-metadata.yang with draft-feng-opsawg-incident-management",
       "url": "https://github.com/billwuqin/network-incident/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "It was suggested by Roland Scott in adoption call in opsawg",
       "createdAt": "2024-02-24T07:49:01Z",
-      "updatedAt": "2024-03-02T14:12:08Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:26:24Z",
+      "closedAt": "2024-04-19T04:26:24Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -223,15 +223,15 @@
       "id": "I_kwDOLTnVFs6AR7ou",
       "title": "Question from Lizhenqiang",
       "url": "https://github.com/billwuqin/network-incident/issues/8",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "billwuqin",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Please consider the following question: As the definition in this draft, network incident is defined from the perspective of a service and is raised by an incident server. Can the incident server know the real effect on the relevant services? For example, in figure 5 in this draft, VPN A may not perceive the link down between P1 and P2 because its packets are not lost during the interruption.",
       "createdAt": "2024-02-24T07:56:03Z",
-      "updatedAt": "2024-03-02T14:35:20Z",
-      "closedAt": null,
+      "updatedAt": "2024-04-19T04:24:34Z",
+      "closedAt": "2024-04-19T04:24:34Z",
       "comments": [
         {
           "author": "billwuqin",
@@ -239,6 +239,222 @@
           "body": "Fix in https://github.com/billwuqin/network-incident/commit/cad34a3a96638a8eaf5ea0890f10850acff8bceb",
           "createdAt": "2024-03-02T14:35:19Z",
           "updatedAt": "2024-03-02T14:35:19Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOLTnVFs6GPANt",
+      "title": "Consider a meaningful prefix",
+      "url": "https://github.com/billwuqin/network-incident/issues/9",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident-types.yang#L4\r\n\r\nincident-types would be great",
+      "createdAt": "2024-04-19T04:50:12Z",
+      "updatedAt": "2024-04-19T11:23:43Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "This yang model has been consolidated into ietf-incident.yang now. ",
+          "createdAt": "2024-04-19T11:23:43Z",
+          "updatedAt": "2024-04-19T11:23:43Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOLTnVFs6GPAef",
+      "title": "Broken ref",
+      "url": "https://github.com/billwuqin/network-incident/issues/10",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident-types.yang#L150\r\n\r\nThis reference is broken as there are many networks indexed by an id. ",
+      "createdAt": "2024-04-19T04:51:30Z",
+      "updatedAt": "2024-04-19T11:25:37Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "okay, the simply way to address this is to change type into string, alternatively we can introduce another leaf network-ref to specify the network, another option is to augment from node defined ietf-network  with specific leaf.",
+          "createdAt": "2024-04-19T11:25:36Z",
+          "updatedAt": "2024-04-19T11:25:36Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOLTnVFs6GPA8S",
+      "title": "One revision statement should be kept.",
+      "url": "https://github.com/billwuqin/network-incident/issues/11",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L63C1-L67C4\r\n\r\nPlease check 8407",
+      "createdAt": "2024-04-19T04:53:46Z",
+      "updatedAt": "2024-04-19T11:23:05Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:23:04Z",
+          "updatedAt": "2024-04-19T11:23:04Z"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "I_kwDOLTnVFs6GPBBo",
+      "title": "update TLP",
+      "url": "https://github.com/billwuqin/network-incident/issues/12",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L48",
+      "createdAt": "2024-04-19T04:54:09Z",
+      "updatedAt": "2024-04-19T11:22:36Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:22:35Z",
+          "updatedAt": "2024-04-19T11:22:35Z"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOLTnVFs6GPBWE",
+      "title": "sequence number not defined",
+      "url": "https://github.com/billwuqin/network-incident/issues/13",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L238",
+      "createdAt": "2024-04-19T04:55:37Z",
+      "updatedAt": "2024-04-19T11:22:12Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Change sequence number into unique identifier with integer type.\r\nFixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:22:10Z",
+          "updatedAt": "2024-04-19T11:22:10Z"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOLTnVFs6GPBoj",
+      "title": "check that only these types are envisaged; otherwise consider an identity",
+      "url": "https://github.com/billwuqin/network-incident/issues/14",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L251",
+      "createdAt": "2024-04-19T04:56:44Z",
+      "updatedAt": "2024-04-19T11:21:16Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:21:15Z",
+          "updatedAt": "2024-04-19T11:21:15Z"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOLTnVFs6GPCGF",
+      "title": "broken statement",
+      "url": "https://github.com/billwuqin/network-incident/issues/15",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L338",
+      "createdAt": "2024-04-19T04:58:04Z",
+      "updatedAt": "2024-04-19T11:21:06Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:21:06Z",
+          "updatedAt": "2024-04-19T11:21:06Z"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOLTnVFs6GPCUg",
+      "title": "consider as identities",
+      "url": "https://github.com/billwuqin/network-incident/issues/16",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L386",
+      "createdAt": "2024-04-19T04:58:59Z",
+      "updatedAt": "2024-04-19T11:20:56Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:20:55Z",
+          "updatedAt": "2024-04-19T11:20:55Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOLTnVFs6GPCaM",
+      "title": "define as a typedef",
+      "url": "https://github.com/billwuqin/network-incident/issues/17",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L530",
+      "createdAt": "2024-04-19T04:59:22Z",
+      "updatedAt": "2024-04-19T11:20:45Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-19T11:20:44Z",
+          "updatedAt": "2024-04-19T11:20:44Z"
         }
       ]
     }
