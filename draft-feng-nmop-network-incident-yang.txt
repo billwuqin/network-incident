@@ -5,18 +5,13 @@
 NMOP Working Group                                                 T. Hu
 Internet-Draft                                                      CMCC
 Intended status: Standards Track                        L. M. C. Murillo
-Expires: 21 October 2024                                  Telefonica I+D
-                                                                 T. Graf
-                                                                Swisscom
-                                                                   Z. Li
-                                                                    CMCC
+Expires: 24 October 2024                                  Telefonica I+D
                                                                    Q. Wu
-                                                                   C. Yu
                                                                   Huawei
                                                                 N. Davis
                                                                    Ciena
                                                                  C. Feng
-                                                           19 April 2024
+                                                           22 April 2024
 
 
            A YANG Data Model for Network Incident Management
@@ -51,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 October 2024.
+   This Internet-Draft will expire on 24 October 2024.
 
 Copyright Notice
 
@@ -1764,6 +1759,39 @@ Appendix A.  Changes between Revisions
 
 Contributors
 
+   Thomas Graf
+   Swisscom
+   Binzring 17CH-8045
+   CH- Zurich
+   Switzerland
+   Email: thomas.graf@swisscom.com
+
+
+   Zhenqiang Li
+   CMCC
+   Email: li_zhenqiang@hotmail.com
+
+
+   Yanlei Zheng
+   China Unicom
+   Email: zhengyanlei@chinaunicom.cn
+
+
+   Yunbin Xu
+   CAICT
+   Email: xuyunbin@caict.ac.cn
+
+
+   Xing Zhao
+   CAICT
+   Email: zhaoxing@caict.ac.cn
+
+
+   Chaode Yu
+   Huawei
+   Email: yuchaode@huawei.com
+
+
    MingShuang Jin
    Huawei Technologies
    Email: jinmingshuang@huawei.com
@@ -1794,21 +1822,6 @@ Contributors
    Email: wukaichun@huawei.com
 
 
-   Yanlei Zheng
-   China Unicom
-   Email: zhengyanlei@chinaunicom.cn
-
-
-   Yunbin Xu
-   CAICT
-   Email: xuyunbin@caict.ac.cn
-
-
-   Xing Zhao
-   CAICT
-   Email: zhaoxing@caict.ac.cn
-
-
 Authors' Addresses
 
    Tong Hu
@@ -1827,19 +1840,6 @@ Authors' Addresses
    Email: luismiguel.contrerasmurillo@telefonica.com
 
 
-   Thomas Graf
-   Swisscom
-   Binzring 17CH-8045
-   CH- Zurich
-   Switzerland
-   Email: thomas.graf@swisscom.com
-
-
-   Zhenqiang Li
-   CMCC
-   Email: li_zhenqiang@hotmail.com
-
-
    Qin Wu
    Huawei
    101 Software Avenue, Yuhua District
@@ -1847,11 +1847,6 @@ Authors' Addresses
    210012
    China
    Email: bill.wu@huawei.com
-
-
-   Chaode Yu
-   Huawei
-   Email: yuchaode@huawei.com
 
 
    Nigel Davis
