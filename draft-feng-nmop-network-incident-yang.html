@@ -2485,10 +2485,7 @@ module ietf-incident {
   grouping resources-info {
     description "the grouping which defines the network
                  resources of a node.";
-    leaf node {
-      type string;
-      description "reference to a network node.";
-    }
+    uses nw:node-ref;
     list resource {
       key name;
       description "the resources of a network node.";
@@ -2613,7 +2610,7 @@ module ietf-incident {
     container sources {
       description "The source components.";
       list source {
-        key node;
+        key node-ref;
         uses resources-info;
         min-elements 1;
         description "The source components of incident.";
@@ -2623,7 +2620,7 @@ module ietf-incident {
     container root-causes{
       description "The root cause objects.";
       list root-cause {
-        key node;
+        key node-ref;
         description "the root causes of incident.";
         uses resources-info {
           augment resource {
