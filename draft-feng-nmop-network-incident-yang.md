@@ -855,13 +855,15 @@ notifications:
 	 +--ro resolve-advice? string
 	 +--ro sources
 	 |  +--ro source* [node-ref]
-         |     +--ro node-ref       -> /nw:networks/network[nw:network-id=current()/../network-ref]/node/node-id
+         |     +--ro node-ref
+-> /nw:networks/network[nw:network-id=current()/../network-ref]/node/node-id
          |     +--ro network-ref?   -> /nw:networks/network/network-id
 	 |     +--ro resource* [name]
 	 |        +--ro name al:resource
 	 +--ro root-causes
 	 |  +--ro root-cause* [node-ref]
-         |     +--ro node-ref       -> /nw:networks/network[nw:network-id=current()/../network-ref]/node/node-id
+         |     +--ro node-ref
+-> /nw:networks/network[nw:network-id=current()/../network-ref]/node/node-id
          |     +--ro network-ref?   -> /nw:networks/network/network-id
 	 |     +--ro resource* [name]
 	 |     |  +--ro name al:resource
