@@ -1036,6 +1036,9 @@ Ziyang Xing for their valuable comments and great input to this work.
 
 # Changes between Revisions
 
+   v02 - v03
+   * Fix pyang compilation issue and yang lint issue.
+
    v01 - v02
    * Fix Broken ref by using node-ref defined in RFC8345.
 
