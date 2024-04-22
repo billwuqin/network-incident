@@ -31,17 +31,6 @@ author:
     country: Spain
     email: luismiguel.contrerasmurillo@telefonica.com
 -
-    fullname: Thomas Graf
-    organization: Swisscom
-    street: Binzring 17CH-8045
-    city: Zurich
-    country: Switzerland
-    email: thomas.graf@swisscom.com
--
-    fullname: Zhenqiang Li
-    organization: CMCC
-    email: li_zhenqiang@hotmail.com
--
     fullname: Qin Wu
     organization: Huawei
     street: 101 Software Avenue, Yuhua District
@@ -49,10 +38,6 @@ author:
     code: 210012
     country: China
     email: bill.wu@huawei.com
--
-    fullname: Chaode Yu
-    organization: Huawei
-    email: yuchaode@huawei.com
 -
     fullname: Nigel Davis
     organization: Ciena
@@ -62,6 +47,33 @@ author:
     email: fengchongllly@gmail.com
 
 contributor:
+-
+    name: Thomas Graf
+    org: Swisscom
+    street: Binzring 17CH-8045
+    city: Zurich
+    country: Switzerland
+    email: thomas.graf@swisscom.com
+-
+    name: Zhenqiang Li
+    org: CMCC
+    email: li_zhenqiang@hotmail.com
+-
+    name: Yanlei Zheng
+    org: China Unicom
+    email: zhengyanlei@chinaunicom.cn
+-
+    name: Yunbin Xu
+    org: CAICT
+    email: xuyunbin@caict.ac.cn
+-
+    name: Xing Zhao
+    org: CAICT
+    email: zhaoxing@caict.ac.cn
+-
+    fullname: Chaode Yu
+    organization: Huawei
+    email: yuchaode@huawei.com
 -
     name: MingShuang Jin
     org: Huawei Technologies
@@ -86,18 +98,6 @@ contributor:
     name: Kaichun Wu
     org: Huawei
     email: wukaichun@huawei.com
--
-    name: Yanlei Zheng
-    org: China Unicom
-    email: zhengyanlei@chinaunicom.cn
--
-    name: Yunbin Xu
-    org: CAICT
-    email: xuyunbin@caict.ac.cn
--
-    name: Xing Zhao
-    org: CAICT
-    email: zhaoxing@caict.ac.cn
 
 normative:
 
