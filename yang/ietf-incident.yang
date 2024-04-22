@@ -67,7 +67,7 @@ module ietf-incident {
 
   revision 2024-03-02 {
     description "Merge incident yang with incident type yang.";
-	reference "RFC XXX: YANG module for network incident management.";
+    reference "RFC XXX: YANG module for network incident management.";
   }
   
     //identities
