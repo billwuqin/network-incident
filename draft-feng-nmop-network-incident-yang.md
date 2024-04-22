@@ -987,40 +987,49 @@ to these data nodes without proper protection can have a negative
 effect on network operations.  These are the subtrees and data nodes
 and their sensitivity/vulnerability:
 
+<<TBC>>
+
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
 notification) to these data nodes.  These are the subtrees and data
 nodes and their sensitivity/vulnerability:
 
+<<TBC>>
+
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control access to these operations.  These are the
 operations and their sensitivity/vulnerability:
 
-
+<<TBC>>
 
 # IANA Considerations
 
 ## The "IETF XML" Registry
 
-This document registers one XML namespace URN in the 'IETF XML
-registry', following the format defined in {{!RFC3688}}.
+This document requests IANA to register one XML namespace URN in the "ns"
+subregistry within the "IETF XML Registry" {{!RFC3688}}:
 
+~~~~
 URI: urn:ietf:params:xml:ns:yang:ietf-incident
 Registrant Contact: The IESG.
 XML: N/A, the requested URIs are XML namespaces.
+~~~~
 
 ## The "YANG Module Names" Registry
 
-This document registers one module name in the 'YANG Module Names'
+This document requests IANA to register one module name in the 'YANG Module Names'
 registry, defined in {{!RFC6020}}.
 
-name: ietf-incident
-prefix: inc
-namespace: urn:ietf:params:xml:ns:yang:ietf-incident
-RFC: XXXX
+~~~~
+Name: ietf-incident
+Maintained by IANA?  N
+Namespace: urn:ietf:params:xml:ns:yang:ietf-incident
+Prefix: inc
+Reference:  RFC XXXX
 // RFC Ed.: replace XXXX and remove this comment
+~~~~
 
 # Acknowledgments
 {:numbered="false"}
