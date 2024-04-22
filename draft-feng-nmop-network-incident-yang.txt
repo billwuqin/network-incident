@@ -823,13 +823,15 @@ Table of Contents
           +--ro detail? string
           +--ro resolve-advice? string
           +--ro sources
-          |  +--ro source* [node]
-          |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
+          |  +--ro source* [node-ref]
+          |     +--ro node-ref  leafref
+          |     +--ro network-ref?  -> /nw:networks/network/network-id
           |     +--ro resource* [name]
           |        +--ro name al:resource
           +--ro root-causes
-          |  +--ro root-cause* [node]
-          |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
+          |  +--ro root-cause* [node-ref]
+          |     +--ro node-ref  leafref
+          |     +--ro network-ref?  -> /nw:networks/network/network-id
           |     +--ro resource* [name]
           |     |  +--ro name al:resource
           |     |  +--ro cause-name? string
@@ -976,19 +978,20 @@ Table of Contents
         set forth in Section 4.c of the IETF Trust's Legal Provisions
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
-        This version of this YANG module is part of RFC XXXX
-            (https://www.rfc-editor.org/info/rfcXXXX); ; see the
-        RFC itself for full legal notices.
 
-            The key words 'MUST', 'MUST NOT', 'REQUIRED', 'SHALL', 'SHALL
+        This version of this YANG module is part of RFC XXXX
+        (https://www.rfc-editor.org/info/rfcXXXX); ; see the RFC
+        itself for full legal notices.
+
+        The key words 'MUST', 'MUST NOT', 'REQUIRED', 'SHALL', 'SHALL
         NOT', 'SHOULD', 'SHOULD NOT', 'RECOMMENDED', 'NOT RECOMMENDED',
         'MAY', and 'OPTIONAL' in this document are to be interpreted as
         described in BCP 14 (RFC 2119) (RFC 8174) when, and only when,
-        they appear in all capitals, as shown here.
-            ";
+        they appear in all capitals, as shown here. ";
+
      revision 2024-03-02 {
        description "Merge incident yang with incident type yang.";
-           reference "RFC XXX: YANG module for network incident management.";
+       reference "RFC XXX: YANG module for network incident management.";
      }
 
        //identities
@@ -1134,12 +1137,6 @@ Table of Contents
          }
        }
        description "define the priority of incident.";
-     }
-     typedef node-ref {
-       type leafref {
-         path "/nw:networks/nw:network/nw:node/nw:node-id";
-       }
-       description "reference a network node.";
      }
 
      typedef incident-ref {
@@ -1671,6 +1668,14 @@ Informative References
               1-20211123/>.
 
 Appendix A.  Changes between Revisions
+
+   v01 - v02 * Fix Broken ref by using node-ref defined in RFC8345.
+
+   *  Update YANG data model based on issues raised in issue tracker of
+      the github.
+
+   *  Shorten the list of authors to 5 based on chairs' comment and move
+      additional authors to top 3 contributors.
 
    v00 - v01
 
