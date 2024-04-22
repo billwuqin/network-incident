@@ -1038,12 +1038,12 @@ Ziyang Xing for their valuable comments and great input to this work.
 
    v01 - v02
    * Fix Broken ref by using node-ref defined in RFC8345.
-     
+  
    * Update YANG data model based on issues raised in issue tracker of the github.
-     
+
    * Shorten the list of authors to 5 based on chairs' comment and move additional authors
      to top 3 contributors.
-     
+
    v00 - v01
 
    * Merge ietf-incident-type.yang into ietf-incident.yang
