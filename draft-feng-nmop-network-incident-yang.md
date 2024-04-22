@@ -854,13 +854,15 @@ notifications:
 	 +--ro detail? string
 	 +--ro resolve-advice? string
 	 +--ro sources
-	 |  +--ro source* [node]
-	 |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
+	 |  +--ro source* [node-ref]
+         |     +--ro node-ref       -> /nw:networks/network[nw:network-id=current()/../network-ref]/node/node-id
+         |     +--ro network-ref?   -> /nw:networks/network/network-id
 	 |     +--ro resource* [name]
 	 |        +--ro name al:resource
 	 +--ro root-causes
-	 |  +--ro root-cause* [node]
-	 |     +--ro node -> /nw:networks/nw:network/nw:node/nw:node-id
+	 |  +--ro root-cause* [node-ref]
+         |     +--ro node-ref       -> /nw:networks/network[nw:network-id=current()/../network-ref]/node/node-id
+         |     +--ro network-ref?   -> /nw:networks/network/network-id
 	 |     +--ro resource* [name]
 	 |     |  +--ro name al:resource
 	 |     |  +--ro cause-name? string
@@ -1034,6 +1036,14 @@ Ziyang Xing for their valuable comments and great input to this work.
 
 # Changes between Revisions
 
+   v01 - v02
+   * Fix Broken ref by using node-ref defined in RFC8345.
+     
+   * Update YANG data model based on issues raised in issue tracker of the github.
+     
+   * Shorten the list of authors to 5 based on chairs' comment and move additional authors
+     to top 3 contributors.
+     
    v00 - v01
 
    * Merge ietf-incident-type.yang into ietf-incident.yang
