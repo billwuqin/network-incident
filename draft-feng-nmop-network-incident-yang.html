@@ -2670,7 +2670,10 @@ module ietf-incident {
         choice event-type-info {
           description "event type information.";
           case alarm {
-            when "type = 'alarm'";
+            when "derived-from-or-self(type, 'alarm')" {
+            description
+            "Only applies when type is alarm.";
+            }
             container alarm {
               description "alarm type event.";
               leaf resource {
