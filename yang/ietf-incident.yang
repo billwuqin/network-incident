@@ -297,11 +297,10 @@ module ietf-incident {
       description "the name of an incident.";
     }
     leaf type {
-	    mandatory true;
-	    type identityref {
-	    base incident-class;
-	  }
-      
+      type identityref {
+      base incident-class;
+      }
+    mandatory true;
       description "The type of an incident.";
     }
     leaf domain {
