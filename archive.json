@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-04-21T01:14:37.406724+00:00",
+  "timestamp": "2024-04-23T01:10:36.163782+00:00",
   "repo": "billwuqin/network-incident",
   "labels": [
     {
@@ -278,7 +278,7 @@
       "labels": [],
       "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident-types.yang#L150\r\n\r\nThis reference is broken as there are many networks indexed by an id. ",
       "createdAt": "2024-04-19T04:51:30Z",
-      "updatedAt": "2024-04-19T11:25:37Z",
+      "updatedAt": "2024-04-22T08:04:39Z",
       "closedAt": null,
       "comments": [
         {
@@ -287,6 +287,13 @@
           "body": "okay, the simply way to address this is to change type into string, alternatively we can introduce another leaf network-ref to specify the network, another option is to augment from node defined ietf-network  with specific leaf.",
           "createdAt": "2024-04-19T11:25:36Z",
           "updatedAt": "2024-04-19T11:25:36Z"
+        },
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-22T08:04:38Z",
+          "updatedAt": "2024-04-22T08:04:38Z"
         }
       ]
     },
@@ -398,7 +405,7 @@
       "labels": [],
       "body": "https://github.com/billwuqin/network-incident/blob/3098dce8018b7817b90ce591e134525d11e11fa7/yang/ietf-incident.yang#L338",
       "createdAt": "2024-04-19T04:58:04Z",
-      "updatedAt": "2024-04-19T11:21:06Z",
+      "updatedAt": "2024-04-22T07:19:02Z",
       "closedAt": null,
       "comments": [
         {
@@ -407,6 +414,13 @@
           "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
           "createdAt": "2024-04-19T11:21:06Z",
           "updatedAt": "2024-04-19T11:21:06Z"
+        },
+        {
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in https://github.com/billwuqin/network-incident/blob/main/yang/ietf-incident.yang",
+          "createdAt": "2024-04-22T07:19:00Z",
+          "updatedAt": "2024-04-22T07:19:00Z"
         }
       ]
     },
@@ -459,5 +473,32 @@
       ]
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 18,
+      "id": "PR_kwDOLTnVFs5tW0yV",
+      "title": "Broken IANA Section",
+      "url": "https://github.com/billwuqin/network-incident/pull/18",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-04-22T14:10:46Z",
+      "updatedAt": "2024-04-22T14:10:46Z",
+      "baseRepository": "billwuqin/network-incident",
+      "baseRefName": "main",
+      "baseRefOid": "1cf4b73a75fb1851bfcf875fd482dc130f927607",
+      "headRepository": "boucadair/network-incident",
+      "headRefName": "main",
+      "headRefOid": "f59fae5bc72b739dc37ffbb011ceba80e56536e6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
